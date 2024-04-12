@@ -1,0 +1,110 @@
+{
+    "hookInstance": "d1577c69-dfbe-44ad-ba6d-3e05e953b2ea",
+    "hook": "DB-HT-OA-merge",
+    "context": {
+        "encounterId": "285064-0",
+        "patientId": "dummyPatient",
+        "diabetes": {
+            "resource": {
+                "resourceType": "Condition",
+                "id": "DB",
+                "clinicalStatus": "active",
+                "verificationStatus": "confirmed",
+                "category": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                          "code": "encounter-diagnosis",
+                          "display": "Encounter Diagnosis"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "439401001",
+                          "display": "Diagnosis"
+                        }
+                      ]
+                    }
+                  ],
+                "code": {
+                    "coding": [{
+                        "system": "http://snomed.info/sct",
+                        "code": "46635009",
+                        "display": "Diabetes mellitus type 1"
+                    }]
+                },
+                "subject": {
+                    "reference": "Patient/1677163"
+                }
+            }
+        },
+        "hypertension": {
+            "resource": {
+                "resourceType": "Condition",
+                "id": "HT",
+                "clinicalStatus": "active",
+                "verificationStatus": "confirmed",
+                "category": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                          "code": "encounter-diagnosis",
+                          "display": "Encounter Diagnosis"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "439401001",
+                          "display": "Diagnosis"
+                        }
+                      ]
+                    }
+                  ],
+                "code": {
+                    "coding": [{
+                        "system": "http://snomed.info/sct",
+                        "code": "73410007",
+                        "display": "Benign secondary renovascular hypertension (disorder)"
+                    }]
+                },
+                "subject": {
+                    "reference": "Patient/1677163"
+                }
+            }
+        },
+        "osteoarthritis": {
+            "resource": {
+                "resourceType": "Condition",
+                "id": "oa",
+                "clinicalStatus": "active",
+                "verificationStatus": "confirmed",
+                "category": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                          "code": "encounter-diagnosis",
+                          "display": "Encounter Diagnosis"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "439401001",
+                          "display": "Diagnosis"
+                        }
+                      ]
+                    }
+                  ],
+                "code": {
+                    "coding": [{
+                        "system": "http://snomed.info/sct",
+                        "code": "15705241000119106",
+                        "display": "Chondrocalcinosis of bilateral shoulders (disorder)"
+                    }]
+                },
+                "subject": {
+                    "reference": "Patient/1677163"
+                }
+            }
+        }
+    }
+}
