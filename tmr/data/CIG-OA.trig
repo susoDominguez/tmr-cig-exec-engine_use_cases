@@ -1,0 +1,94 @@
+@prefix :      <http://anonymous.org/data/> .
+@prefix np:    <http://www.nanopub.org/nschema#> .
+@prefix data:  <http://anonymous.org/data/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix vocab4i: <http://anonymous.org/vocab4i/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix tmr:   <http://anonymous.org/vocab/> .
+@prefix vocab: <http://anonymous.org/vocab/> .
+@prefix tmr4i: <http://anonymous.org/vocab4i/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix swrl:  <http://www.w3.org/2003/11/swrl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nanopub: <http://www.nanopub.org/nschema#> .
+
+:CIG-OA  rdf:type   tmr:ClinicalGuideline , owl:NamedIndividual ;
+        rdfs:label  "OA guideline"@en .
+
+:RecOA-Painkiller  tmr:isPartOf  :CIG-OA .
+
+:RecOA-AvoidGIB  tmr:isPartOf  :CIG-OA .
+
+:RecOA-Painkiller_publicationinfo {
+    :RecOA-Painkiller_head
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:RecOA-Painkiller_head {
+    :RecOA-Painkiller_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        :RecOA-Painkiller ;
+            np:hasProvenance       :RecOA-Painkiller_provenance ;
+            np:hasPublicationInfo  :RecOA-Painkiller_publicationinfo .
+}
+
+:RecOA-AvoidGIB_head {
+    :RecOA-AvoidGIB_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        :RecOA-AvoidGIB ;
+            np:hasProvenance       :RecOA-AvoidGIB_provenance ;
+            np:hasPublicationInfo  :RecOA-AvoidGIB_publicationinfo .
+}
+
+:RecOA-AvoidGIB_publicationinfo {
+    :RecOA-AvoidGIB_head
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:RecOA-AvoidGIB_provenance {
+    :RecOA-AvoidGIB_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    :RecOA-AvoidGIB ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+    
+    :RecOA-AvoidGIB  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+}
+
+:RecOA-AvoidGIB {
+    :CBAspirinGIB  tmr:contribution  "positive" .
+    
+    :RecOA-AvoidGIB  rdf:type     tmr:ClinicalRecommendation ;
+            rdfs:label            "Avoid gastrointestinal bleeding"@en ;
+            tmr:aboutExecutionOf  :ActAdministerAspirin ;
+            tmr:basedOn           :CBAspirinGIB ;
+            tmr:partOf            :CIG-OA ;
+            tmr:strength          "should-not" .
+}
+
+:RecOA-Painkiller {
+    :CBIbuprofenPain  tmr:contribution  "positive" .
+    
+    :RecOA-Painkiller
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Reduce pain"@en ;
+            tmr:aboutExecutionOf  :ActAdministerIbuprofen ;
+            tmr:basedOn           :CBIbuprofenPain ;
+            tmr:partOf            :CIG-OA ;
+            tmr:strength          "should" .
+}
+
+:RecOA-Painkiller_provenance {
+    :RecOA-Painkiller
+            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :RecOA-Painkiller_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    :RecOA-Painkiller ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}

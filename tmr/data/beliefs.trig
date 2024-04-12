@@ -1,0 +1,456 @@
+
+:CBPiaglitazoneHeartFailure_head {
+    :CBPiaglitazoneHeartFailure_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBPiaglitazoneHeartFailure ;
+            nanopub:hasProvenance       :CBPiaglitazoneHeartFailure_provenance ;
+            nanopub:hasPublicationInfo  :CBPiaglitazoneHeartFailure_publicationinfo .
+}
+
+data:CBPiaglitazoneHeartFailure {
+    data:ActAdministerPiaglitazone
+        vocab:causes                  data:TrPiaglitazoneSideEffects .
+    data:CBPiaglitazoneHeartFailure
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+:CBPiaglitazoneHeartFailure_provenance {
+    :CBPiaglitazoneHeartFailure  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBPiaglitazoneHeartFailure_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBPiaglitazoneHeartFailure ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBPiaglitazoneHeartFailure_publicationinfo {
+    :CBPiaglitazoneHeartFailure_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBPiaglitazone_head {
+    :CBPiaglitazone_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBPiaglitazone ;
+            nanopub:hasProvenance       :CBPiaglitazone_provenance ;
+            nanopub:hasPublicationInfo  :CBPiaglitazone_publicationinfo .
+}
+
+data:CBPiaglitazone {
+    data:ActAdministerPiaglitazone
+        vocab:causes                  data:TrLowerHbA1c.
+    data:CBPiaglitazone
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+:CBPiaglitazone_provenance {
+    :CBPiaglitazone  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBPiaglitazone_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBPiaglitazone ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBPiaglitazone_publicationinfo {
+    :CBPiaglitazone_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBMetformin_head {
+    :CBMetformin_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBMetformin ;
+            nanopub:hasProvenance       :CBMetformin_provenance ;
+            nanopub:hasPublicationInfo  :CBMetformin_publicationinfo .
+}
+
+data:CBMetformin {
+    data:ActAdministerMetformin
+        vocab:causes                  data:TrLowerHbA1c.
+    data:CBMetformin
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+:CBMetformin_provenance {
+    :CBMetformin  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBMetformin_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBMetformin ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBMetformin_publicationinfo {
+    :CBMetformin_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBMetforminIntolerance_head {
+    :CBMetforminIntolerance_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBMetforminIntolerance ;
+            nanopub:hasProvenance       :CBMetforminIntolerance_provenance ;
+            nanopub:hasPublicationInfo  :CBMetforminIntolerance_publicationinfo .
+}
+
+data:CBMetforminIntolerance {
+    data:ActAdministerMetformin
+        vocab:causes                  data:TrMetforminIntolerance.
+    data:CBMetforminIntolerance
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+:CBMetforminIntolerance_provenance {
+    :CBMetforminIntolerance  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBMetforminIntolerance_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBMetforminIntolerance ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBMetforminIntolerance_publicationinfo {
+    :CBMetforminIntolerance_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBSulphonylureas_head {
+    :CBSulphonylureas_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBSulphonylureas ;
+            nanopub:hasProvenance       :CBSulphonylureas_provenance ;
+            nanopub:hasPublicationInfo  :CBSulphonylureas_publicationinfo .
+}
+
+data:CBSulphonylureas {
+    data:ActAdministerSulphonylureas
+        vocab:causes                  data:TrLowerHbA1c, data:TrIncreaseWeight, data:TrIncreaseHypoglycaemia.
+    data:CBSulphonylureas
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+:CBSulphonylureas_provenance {
+    :CBSulphonylureas  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBSulphonylureas_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBSulphonylureas ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBSulphonylureas_publicationinfo {
+    :CBSulphonylureas_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBSulphonylureasIntolerance_head {
+    :CBSulphonylureasIntolerance_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBSulphonylureasIntolerance ;
+            nanopub:hasProvenance       :CBSulphonylureasIntolerance_provenance ;
+            nanopub:hasPublicationInfo  :CBSulphonylureasIntolerance_publicationinfo .
+}
+
+data:CBSulphonylureasIntolerance {
+    data:ActAdministerMetformin
+        vocab:causes                  data:TrSulphonylureasIntolerance.
+    data:CBSulphonylureasIntolerance
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+:CBSulphonylureasIntolerance_provenance {
+    :CBSulphonylureasIntolerance  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBSulphonylureasIntolerance_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBSulphonylureasIntolerance ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBSulphonylureasIntolerance_publicationinfo {
+    :CBSulphonylureasIntolerance_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+
+:CBAspirinGIB_head {
+    :CBAspirinGIB_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBAspirinGIB ;
+            nanopub:hasProvenance       :CBAspirinGIB_provenance ;
+            nanopub:hasPublicationInfo  :CBAspirinGIB_publicationinfo .
+}
+
+:CBAspirinGIB {
+    :CBAspirinGIB  a         vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+    
+    :ActAdministerAspirin
+            vocab:causes  :TrIncreaseRiskGIB .
+}
+
+:CBAspirinGIB_provenance {
+    :CBAspirinGIB  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBAspirinGIB_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBAspirinGIB ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBAspirinGIB_publicationinfo {
+    :CBAspirinGIB_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBNSAIDCoagulation_head {
+    :CBNSAIDCoagulation_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBNSAIDCoagulation ;
+            nanopub:hasProvenance       :CBNSAIDCoagulation_provenance ;
+            nanopub:hasPublicationInfo  :CBNSAIDCoagulation_publicationinfo .
+}
+
+:CBNSAIDCoagulation {
+    :CBNSAIDCoagulation
+            a                vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+    
+    :ActAdministerNSAID
+            vocab:causes  :TrDecreaseBC .
+}
+
+:CBNSAIDCoagulation_provenance {
+    :CBNSAIDCoagulation
+            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBNSAIDCoagulation_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBNSAIDCoagulation ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBNSAIDCoagulation_publicationinfo {
+    :CBNSAIDCoagulation_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBIbuprofenPain_head {
+    :CBIbuprofenPain_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBIbuprofenPain ;
+            nanopub:hasProvenance       :CBIbuprofenPain_provenance ;
+            nanopub:hasPublicationInfo  :CBIbuprofenPain_publicationinfo .
+}
+
+:CBIbuprofenPain {
+    :CBIbuprofenPain  a      vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+    
+    :ActAdministerIbuprofen
+            vocab:causes  :TrPainkiller .
+}
+
+:CBIbuprofenPain_provenance {
+    :CBIbuprofenPain  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBIbuprofenPain_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBIbuprofenPain ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBIbuprofenPain_publicationinfo {
+    :CBIbuprofenPain_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBIbuprofenBP_head {
+    :CBIbuprofenBP_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBIbuprofenBP ;
+            nanopub:hasProvenance       :CBIbuprofenBP_provenance ;
+            nanopub:hasPublicationInfo  :CBIbuprofenBP_publicationinfo .
+}
+
+:CBIbuprofenBP {
+    :ActAdministerIbuprofen
+            vocab:causes  :TrIncreaseBP .
+    
+    :CBIbuprofenBP  a        vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+}
+
+:CBIbuprofenBP_provenance {
+    :CBIbuprofenBP  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBIbuprofenBP_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBIbuprofenBP ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBIbuprofenBP_publicationinfo {
+    :CBIbuprofenBP_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Martin .
+}
+
+:CBDipyridamoleThrombus_head {
+    :CBDipyridamoleThrombus_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBDipyridamoleThrombus ;
+            nanopub:hasProvenance       :CBDipyridamoleThrombus_provenance ;
+            nanopub:hasPublicationInfo  :CBDipyridamoleThrombus_publicationinfo .
+}
+
+:CBDipyridamoleThrombus {
+    :CBDipyridamoleThrombus
+            a                vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+    
+    :ActAdministerDipyridamole
+            vocab:causes  :TrDecreaseBC .
+}
+
+:CBDipyridamoleThrombus_provenance {
+    :CBDipyridamoleThrombus
+            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBDipyridamoleThrombus_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBDipyridamoleThrombus ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBDipyridamoleThrombus_publicationinfo {
+    :CBDipyridamoleThrombus_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBInsulinLBS_head {
+    :CBInsulinLBS_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBInsulinLBS ;
+            nanopub:hasProvenance       :CBInsulinLBS_provenance ;
+            nanopub:hasPublicationInfo  :CBInsulinLBS_publicationinfo .
+}
+
+:CBInsulinLBS {
+    :CBInsulinLBS  a         vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+    
+    :ActAdministerInsulin
+            vocab:causes  :TrDecreaseLBS .
+}
+
+:CBInsulinLBS_provenance {
+    :CBInsulinLBS  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBInsulinLBS_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBInsulinLBS ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBInsulinLBS_publicationinfo {
+    :CBInsulinLBS_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBThiazideBP_head {
+    :CBThiazideBP_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBThiazideBP ;
+            nanopub:hasProvenance       :CBThiazideBP_provenance ;
+            nanopub:hasPublicationInfo  :CBThiazideBP_publicationinfo .
+}
+
+:CBThiazideBP {
+    :CBThiazideBP  a         vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+    
+    :ActAdministerThiazide
+            vocab:causes  :TrDecreaseBP .
+}
+
+:CBThiazideBP_provenance {
+    :CBThiazideBP  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBThiazideBP_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBThiazideBP ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBThiazideBP_publicationinfo {
+    :CBThiazideBP_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBClopidogrelThrombus_head {
+    :CBClopidogrelThrombus_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBClopidogrelThrombus ;
+            nanopub:hasProvenance       :CBClopidogrelThrombus_provenance ;
+            nanopub:hasPublicationInfo  :CBClopidogrelThrombus_publicationinfo .
+}
+
+:CBClopidogrelThrombus {
+    :CBClopidogrelThrombus
+            a                vocab:CausationBelief ;
+            vocab:frequency  "always" ;
+            vocab:strength   "L1" .
+    
+    :ActAdministerClopidogrel
+            vocab:causes  :TrDecreaseBC .
+}
+
+:CBClopidogrelThrombus_provenance {
+    :CBClopidogrelThrombus
+            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBClopidogrelThrombus_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBClopidogrelThrombus ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBClopidogrelThrombus_publicationinfo {
+    :CBClopidogrelThrombus_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+

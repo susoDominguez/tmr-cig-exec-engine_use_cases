@@ -1,0 +1,136 @@
+@prefix :      <http://anonymous.org/data/> .
+@prefix np:    <http://www.nanopub.org/nschema#> .
+@prefix data:  <http://anonymous.org/data/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix vocab4i: <http://anonymous.org/vocab4i/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix tmr:   <http://anonymous.org/vocab/> .
+@prefix vocab: <http://anonymous.org/vocab/> .
+@prefix tmr4i: <http://anonymous.org/vocab4i/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix swrl:  <http://www.w3.org/2003/11/swrl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nanopub: <http://www.nanopub.org/nschema#> .
+
+:CIG-DB  rdf:type   owl:NamedIndividual , tmr:ClinicalGuideline ;
+        rdfs:label  "Diabetes guideline"@en .
+
+:RecDB-AntiThrombotic1
+        tmr:isPartOf  :CIG-DB .
+
+:RecDB-AntiThrombotic2
+        tmr:isPartOf  :CIG-DB .
+
+:RecDM-ReduceLBS  tmr:isPartOf  :CIG-DB .
+
+:RecDM-ReduceLBS {
+    :RecDM-ReduceLBS  rdf:type    tmr:ClinicalRecommendation ;
+            rdfs:label            "Reduce blood sugar level"@en ;
+            tmr:aboutExecutionOf  :ActAdministerInsulin ;
+            tmr:basedOn           :CBInsulinLBS ;
+            tmr:partOf            :CIG-DB ;
+            tmr:strength          "should" .
+    
+    :CBInsulinLBS  tmr:contribution  "positive" .
+}
+
+:RecDM-ReduceLBS_head {
+    :RecDM-ReduceLBS_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        :RecDM-ReduceLBS ;
+            np:hasProvenance       :RecDM-ReduceLBS_provenance ;
+            np:hasPublicationInfo  :RecDM-ReduceLBS_publicationinfo .
+}
+
+:RecDB-AntiThrombotic1_provenance {
+    :RecDB-AntiThrombotic1
+            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :RecDB-AntiThrombotic1_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    :RecDB-AntiThrombotic1 ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:RecDB-AntiThrombotic1_head {
+    :RecDB-AntiThrombotic1_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        :RecDB-AntiThrombotic1 ;
+            np:hasProvenance       :RecDB-AntiThrombotic1_provenance ;
+            np:hasPublicationInfo  :RecDB-AntiThrombotic1_publicationinfo .
+}
+
+:RecDB-AntiThrombotic2_provenance {
+    :RecDB-AntiThrombotic2
+            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :RecDB-AntiThrombotic2_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    :RecDB-AntiThrombotic2 ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:RecDM-ReduceLBS_provenance {
+    :RecDM-ReduceLBS  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :RecDM-ReduceLBS_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    :RecDM-ReduceLBS ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:RecDB-AntiThrombotic1_publicationinfo {
+    :RecDB-AntiThrombotic1_head
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:RecDB-AntiThrombotic2_publicationinfo {
+    :RecDB-AntiThrombotic2_head
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:RecDB-AntiThrombotic2 {
+    :RecDB-AntiThrombotic2
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Avoid thrombi"@en ;
+            tmr:aboutExecutionOf  :ActAdministerDipyridamole ;
+            tmr:basedOn           :CBDipyridamoleThrombus ;
+            tmr:partOf            :CIG-DB ;
+            tmr:strength          "should" .
+    
+    :CBDipyridamoleThrombus
+            tmr:contribution  "positive" .
+}
+
+:RecDB-AntiThrombotic1 {
+    :RecDB-AntiThrombotic1
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Avoid thrombi"@en ;
+            tmr:aboutExecutionOf  :ActAdministerNSAID ;
+            tmr:basedOn           :CBNSAIDCoagulation ;
+            tmr:partOf            :CIG-DB ;
+            tmr:strength          "should" .
+    
+    :CBNSAIDCoagulation
+            tmr:contribution  "positive" .
+}
+
+:RecDB-AntiThrombotic2_head {
+    :RecDB-AntiThrombotic2_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        :RecDB-AntiThrombotic2 ;
+            np:hasProvenance       :RecDB-AntiThrombotic2_provenance ;
+            np:hasPublicationInfo  :RecDB-AntiThrombotic2_publicationinfo .
+}
+
+:RecDM-ReduceLBS_publicationinfo {
+    :RecDM-ReduceLBS_head
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}

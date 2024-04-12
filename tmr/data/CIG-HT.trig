@@ -1,0 +1,96 @@
+@prefix :      <http://anonymous.org/data/> .
+@prefix np:    <http://www.nanopub.org/nschema#> .
+@prefix data:  <http://anonymous.org/data/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix vocab4i: <http://anonymous.org/vocab4i/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix tmr:   <http://anonymous.org/vocab/> .
+@prefix vocab: <http://anonymous.org/vocab/> .
+@prefix tmr4i: <http://anonymous.org/vocab4i/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix swrl:  <http://www.w3.org/2003/11/swrl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nanopub: <http://www.nanopub.org/nschema#> .
+
+:CIG-HT  rdf:type   tmr:ClinicalGuideline , owl:NamedIndividual ;
+        rdfs:label  "Hypertension guideline"@en .
+
+:RecHT-Diuretic  tmr:isPartOf  :CIG-HT .
+
+:RecHT-AntiThrombotic
+        tmr:isPartOf  :CIG-HT .
+
+:RecHT-Diuretic_head {
+    :RecHT-Diuretic_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        :RecHT-Diuretic ;
+            np:hasProvenance       :RecHT-Diuretic_provenance ;
+            np:hasPublicationInfo  :RecHT-Diuretic_publicationinfo .
+}
+
+:RecHT-Diuretic_provenance {
+    :RecHT-Diuretic  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :RecHT-Diuretic_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    :RecHT-Diuretic ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:RecHT-AntiThrombotic_head {
+    :RecHT-AntiThrombotic_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        :RecHT-AntiThrombotic ;
+            np:hasProvenance       :RecHT-AntiThrombotic_provenance ;
+            np:hasPublicationInfo  :RecHT-AntiThrombotic_publicationinfo .
+}
+
+:RecHT-AntiThrombotic_publicationinfo {
+    :RecHT-AntiThrombotic_head
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:RecHT-Diuretic {
+    :RecHT-Diuretic  rdf:type     tmr:ClinicalRecommendation ;
+            rdfs:label            "Reduce blood pressure"@en ;
+            tmr:aboutExecutionOf  :ActAdministerThiazide ;
+            tmr:basedOn           :CBThiazideBP ;
+            tmr:partOf            :CIG-HT ;
+            tmr:strength          "should" .
+    
+    :CBThiazideBP  tmr:contribution  "positive" .
+}
+
+:RecHT-Diuretic_publicationinfo {
+    :RecHT-Diuretic_head
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:RecHT-AntiThrombotic_provenance {
+    :RecHT-AntiThrombotic
+            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :RecHT-AntiThrombotic_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    :RecHT-AntiThrombotic ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:RecHT-AntiThrombotic {
+    :RecHT-AntiThrombotic
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Avoid thrombi"@en ;
+            tmr:aboutExecutionOf  :ActAdministerClopidogrel ;
+            tmr:basedOn           :CBClopidogrelThrombus ;
+            tmr:partOf            :CIG-HT ;
+            tmr:strength          "should" .
+    
+    :CBClopidogrelThrombus
+            tmr:contribution  "positive" .
+}
