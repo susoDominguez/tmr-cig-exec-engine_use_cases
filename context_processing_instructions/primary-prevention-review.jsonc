@@ -7,14 +7,14 @@
         {
           "label": "conditionsCodes",
           "description": "searches for snomed ct codes in FHIR condition resources with a clinical status that is either active, recurrent or relapse, that have been verified by clinical staff and that are part of a diagnosis",
-          "Jpath": "context.clinicalConditions.entry.resource[('439401001' in category.coding.code and 'http://snomed.info/sct' in category.coding.system) or (('problem-list-item' in category.coding.code  or 'encounter-diagnosis' in category.coding.code) and 'http://terminology.hl7.org/CodeSystem/condition-category' in category.coding.system)][('active' in clinicalStatus.coding.code or 'recurrence' in clinicalStatus.coding.code or 'relapse' in clinicalStatus.coding.code) and 'http://terminology.hl7.org/CodeSystem/condition-clinical' in clinicalStatus.coding.system][('confirmed' in verificationStatus.coding.code or 'provisional' in verificationStatus.coding.code) and 'http://terminology.hl7.org/CodeSystem/condition-ver-status' in verificationStatus.coding.system].code.coding[system='http://snomed.info/sct'].code",
+          "Jpath": "context.diabetesAssessment.entry.resource[resourceType='Condition'][clinicalStatus.coding.code in ['active','recurrent','relapse'] and clinicalStatus.coding.system in ['http://terminology.hl7.org/CodeSystem/condition-clinical']][verificationStatus.coding.code in ['confirmed','provisional'] and verificationStatus.coding.system in ['http://terminology.hl7.org/CodeSystem/condition-ver-status']][category.coding[0].code in ['encounter-diagnosis','439401001','problem-list-item'] and category.coding[0].system in ['http://terminology.hl7.org/CodeSystem/condition-category','http://snomed.info/sct'] ].code.coding[system='http://snomed.info/sct'].code",
           "typeOf": "string",
           "required": true
         },
         {
           "label": "riskFactors",
           "description": "returns all recorded risk factors, otherwise null",
-          "Jpath": "context.riskFactor.entry.resource.code.coding[system='http://snomed.info/sct'].code",
+          "Jpath": "context.riskFactors.entry.resource.code.coding[system='http://snomed.info/sct'].code",
           "typeOf": "string",
           "defaultVal": null,
           "required": false

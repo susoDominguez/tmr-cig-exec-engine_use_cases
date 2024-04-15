@@ -1,54 +1,61 @@
 {
-    "hookInstance": "d1577c69-dfbe-44ad-ba6d-3e05e953b2ea",
-    "hook": "diabetes-assess",
-    "context": {
-      "birthDate": "1988-17-03",
-      "diabetesAssessment": {
-        "resourceType": "Bundle",
-        "entry": [
-          {
-            "resource": {
-                "resourceType": "Condition",
-                "id": "DM",
-                "clinicalStatus": { "coding": [
-                  { "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                    "code": "active" } ] },
-                "verificationStatus": { "coding": [
-                  { "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-                    "code": "confirmed" } ] },
-                "category": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-                          "code": "encounter-diagnosis",
-                          "display": "Encounter Diagnosis"
-                        },
-                        {
-                          "system": "http://snomed.info/sct",
-                          "code": "439401001",
-                          "display": "Diagnosis"
-                        }
-                      ]
-                    }
-                  ],
-                "code": {
-                    "coding": [{
-                      "system": "http://snomed.info/sct",
-                      "code": "46635009",
-                      "display": "Diabetes mellitus type 1"
-                  }]
-                },
-                "subject": {
-                    "reference": "Patient/1677163"
-                }
+  "hookInstance": "d1577c69-dfbe-44ad-ba6d-3e05e953b2ea",
+  "hook": "diabetes-assess",
+  "context": {
+    "birthDate": "1988-17-03",
+    "diabetesAssessment": {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "DM",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
             }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "439401001",
+                "display": "Diagnosis"
+              }
+            ]
           }
-        ]
-      },
-      "riskFactor": {
-        "resourceType": "Bundle",
-        "entry" : [
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "46635009",
+              "display": "Diabetes mellitus type 1"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/1677163"
+        }
+      }
+    },
+    "riskFactors": {
+      "resourceType": "Bundle",
+      "entry": [
         {
           "resource": {
             "resourceType": "Condition",
@@ -87,5 +94,5 @@
         }
       ]
     }
-    }
-}  
+  }
+}
