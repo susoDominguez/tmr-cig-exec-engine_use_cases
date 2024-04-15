@@ -1,0 +1,31 @@
+[
+    {
+      "services": [
+        {
+          "hook": "multimorbidity-interactions-detection",
+          "title": "multimorbidity interactions detection CDS service",
+          "description": "An example of a CDS service to provide support on detecting potential interactions between guidelines in multimorbidity contexts",
+          "id": "multimorbidity-interactions-detection",
+          "prefetch": {},
+          "usageRequirements": "none"
+        },
+        {
+          "hook": "multimorbidity-interactions-detection",
+          "title": "multimorbidity interactions detection CDS service",
+          "description": "An example of a CDS service to provide support on detecting potential interactions between guidelines in multimorbidity contexts",
+          "id": "DB-HT-OA-merge",
+          "prefetch": {},
+          "usageRequirements": "none"
+        },
+        {
+          "hook": "diabetes-management",
+          "title": "diabetes continuous therapy management CDS service",
+          "description": "An example of a CDS service to provide support on continuous diabetes prevention therapy to patients (lipid lowering drug therapy), considering characteristics such as type of diabetes, age, risk factors, among others",
+          "id": "primary-prevention-review",
+          "prefetch": {},
+          "usageRequirements": "none"
+        }
+      ]
+    }
+  ]
+  
