@@ -7,7 +7,7 @@
         {
           "label": "conditionsCodes",
           "description": "searches for snomed ct codes in FHIR condition resources with a clinical status that is either active, recurrent or relapse, that have been verified by clinical staff and that are part of a diagnosis",
-          "Jpath": "context.diabetesAssessment.entry.resource[resourceType='Condition'][clinicalStatus.coding.code in ['active','recurrent','relapse'] and clinicalStatus.coding.system in ['http://terminology.hl7.org/CodeSystem/condition-clinical']][verificationStatus.coding.code in ['confirmed','provisional'] and verificationStatus.coding.system in ['http://terminology.hl7.org/CodeSystem/condition-ver-status']][category.coding[0].code in ['encounter-diagnosis','439401001','problem-list-item'] and category.coding[0].system in ['http://terminology.hl7.org/CodeSystem/condition-category','http://snomed.info/sct'] ].code.coding[system='http://snomed.info/sct'].code",
+          "Jpath": "context.diabetesAssessment.resource[resourceType='Condition'][clinicalStatus.coding.code in ['active','recurrent','relapse'] and clinicalStatus.coding.system in ['http://terminology.hl7.org/CodeSystem/condition-clinical']][verificationStatus.coding.code in ['confirmed','provisional'] and verificationStatus.coding.system in ['http://terminology.hl7.org/CodeSystem/condition-ver-status']][category.coding[0].code in ['encounter-diagnosis','439401001','problem-list-item'] and category.coding[0].system in ['http://terminology.hl7.org/CodeSystem/condition-category','http://snomed.info/sct'] ].code.coding[system='http://snomed.info/sct'].code",
           "typeOf": "string",
           "required": true
         },

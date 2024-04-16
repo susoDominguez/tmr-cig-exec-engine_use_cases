@@ -53,37 +53,37 @@
       "parameter": "osteoarthritis",
       "description": "osteoarthritis CIG initialiser",
       "cigInvolved": ["CIG-OA"],
-      "hookInvolved": ["DB-HT-OA-merge"],
+      "hookInvolved": [],
       "dataPaths": [
         {
           "label": "clinicalStatus",
           "Jpath": "context.osteoarthritis.resource[resourceType = 'Condition'].clinicalStatus.coding.code",
           "typeOf": "string",
-          "required": false
+          "required": true
         },
         {
           "label": "verificationStatus",
           "Jpath": "context.osteoarthritis.resource[resourceType = 'Condition'].verificationStatus.coding.code",
           "typeOf": "string",
-          "required": false
+          "required": true
         },
         {
           "label": "category",
           "Jpath": "context.osteoarthritis.resource[resourceType = 'Condition'].category.coding[system = 'http://terminology.hl7.org/CodeSystem/condition-category' or system = 'http://snomed.info/sct'].code",
           "typeOf": "string",
-          "required": false
+          "required": true
         }
       ],
       "actions": [
         {
-          "action": "anyElemIn",
+          "action": "isIncluded",
           "details": {
           "arg1": "clinicalStatus",
           "arg2": "clinicalStatusList"
           }
         },
         {
-          "action": "anyElemIn",
+          "action": "isIncluded",
           "details": {
             "arg1": "verificationStatus",
             "arg2": "verificationStatusList"
@@ -118,31 +118,31 @@
           "label": "clinicalStatus",
           "Jpath": "context.diabetes.resource[resourceType = 'Condition'].clinicalStatus.coding.code",
           "typeOf": "string",
-          "required": false
+          "required": true
         },
         {
           "label": "verificationStatus",
           "Jpath": "context.diabetes.resource[resourceType = 'Condition'].verificationStatus.coding.code",
           "typeOf": "string",
-          "required": false
+          "required": true
         },
         {
           "label": "category",
           "Jpath": "context.diabetes.resource[resourceType = 'Condition'].category.coding[system = 'http://terminology.hl7.org/CodeSystem/condition-category' or system = 'http://snomed.info/sct'].code",
           "typeOf": "string",
-          "required": false
+          "required": true
         }
       ],
       "actions": [
         {
-          "action": "anyElemIn",
+          "action": "isIncluded",
           "details": {
           "arg1": "clinicalStatus",
           "arg2": "clinicalStatusList"
           }
         },
         {
-          "action": "anyElemIn",
+          "action": "isIncluded",
           "details": {
             "arg1": "verificationStatus",
             "arg2": "verificationStatusList"
@@ -177,31 +177,31 @@
           "label": "clinicalStatus",
           "Jpath": "context.hypertension.resource[resourceType = 'Condition'].clinicalStatus.coding.code",
           "typeOf": "string",
-          "required": false
+          "required": true
         },
         {
           "label": "verificationStatus",
           "Jpath": "context.hypertension.resource[resourceType = 'Condition'].verificationStatus.coding.code",
           "typeOf": "string",
-          "required": false
+          "required": true
         },
         {
           "label": "category",
           "Jpath": "context.hypertension.resource[resourceType = 'Condition'].category.coding[system = 'http://terminology.hl7.org/CodeSystem/condition-category' or system = 'http://snomed.info/sct'].code",
           "typeOf": "string",
-          "required": false
+          "required": true
         }
       ],
       "actions": [
         {
-          "action": "anyElemIn",
+          "action": "isIncluded",
           "details": {
           "arg1": "clinicalStatus",
           "arg2": "clinicalStatusList"
           }
         },
         {
-          "action": "anyElemIn",
+          "action": "isIncluded",
           "details": {
             "arg1": "verificationStatus",
             "arg2": "verificationStatusList"
