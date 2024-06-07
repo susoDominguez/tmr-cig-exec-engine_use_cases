@@ -43,21 +43,33 @@
 :CareActionType rdf:type owl:Class ;
     rdfs:subClassOf :ActionType .
 
+:DrugAdministrationType rdf:type owl:Class ;
+    rdfs:subClassOf :CareActionType .
+
 #special case for non drug therapies
 :NonDrugAdministrationType rdf:type owl:Class ;
     rdfs:subClassOf :CareActionType .
 
-:NonDrugType rdf:type owl:Class;
-    rdfs:subClassOf :Type .
+:VaccinationType rdf:type owl:Class ;
+    rdfs:subClassOf :DrugAdministrationType ;
+     owl:disjointWith :NonDrugAdministrationType .
 
-:DrugAdministrationType rdf:type owl:Class ;
+:CombinedCareActionType rdf:type owl:Class ;
     rdfs:subClassOf :CareActionType .
+# subclass must be unionOf
 
 :DrugType rdf:type owl:Class;
     rdfs:subClassOf :Type .
 
 :DrugCategory rdf:type owl:Class ;
                 rdfs:subClassOf :DrugType .
+
+:NonDrugType rdf:type owl:Class;
+    rdfs:subClassOf :Type .
+
+# combination of 2 or more drug and/or nonDrug types
+:CombinedCareType rdf:type owl:Class ;
+                rdfs:subClassOf :DrugType, :NonDrugType .
 
 :DrugEffectCategory rdf:type owl:Class ;
                         rdfs:subClassOf :DrugCategory .
@@ -130,14 +142,24 @@ rdfs:subClassOf owl:Thing .
 
 :administrationOf a owl:ObjectProperty ;
     rdfs:subPropertyOf :participationOf ;
-    rdfs:domain :DrugAdministrationType;
+    rdfs:domain :DrugAdministrationType ;
     rdfs:range :DrugType.
+
+:inoculationOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf :administrationOf ;
+    rdfs:domain :VaccinationType ;
+    rdfs:range :VaccineType.
 
 #same as administratioOf but for nonDrug types
 :applicationOf a owl:ObjectProperty ;
     rdfs:subPropertyOf :participationOf ;
-    rdfs:domain :NonDrugAdministrationType;
+    rdfs:domain :NonDrugAdministrationType ;
     rdfs:range :NonDrugType.
+
+:combinedParticipationOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf :participationOf ;
+    rdfs:domain :CombinedCareActionType ;
+    rdfs:range :CombinedCareType .
 
 :hasPreSituation rdf:type owl:ObjectProperty ;
     rdfs:range :SituationType ;
