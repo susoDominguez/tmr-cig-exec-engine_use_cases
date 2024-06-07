@@ -41,6 +41,7 @@
           "label": "conditionsCodes",
           "Jpath": "context.clinicalConditions.entry.resource[resourceType='Condition' and clinicalStatus.coding.code in ['active','recurrent','relapse'] and verificationStatus.coding.code in ['confirmed','provisional'] and category.coding.code in ['problem-list-item','encounter-diagnosis','439401001']].code.coding[system='http://snomed.info/sct'].code",
           "typeOf": "string",
+          "defaultVal": null,
           "required": true
         }
       ],
@@ -52,14 +53,14 @@
             "codeSystem": "900000000000207008",
             "version": "20200131",
             "arg1": "conditionsCodes",
-            "arg2": "conditionCode"
+            "arg2": "SCTID"
           }
         }
       ],
       "constraints": [
-        { "actionsRef": { "conditionCode": 38341003 }, "output": ["CIG-HT"] },
-        { "actionsRef": { "conditionCode": 396275006 }, "output": ["CIG-OA"] },
-        { "actionsRef": { "conditionCode": 73211009 }, "output": ["CIG-DM"] }
+        { "actionsRef": { "SCTID": 38341003 }, "output": ["CIG-HT"] },
+        { "actionsRef": { "SCTID": 396275006 }, "output": ["CIG-OA"] },
+        { "actionsRef": { "SCTID": 73211009 }, "output": ["CIG-DM"] }
       ]
     },
     {
