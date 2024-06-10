@@ -31,7 +31,7 @@
         vocab:stateOf   "low" ;
         vocab:umlsCode  "null" .
 
-:SitHighHeartFailureRisk rdf:type vocab:SituationType;
+:SitHighHeartFailureRisk rdf:type vocab:SituationType , owl:NamedIndividual ;
         rdfs:label              "Heart failure risk is high"@en ;
         vocab:stateOf   "high" ;
         vocab:umlsCode  "null" .
