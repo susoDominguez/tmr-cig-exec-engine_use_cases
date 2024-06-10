@@ -24,7 +24,7 @@
 :DrugTTramadol  a   vocab:DrugType , owl:NamedIndividual ;
         rdfs:label  "Tramadol"@en .
 
-:DrugCatAnalgesic  a               vocab:DrugType , owl:NamedIndividual ;
+:DrugCatAnalgesic  a   vocab:DrugType , owl:NamedIndividual ;
         rdfs:label                 "Analgesic"@en ;
         vocab:hasGroupingCriteria  :TrPainkiller .
 
@@ -155,15 +155,15 @@
                           rdfs:label    "sulphonylureas"@en . 
 
 
-:ActAdministerPiaglitazone  rdf:type vocab:DrugAdministrationType;
+:ActAdministerPiaglitazone  rdf:type vocab:DrugAdministrationType ,  owl:NamedIndividual;
                             rdfs:label "Administer piaglitazone"@en ;
                             vocab:administrationOf  :DrugTPiaglitazone .
 
-:ActAdministerMetformin  rdf:type vocab:DrugAdministrationType;
+:ActAdministerMetformin  rdf:type vocab:DrugAdministrationType ,  owl:NamedIndividual ;
                          rdfs:label "Administer metformin"@en ;
                          vocab:administrationOf  :DrugTMetformin .
                          
-:ActAdministerSulphonylureas  rdf:type vocab:DrugAdministrationType ;
+:ActAdministerSulphonylureas  rdf:type vocab:DrugAdministrationType ,  owl:NamedIndividual ;
                             rdfs:label "Administer sulphonylureas"@en ;
                             vocab:administrationOf  :DrugTSulphonylureas .
 
