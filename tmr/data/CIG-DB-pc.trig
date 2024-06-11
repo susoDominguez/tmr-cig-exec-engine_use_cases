@@ -16,7 +16,7 @@
 
 
 :CIG-DB  rdf:type   owl:NamedIndividual , tmr:ClinicalGuideline ;
-        rdfs:label  "CIG for Diabetes Mellitus"@en .
+        rdfs:label  "CIG for Diabetes Mellitus (added TMR preconditions)"@en .
 
 :RecDB-Thiazolidinediones1
         tmr:isPartOf  :CIG-DB , :subCIG-Metmorfin .
@@ -57,20 +57,6 @@
             prov:wasAttributedTo  :JD .
 }
 
-:CBSulphonylureas_publicationinfo {
-    :CBSulphonylureas_nanopub
-            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
-            prov:wasAttributedTo  :Veruska .
-}
-
-:CBSulphonylureasIntolerance_head {
-    :CBSulphonylureasIntolerance_nanopub
-            rdf:type               np:Nanopublication ;
-            np:hasAssertion        :CBSulphonylureasIntolerance ;
-            np:hasProvenance       :CBSulphonylureasIntolerance_provenance ;
-            np:hasPublicationInfo  :CBSulphonylureasIntolerance_publicationinfo .
-}
-
 :RecDB-Thiazolidinediones2_provenance {
     :RecDB-Thiazolidinediones2
             prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
@@ -81,13 +67,6 @@
             oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
 }
 
-:CBSulphonylureas_head {
-    :CBSulphonylureas_nanopub
-            rdf:type               np:Nanopublication ;
-            np:hasAssertion        :CBSulphonylureas ;
-            np:hasProvenance       :CBSulphonylureas_provenance ;
-            np:hasPublicationInfo  :CBSulphonylureas_publicationinfo .
-}
 
 :RecDB-Thiazolidinediones4_provenance {
     :RecDB-Thiazolidinediones4
@@ -113,15 +92,6 @@
             prov:wasAttributedTo  :JD .
 }
 
-:CBSulphonylureasIntolerance_provenance {
-    :CBSulphonylureasIntolerance
-            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
-    
-    :CBSulphonylureasIntolerance_provenance
-            rdf:type      oa:Annotation ;
-            oa:hasBody    :CBSulphonylureasIntolerance ;
-            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
-}
 
 :RecDB-Thiazolidinediones2_publicationinfo {
     :RecDB-Thiazolidinediones2_head
@@ -139,29 +109,6 @@
             oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
 }
 
-:CBPiaglitazone_provenance {
-    :CBPiaglitazone  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
-    
-    :CBPiaglitazone_provenance
-            rdf:type      oa:Annotation ;
-            oa:hasBody    :CBPiaglitazone ;
-            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
-}
-
-:CBPiaglitazoneHeartFailure_publicationinfo {
-    :CBPiaglitazoneHeartFailure_nanopub
-            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
-            prov:wasAttributedTo  :Veruska .
-}
-
-:CBMetformin {
-    :ActAdministerMetformin
-            tmr:causes  :TrLowerHbA1c .
-    
-    :CBMetformin  rdf:type  tmr:CausationBelief ;
-            tmr:frequency  "always" ;
-            tmr:strength   "L1" .
-}
 
 :RecDB-Thiazolidinediones1_publicationinfo {
     :RecDB-Thiazolidinediones1_head
@@ -189,57 +136,33 @@
             tmr:strength            "should-not" .
 }
 
-:CBPiaglitazone {
-    :ActAdministerPiaglitazone
-            tmr:causes  :TrLowerHbA1c .
-    
-    :CBPiaglitazone  rdf:type  tmr:CausationBelief ;
-            tmr:frequency  "always" ;
-            tmr:strength   "L1" .
-}
 
 :RecDB-Thiazolidinediones3c {
     :CBPiaglitazone  tmr:contribution  "positive" .
     
-    :CBSulphonylureasIntolerance
-            tmr:contribution  "negative" .
     
     :RecDB-Thiazolidinediones3c
             rdf:type                tmr:ClinicalRecommendation ;
-            rdfs:label              "Use pioglitazone if intolerant for sulphonylureas"@en , "Stop sulphonylureas, if intolerant"@en ;
-            tmr:aboutExecutionOf    :ActAdministerPiaglitazone , :ActAdministerSulphonylureas ;
-            tmr:basedOn             :CBPiaglitazone , :CBSulphonylureasIntolerance ;
+            rdfs:label              "Use pioglitazone if intolerant for sulphonylureas"@en ;
+            tmr:aboutExecutionOf    :ActAdministerPiaglitazone ;
+            tmr:basedOn             :CBPiaglitazone ;
             tmr:hasFilterSituation  :PredIntolerantForSulphonylureas ;
             tmr:partOf              :CIG-DB ;
-            tmr:strength            "should" , "should-not" .
+            tmr:strength            "should" .
 }
 
-:CBMetformin_provenance {
-    :CBMetformin  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
-    
-    :CBMetformin_provenance
-            rdf:type      oa:Annotation ;
-            oa:hasBody    :CBMetformin ;
-            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
-}
-
-:CBMetforminIntolerance_head {
-    :CBMetforminIntolerance_nanopub
-            rdf:type               np:Nanopublication ;
-            np:hasAssertion        :CBMetforminIntolerance ;
-            np:hasProvenance       :CBMetforminIntolerance_provenance ;
-            np:hasPublicationInfo  :CBMetforminIntolerance_publicationinfo .
-}
 
 :RecDB-Thiazolidinediones2 {
-    :CBSulphonylureas
+    :CBSulphonylureas_LHb
             tmr:contribution  "positive" .
+
+     :CBSulphonylureas_IW   tmr:contribution  "negative" .
     
     :RecDB-Thiazolidinediones2
             rdf:type                tmr:ClinicalRecommendation ;
             rdfs:label              "Sulphonylureas if not overweight, or intolerant or contraindications for metformin"@en ;
             tmr:aboutExecutionOf    :ActAdministerSulphonylureas ;
-            tmr:basedOn             :CBSulphonylureas ;
+            tmr:basedOn             :CBSulphonylureas_LHb , :CBSulphonylureas_IW ;
             tmr:hasFilterSituation  :PCNotOverweightOrIntolerantOrContraindications ;
             tmr:partOf              :CIG-DB ;
             tmr:strength            "should" .
@@ -286,37 +209,6 @@
             np:hasPublicationInfo  :RecDB-Thiazolidinediones3d_publicationinfo .
 }
 
-:CBPiaglitazoneHeartFailure_head {
-    :CBPiaglitazoneHeartFailure_nanopub
-            rdf:type               np:Nanopublication ;
-            np:hasAssertion        :CBPiaglitazoneHeartFailure ;
-            np:hasProvenance       :CBPiaglitazoneHeartFailure_provenance ;
-            np:hasPublicationInfo  :CBPiaglitazoneHeartFailure_publicationinfo .
-}
-
-:CBPiaglitazone_head {
-    :CBPiaglitazone_nanopub
-            rdf:type               np:Nanopublication ;
-            np:hasAssertion        :CBPiaglitazone ;
-            np:hasProvenance       :CBPiaglitazone_provenance ;
-            np:hasPublicationInfo  :CBPiaglitazone_publicationinfo .
-}
-
-:CBMetformin_publicationinfo {
-    :CBMetformin_nanopub
-            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
-            prov:wasAttributedTo  :Veruska .
-}
-
-:CBSulphonylureas {
-    :ActAdministerSulphonylureas
-            tmr:causes  :TrLowerHbA1c , :TrIncreaseWeight , :TrIncreaseHypoglycaemia .
-    
-    :CBSulphonylureas
-            rdf:type       tmr:CausationBelief ;
-            tmr:frequency  "always" ;
-            tmr:strength   "L1" .
-}
 
 :RecDB-Thiazolidinediones3a_provenance {
     :RecDB-Thiazolidinediones3a
@@ -338,11 +230,6 @@
             oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
 }
 
-:CBPiaglitazone_publicationinfo {
-    :CBPiaglitazone_nanopub
-            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
-            prov:wasAttributedTo  :Veruska .
-}
 
 :RecDB-Thiazolidinediones2_head {
     :RecDB-Thiazolidinediones2_head
@@ -383,15 +270,6 @@
             tmr:strength            "should" .
 }
 
-:CBMetforminIntolerance {
-    :ActAdministerMetformin
-            tmr:causes  :TrMetforminIntolerance .
-    
-    :CBMetforminIntolerance
-            rdf:type       tmr:CausationBelief ;
-            tmr:frequency  "always" ;
-            tmr:strength   "L1" .
-}
 
 :RecDB-Thiazolidinediones3d_provenance {
     :RecDB-Thiazolidinediones3d
@@ -403,25 +281,6 @@
             oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
 }
 
-:CBMetforminIntolerance_provenance {
-    :CBMetforminIntolerance
-            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
-    
-    :CBMetforminIntolerance_provenance
-            rdf:type      oa:Annotation ;
-            oa:hasBody    :CBMetforminIntolerance ;
-            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
-}
-
-:CBSulphonylureas_provenance {
-    :CBSulphonylureas
-            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
-    
-    :CBSulphonylureas_provenance
-            rdf:type      oa:Annotation ;
-            oa:hasBody    :CBSulphonylureas ;
-            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
-}
 
 :RecDB-Thiazolidinediones1 {
     :CBMetformin  tmr:contribution  "positive" .
@@ -462,31 +321,6 @@
             np:hasPublicationInfo  :RecDB-Thiazolidinediones4_publicationinfo .
 }
 
-:CBPiaglitazoneHeartFailure_provenance {
-    :CBPiaglitazoneHeartFailure
-            prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
-    
-    :CBPiaglitazoneHeartFailure_provenance
-            rdf:type      oa:Annotation ;
-            oa:hasBody    :CBPiaglitazoneHeartFailure ;
-            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
-}
-
-:CBMetforminIntolerance_publicationinfo {
-    :CBMetforminIntolerance_nanopub
-            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
-            prov:wasAttributedTo  :Veruska .
-}
-
-:CBPiaglitazoneHeartFailure {
-    :ActAdministerPiaglitazone
-            tmr:causes  :TrPiaglitazoneSideEffects .
-    
-    :CBPiaglitazoneHeartFailure
-            rdf:type       tmr:CausationBelief ;
-            tmr:frequency  "always" ;
-            tmr:strength   "L1" .
-}
 
 :RecDB-Thiazolidinediones1_head {
     :RecDB-Thiazolidinediones1_head
@@ -510,14 +344,6 @@
             tmr:strength            "should-not" .
 }
 
-:CBMetformin_head {
-    :CBMetformin_nanopub
-            rdf:type               np:Nanopublication ;
-            np:hasAssertion        :CBMetformin ;
-            np:hasProvenance       :CBMetformin_provenance ;
-            np:hasPublicationInfo  :CBMetformin_publicationinfo .
-}
-
 :RecDB-Thiazolidinediones3b_head {
     :RecDB-Thiazolidinediones3b_head
             rdf:type               np:Nanopublication ;
@@ -526,11 +352,6 @@
             np:hasPublicationInfo  :RecDB-Thiazolidinediones3b_publicationinfo .
 }
 
-:CBSulphonylureasIntolerance_publicationinfo {
-    :CBSulphonylureasIntolerance_nanopub
-            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
-            prov:wasAttributedTo  :Veruska .
-}
 
 :RecDB-Thiazolidinediones3e_publicationinfo {
     :RecDB-Thiazolidinediones3e_head
@@ -554,25 +375,16 @@
             prov:wasAttributedTo  :JD .
 }
 
-:CBSulphonylureasIntolerance {
-    :ActAdministerMetformin
-            tmr:causes  :TrSulphonylureasIntolerance .
-    
-    :CBSulphonylureasIntolerance
-            rdf:type       tmr:CausationBelief ;
-            tmr:frequency  "always" ;
-            tmr:strength   "L1" .
-}
 
 :RecDB-Thiazolidinediones5 {
-    :CBSulphonylureas
+    :CBSulphonylureas_IHg
             tmr:contribution  "negative" .
     
     :RecDB-Thiazolidinediones5
             rdf:type                tmr:ClinicalRecommendation ;
             rdfs:label              "With intensive insulin therapy, stop sulphonylurea"@en ;
             tmr:aboutExecutionOf    :ActAdministerSulphonylureas ;
-            tmr:basedOn             :CBSulphonylureas ;
+            tmr:basedOn             :CBSulphonylureas_IHg ;
             tmr:hasFilterSituation  :PredIntenseInsulinTherapy ;
             tmr:partOf              :CIG-DB ;
             tmr:strength            "should-not" .

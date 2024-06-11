@@ -146,34 +146,98 @@ data:CBMetforminIntolerance {
             prov:wasAttributedTo  :Veruska .
 }
 
-:CBSulphonylureas_head {
-    :CBSulphonylureas_nanopub
+:CBSulphonylureas_LHb_head {
+    :CBSulphonylureas_LHb_nanopub
             a                           nanopub:Nanopublication ;
-            nanopub:hasAssertion        :CBSulphonylureas ;
-            nanopub:hasProvenance       :CBSulphonylureas_provenance ;
-            nanopub:hasPublicationInfo  :CBSulphonylureas_publicationinfo .
+            nanopub:hasAssertion        :CBSulphonylureas_LHb ;
+            nanopub:hasProvenance       :CBSulphonylureas_LHb_provenance ;
+            nanopub:hasPublicationInfo  :CBSulphonylureas_LHb_publicationinfo .
 }
 
-data:CBSulphonylureas {
+:CBSulphonylureas_IW_head {
+    :CBSulphonylureas_IW_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBSulphonylureas_IW ;
+            nanopub:hasProvenance       :CBSulphonylureas_IW_provenance ;
+            nanopub:hasPublicationInfo  :CBSulphonylureas_IW_publicationinfo .
+}
+
+:CBSulphonylureas_IHg_head {
+    :CBSulphonylureas_IHg_nanopub
+            a                           nanopub:Nanopublication ;
+            nanopub:hasAssertion        :CBSulphonylureas_IHg ;
+            nanopub:hasProvenance       :CBSulphonylureas_IHg_provenance ;
+            nanopub:hasPublicationInfo  :CBSulphonylureas_IHg_publicationinfo .
+}
+
+data:CBSulphonylureas_LHb {
     data:ActAdministerSulphonylureas
-        vocab:causes                  data:TrLowerHbA1c, data:TrIncreaseWeight, data:TrIncreaseHypoglycaemia.
-    data:CBSulphonylureas
+        vocab:causes                  data:TrLowerHbA1c .
+    data:CBSulphonylureas_LHb
         a                             vocab:CausationBelief ;
         vocab:strength                "L1"^^xsd:string;
         vocab:frequency               "always"^^xsd:string.
 }
 
-:CBSulphonylureas_provenance {
-    :CBSulphonylureas  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+data:CBSulphonylureas_IW {
+    data:ActAdministerSulphonylureas
+        vocab:causes                  data:TrIncreaseWeight .
+    data:CBSulphonylureas_IW
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+data:CBSulphonylureas_IHg {
+    data:ActAdministerSulphonylureas
+        vocab:causes       data:TrIncreaseHypoglycaemia.
+    data:CBSulphonylureas_IHg
+        a                             vocab:CausationBelief ;
+        vocab:strength                "L1"^^xsd:string;
+        vocab:frequency               "always"^^xsd:string.
+}
+
+:CBSulphonylureas_LHb_provenance {
+    :CBSulphonylureas_LHb  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
     
-    :CBSulphonylureas_provenance
+    :CBSulphonylureas_LHb_provenance
             a             oa:Annotation ;
-            oa:hasBody    :CBSulphonylureas ;
+            oa:hasBody    :CBSulphonylureas_LHb ;
             oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
 }
 
-:CBSulphonylureas_publicationinfo {
-    :CBSulphonylureas_nanopub
+:CBSulphonylureas_IW_provenance {
+    :CBSulphonylureas_IW  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBSulphonylureas_IW_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBSulphonylureas_IW ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBSulphonylureas_IHg_provenance {
+    :CBSulphonylureas_IHg  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
+    
+    :CBSulphonylureas_IHg_provenance
+            a             oa:Annotation ;
+            oa:hasBody    :CBSulphonylureas_IHg ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+:CBSulphonylureas_IHg_publicationinfo {
+    :CBSulphonylureas_IHg_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBSulphonylureas_IW_publicationinfo {
+    :CBSulphonylureas_IW_nanopub
+            prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  :Veruska .
+}
+
+:CBSulphonylureas_LHb_publicationinfo {
+    :CBSulphonylureas_LHb_nanopub
             prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
             prov:wasAttributedTo  :Veruska .
 }
@@ -194,6 +258,7 @@ data:CBSulphonylureasIntolerance {
         vocab:strength                "L1"^^xsd:string;
         vocab:frequency               "always"^^xsd:string.
 }
+
 
 :CBSulphonylureasIntolerance_provenance {
     :CBSulphonylureasIntolerance  prov:wasDerivedFrom  <http://hdl.handle.net/10222/43703> .
