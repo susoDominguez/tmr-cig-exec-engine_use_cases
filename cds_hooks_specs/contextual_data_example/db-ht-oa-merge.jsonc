@@ -8,8 +8,22 @@
             "resource": {
                 "resourceType": "Condition",
                 "id": "DB",
-                "clinicalStatus": "active",
-                "verificationStatus": "confirmed",
+                "clinicalStatus": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                      "code": "active"
+                    }
+                  ]
+                },
+                "verificationStatus": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                      "code": "confirmed"
+                    }
+                  ]
+                },
                 "category": [
                     {
                       "coding": [
@@ -42,8 +56,22 @@
             "resource": {
                 "resourceType": "Condition",
                 "id": "HT",
-                "clinicalStatus": "active",
-                "verificationStatus": "confirmed",
+                "clinicalStatus": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                      "code": "active"
+                    }
+                  ]
+                },
+                "verificationStatus": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                      "code": "confirmed"
+                    }
+                  ]
+                },
                 "category": [
                     {
                       "coding": [
@@ -76,8 +104,22 @@
             "resource": {
                 "resourceType": "Condition",
                 "id": "oa",
-                "clinicalStatus": "active",
-                "verificationStatus": "confirmed",
+                "clinicalStatus": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                      "code": "active"
+                    }
+                  ]
+                },
+                "verificationStatus": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                      "code": "confirmed"
+                    }
+                  ]
+                },
                 "category": [
                     {
                       "coding": [

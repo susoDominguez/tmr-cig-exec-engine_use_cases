@@ -4,173 +4,262 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix swrl:  <http://www.w3.org/2003/11/swrl#> .
 @prefix vocab4i: <http://anonymous.org/vocab4i/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml:   <http://www.w3.org/XML/1998/namespace> .
 @prefix tmr:   <http://anonymous.org/vocab/> .
 @prefix vocab: <http://anonymous.org/vocab/> .
 @prefix tmr4i: <http://anonymous.org/vocab4i/> .
-@prefix prov:  <http://www.w3.org/ns/prov#> .
-@prefix swrl:  <http://www.w3.org/2003/11/swrl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix nanopub: <http://www.nanopub.org/nschema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
 
+data:DrugTMetformin  rdf:type  owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing metformin (medicinal product)"@en ;
+        vocab:snomedCode  "109081006" .
 
-:DrugCatNSAID  a                   vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label                 "NSAID"@en ;
-        vocab:hasGroupingCriteria  :TrAntinflammatory , :SitNonSteroidalDrug .
+data:ActAdministerMetformin
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing metformin"@en ;
+        vocab:administrationOf  data:DrugTMetformin .
 
-:DrugTTramadol  a   vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Tramadol"@en .
+data:ActAdministerPioglitazone
+        rdf:type             owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label           "administer product containing pioglitazone"@en ;
+        vocab:applicationOf  data:DrugTPioglitazone .
 
-:DrugCatAnalgesic  a   vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label                 "Analgesic"@en ;
-        vocab:hasGroupingCriteria  :TrPainkiller .
+data:DrugTPioglitazone
+        rdf:type          owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing pioglitazone (medicinal product)"@en ;
+        vocab:snomedCode  "326058001" .
 
-:ActAdministerPlateletAggregationInhibitor
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Platelet Aggregation Inhibitor"@en ;
-        vocab:administrationOf  :DrugCatPlateletAggregationInhibitor .
+data:DrugCatNSAID  rdf:type        owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label                 "Non-steroidal anti-inflammatory agent (product)"@en ;
+        vocab:hasGroupingCriteria  data:Trdata:TrAntinflammatory , data:Trdata:SitNonSteroidalDrug ;
+        vocab:snomedCode           "16403005" .
 
-:DrugCatPlateletAggregationInhibitor
-        a                          vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label                 "Platelet Aggregation Inhibitor"@en ;
-        vocab:hasGroupingCriteria  :TrDecreaseBC .
+data:ActAdministerNSAID
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing non-steroidal anti-inflammatory agent (NSAID) "@en ;
+        vocab:administrationOf  data:DrugCatNSAID ;
+        vocab:subsumes          data:ActAdministerdataAspirin .
 
-:DrugTDipyridamole  a  vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Dipyridamole"@en .
+data:DrugTTramadol  rdf:type  owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing tramadol (medicinal product)"@en ;
+        vocab:snomedCode  "108507005" .
 
-:ActAdministerTramadol
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Tramadol"@en ;
-        vocab:administrationOf  :DrugTTramadol .
+data:ActAdministerTramadol
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing tramadol"@en ;
+        vocab:administrationOf  data:DrugTTramadol .
 
-:ActAdministerAnalgesic
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Analgesic"@en ;
-        vocab:administrationOf  :DrugCatAnalgesic .
+data:DrugCatAnalgesic
+        rdf:type                   owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label                 "Medicinal product acting as analgesic agent (product)"@en ;
+        vocab:hasGroupingCriteria  data:TrPainkiller ;
+        vocab:snomedCode           "53009005" .
 
-:DrugCatAntiBacterialAgent
-        a           vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Anti-Bacterial Agent"@en .
+data:ActAdministerAnalgesic
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer medicinal product acting as analgesic agent"@en ;
+        vocab:administrationOf  data:DrugCatAnalgesic ;
+        vocab:subsumes          data:ActAdministerTramadol .
 
-:DrugTInsulin  a    vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Insulin"@en .
+data:DrugCatPlateletAggregationInhibitor
+        rdf:type                   owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label                 "Product containing platelet aggregation inhibitor"@en ;
+        vocab:hasGroupingCriteria  data:TrDecreaseBC ;
+        vocab:snomedCode           "773388004" .
 
-:ActAdministerAspirin
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Aspirin"@en ;
-        vocab:administrationOf  :DrugTAspirin .
+data:DrugTDipyridamole
+        rdf:type          owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing dipyridamole (medicinal product)"@en ;
+        vocab:snomedCode  "66859009" .
 
-:DrugTAspirin  a    vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Aspirin"@en .
+data:ActAdministerDipyridamole
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing dipyridamole"@en ;
+        vocab:administrationOf  data:DrugTDipyridamole .
 
-:ActAdministerDipyridamole
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Dipyridamole"@en ;
-        vocab:administrationOf  :DrugTDipyridamole .
+data:DrugCatAntibacterialSubstance
+        rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Medicinal product acting as antibacterial agent (product)"@en ;
+        vocab:snomedCode  "346325008" .
 
-:DrugCatNonSteroidal  a            vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label                 "Non-Steroidal Drug Type"@en ;
-        vocab:hasGroupingCriteria  :SitNonSteroidalDrug .
+data:ActAdministerAntibacterialSubstance
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer medicinal product acting as antibacterial agent (product)"@en ;
+        vocab:administrationOf  data:DrugCatAntibacterialSubstance .
 
-:ActAdministerAntiBacterialAgent
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Anti-Bacterial Agent"@en ;
-        vocab:administrationOf  :DrugCatAntiBacterialAgent .
+data:DrugCatInsulin  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Product containing insulin (product)"@en ;
+        vocab:snomedCode  "39487003" .
 
-:ActAdministerNonSteroidal
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer NonSteroidal"@en ;
-        vocab:administrationOf  :DrugCatNonSteroidal .
+data:ActAdministerInsulin
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer Product containing insulin "@en ;
+        vocab:administrationOf  data:DrugCatInsulin .
 
-:ActAdministerPPI  a            owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer PPI"@en ;
-        vocab:administrationOf  :DrugCatPPI .
+data:DrugTBendroflumethiazide
+        rdf:type          owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing bendroflumethiazide (medicinal product)"@en ;
+        vocab:snomedCode  "91135008" .
 
-:DrugCatPPI  a      vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "PPI"@en .
+data:ActAdministerBendroflumethiazide
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing bendroflumethiazide (medicinal product)"@en ;
+        vocab:administrationOf  data:DrugTBendroflumethiazide .
 
-:ActAdministerIbuprofen
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Ibuprofen"@en ;
-        vocab:administrationOf  :DrugTIbuprofen .
+data:DrugTClopidogrel
+        rdf:type          owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing clopidogrel (medicinal product)"@en ;
+        vocab:snomedCode  "108979001" .
 
-:DrugTIbuprofen  a  vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Ibuprofen"@en .
+data:ActAdministerClopidogrel
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing clopidogrel "@en ;
+        vocab:administrationOf  data:DrugTClopidogrel .
 
-:ActAdministerClopidogrel
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Clopidogrel"@en ;
-        vocab:administrationOf  :DrugTClopidogrel .
+data:ActAdministerPlateletAggregationInhibitor
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing platelet aggregation inhibitor"@en ;
+        vocab:administrationOf  data:DrugCatPlateletAggregationInhibitor ;
+        vocab:subsumes          data:ActAdministerClopidogrel , data:ActAdministerAspirin .
 
-:DrugTClopidogrel  a  vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Clopidogrel"@en .
+data:DrugCatThiazide  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Medicinal product containing thiazide and acting as diuretic agent (product)"@en ;
+        vocab:snomedCode  "45518007" .
 
-:ActAdministerAntiHypertensiveAgent
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Anti Hypertensive"@en ;
-        vocab:administrationOf  :DrugCatAntiHypertensiveAgent .
+data:ActAdministerThiazide
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer medicinal product containing thiazide and acting as diuretic agent (product)"@en ;
+        vocab:administrationOf  data:DrugCatThiazide ;
+        vocab:subsumes          data:ActAdministerBendroflumethiazide .
 
-:DrugCatAntiHypertensiveAgent
-        a                          vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label                 "Anti Hypertensive"@en ;
-        vocab:hasGroupingCriteria  :TrDecreaseBP .
+data:DrugTEpoprostenol
+        rdf:type          owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing epoprostenol (medicinal product)"@en ;
+        vocab:snomedCode  "108593000" .
 
-:ActAdministerInsulin
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Insulin"@en ;
-        vocab:administrationOf  :DrugTInsulin .
+data:ActAdministerEpoprostenol
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing epoprostenol "@en ;
+        vocab:administrationOf  data:DrugTEpoprostenol .
 
-:ActAdministerNSAID  a          owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer NSAID"@en ;
-        vocab:administrationOf  :DrugCatNSAID .
+data:DrugTIbuprofen  rdf:type  owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Product containing ibuprofen (medicinal product)"@en ;
+        vocab:snomedCode  "38268001" .
 
-:ActAdministerThiazide
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer Thiazide"@en ;
-        vocab:administrationOf  :DrugCatThiazide ;
-        vocab:subsumes          :ActAdministerBendroflumethiazide .
+data:ActAdministerIbuprofen
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing ibuprofen"@en ;
+        vocab:administrationOf  data:DrugTIbuprofen .
 
-:DrugCatThiazide  a  vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Thiazide"@en .
+data:DrugCatPPI  rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label                 "Product containing hydrogen/potassium adenosine triphosphatase enzyme system inhibitor (product)"@en ;
+        vocab:hasGroupingCriteria  data:TrtoCheck ;
+        vocab:snomedCode           "108665006" .
 
-:ActAdministerBendroflumethiazide
-        a                       owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "Administer Bendroflumethiazide"@en ;
-        vocab:administrationOf  :DrugTBendroflumethiazide .
+data:ActAdministerPPI
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing hydrogen/potassium adenosine triphosphatase enzyme system inhibitor mechanism of action "@en ;
+        vocab:administrationOf  data:DrugCatPPI ;
+        vocab:subsumes          data:ActAdministerPantoprazole .
 
-:DrugTBendroflumethiazide
-        a           vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "Bendroflumethiazide"@en .
+data:DrugCatAntihypertensive
+        rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Antihypertensive agent"@en ;
+        vocab:snomedCode  "1182007" .
 
-:DrugTPiaglitazone  a     vocab:DrugType , owl:NamedIndividual ;
-                          rdfs:label    "piaglitazone"@en . 
+data:ActAdministerAntihypertensive
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing antihypertensive drug"@en ;
+        vocab:administrationOf  data:DrugCatAntihypertensive .
 
-:DrugTMetformin  a     vocab:DrugType , owl:NamedIndividual ;
-                          rdfs:label    "metformin"@en . 
+data:DrugCatSulfonylurea
+        rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Product containing sulfonylurea (product)"@en ;
+        vocab:snomedCode  "34012005" .
 
-:DrugTSulphonylureas  a     vocab:DrugType , owl:NamedIndividual ;
-                          rdfs:label    "sulphonylureas"@en . 
+data:ActAdministerSulfonylurea
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing sulfonylurea "@en ;
+        vocab:administrationOf  data:DrugCatSulfonylurea .
 
+data:DrugCatAceInhibitors
+        rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Product containing angiotensin-converting enzyme inhibitor (product)"@en ;
+        vocab:snomedCode  "41549009" .
 
-:ActAdministerPiaglitazone  rdf:type vocab:DrugAdministrationType ,  owl:NamedIndividual;
-                            rdfs:label "Administer piaglitazone"@en ;
-                            vocab:administrationOf  :DrugTPiaglitazone .
+data:ActAdministerAceInhibitors
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing angiotensin-converting enzyme inhibitor"@en ;
+        vocab:administrationOf  data:DrugCatAceInhibitors .
 
-:ActAdministerMetformin  rdf:type vocab:DrugAdministrationType ,  owl:NamedIndividual ;
-                         rdfs:label "Administer metformin"@en ;
-                         vocab:administrationOf  :DrugTMetformin .
-                         
-:ActAdministerSulphonylureas  rdf:type vocab:DrugAdministrationType ,  owl:NamedIndividual ;
-                            rdfs:label "Administer sulphonylureas"@en ;
-                            vocab:administrationOf  :DrugTSulphonylureas .
+data:DrugCatARB  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Product containing angiotensin II receptor antagonist (product)"@en ;
+        vocab:snomedCode  "96308008" .
 
-[ a                    owl:AllDifferent ;
-  owl:distinctMembers  ( :ActAdministerPiaglitazone :ActAdministerMetformin :ActAdministerSulphonylureas :ActAdministerAspirin :ActAdministerClopidogrel :ActAdministerDipyridamole :ActAdministerThiazide :ActAdministerTramadol :ActAdministerPPI :ActAdministerIbuprofen :ActAdministerInsulin :ActAdministerNSAID :ActEradicationTherapy )
+data:ActAdministerARB
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing angiotensin II receptor antagonist"@en ;
+        vocab:administrationOf  data:DrugCatARB .
+
+data:DrugCatCCB  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Product containing calcium channel blocker (product)"@en ;
+        vocab:snomedCode  "48698004" .
+
+data:ActAdministerCCB
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing calcium channel blocker"@en ;
+        vocab:administrationOf  data:DrugCatCCB .
+
+data:NonDrugTSelfMntrBldGlcs
+        rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Self-monitoring of blood glucose (procedure)"@en ;
+        vocab:snomedCode  "308113006" .
+
+data:ActAdministerSelfMntrBldGlcs
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "Perform self-monitoring of blood glucose"@en ;
+        vocab:applicationOf  data:NonDrugTSelfMntrBldGlcs .
+
+data:NonDrugTPerformExercise
+        rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Recommendation to exercise (procedure)"@en ;
+        vocab:snomedCode  "281090004" .
+
+data:ActAdministerPerformExercise
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "Recommendation to exercise"@en ;
+        vocab:applicationOf  data:NonDrugTPerformExercise .
+
+data:NonDrugTScanRetina
+        rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Diabetic retinopathy screening (procedure)"@en ;
+        vocab:snomedCode  "134395001" .
+
+data:ActAdministerScanRetina
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "Diabetic retinopathy screening"@en ;
+        vocab:applicationOf  data:NonDrugTScanRetina .
+
+data:DrugTSimvastatin40mg
+        rdf:type          owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "Simvastatin 40mg tablets (product)"@en ;
+        vocab:snomedCode  "42382311000001100" .
+
+data:ActAdministerSimvastatin40mg
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing Simvastatin 40mg tablets "@en ;
+        vocab:administrationOf  data:DrugTSimvastatin40mg .
+
+[ rdf:type             owl:AllDifferent ;
+  owl:distinctMembers  ( data:ActAdministerPiaglitazone data:ActAdministerMetformin data:ActAdministerSulphonylureas data:ActAdministerAspirin data:ActAdministerClopidogrel data:ActAdministerDipyridamole data:ActAdministerThiazide data:ActAdministerTramadol data:ActAdministerPPI data:ActAdministerIbuprofen data:ActAdministerInsulin data:ActAdministerNSAID data:ActEradicationTherapy )
 ] .
 
-[ a                    owl:AllDifferent ;
-  owl:distinctMembers  ( :DrugTPiaglitazone :DrugTMetformin :DrugTSulphonylureas :DrugTAspirin :DrugTClopidogrel :DrugTDipyridamole :DrugCatThiazide :DrugTTramadol :DrugCatPPI :DrugCatNSAID :DrugTIbuprofen :DrugTnsulin :DrugCatDiuretic :DrugCatAntiBacterialAgent :DrugCatPlateletAggregationInhibitor :DrugCatAnalgesic :DrugCatAntiHypertensiveAgent )
+[ rdf:type             owl:AllDifferent ;
+  owl:distinctMembers  ( data:DrugTPiaglitazone data:DrugTMetformin data:DrugTSulphonylureas data:DrugTAspirin data:DrugTClopidogrel data:DrugTDipyridamole data:DrugCatThiazide data:DrugTTramadol data:DrugCatPPI data:DrugCatNSAID data:DrugTIbuprofen data:DrugTnsulin data:DrugCatDiuretic data:DrugCatAntiBacterialAgent data:DrugCatPlateletAggregationInhibitor data:DrugCatAnalgesic data:DrugCatAntiHypertensiveAgent )
 ] .
