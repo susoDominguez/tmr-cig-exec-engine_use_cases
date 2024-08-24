@@ -22,7 +22,7 @@
 
 data:CombDrugTLabaLama  rdf:type   owl:NamedIndividual , tmr:DrugTypeCombination ;
         rdfs:label               "long-acting muscarinic antagonist and long-acting beta-2 agonist combination therapy"@en ;
-        vocab:snomedCode  "1115171000000107" .
+        vocab:snomedCode  "1115171000000107" ;
         tmr:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls .
 
 data:ActAdministerLabaLama
@@ -401,7 +401,7 @@ data:ActAdministerAspirin
         vocab:administrationOf  data:DrugTAspirin .
 
 data:DrugTAspirin  rdf:type  vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "product containing aspirin"@en .
+        rdfs:label  "product containing aspirin"@en ;
         vocab:snomedCode  "7947003" .
 
 data:DrugTEpoprostenol
