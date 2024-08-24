@@ -15,3 +15,13 @@ interaction_element(I, E) :-
     ( rdf_reachable(I, owl:sameAs, I2)
     ; rdf_reachable(I2, owl:sameAs, I)),  
     rdf(I2, vocab4i:relates, E).
+
+% Convert interaction result to JSON
+interaction_to_json(I, JSON) :-
+    interaction(I, Label, Elements),
+    JSON = json{interaction: I, label: Label, elements: Elements}.
+
+% Output the JSON
+interaction_json(I) :-
+    interaction_to_json(I, JSON),
+    json_write_dict(current_output, JSON).
