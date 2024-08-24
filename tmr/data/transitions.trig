@@ -17,7 +17,7 @@
 @prefix nanopub: <http://www.nanopub.org/nschema#> .
 
 
-:TrPiaglitazoneSideEffects rdf:type owl:NamedIndividual , vocab:TransitionType;
+:TrPioglitazoneSideEffects rdf:type owl:NamedIndividual , vocab:TransitionType;
                     vocab:affects               :PropHeartFailureRisk ;
                     vocab:derivative            "increase" ;
                     vocab:hasTransformableSituation :SitLowHeartFailureRisk ;
@@ -74,22 +74,22 @@
         vocab:stateOf   "present" ;
         vocab:umlsCode  "null" .
 
-:TrSulphonylureasIntolerance rdf:type owl:NamedIndividual , vocab:TransitionType;
-                    vocab:affects               :PropSulphonylureasSymptoms ;
+:TrSulfonylureaIntolerance rdf:type owl:NamedIndividual , vocab:TransitionType;
+                    vocab:affects               :PropSulfonylureaSymptoms ;
                     vocab:derivative            "increase" ;
-                    vocab:hasTransformableSituation :SitSulphonylureasSymptomsNotPresent ;
-                    vocab:hasExpectedSituation :SitSulphonylureasSymptomsPresent .
+                    vocab:hasTransformableSituation :SitSulfonylureaSymptomsNotPresent ;
+                    vocab:hasExpectedSituation :SitSulfonylureaSymptomsPresent .
 
-:PropSulphonylureas  a       owl:NamedIndividual , vocab:TropeType ;
-                                rdfs:label  "sulphonylureas symptoms"@en .
+:PropSulfonylurea  a       owl:NamedIndividual , vocab:TropeType ;
+                                rdfs:label  "sulfonylurea symptoms"@en .
 
-:SitSulphonylureasSymptomsNotPresent rdf:type owl:NamedIndividual , vocab:SituationType;
-        rdfs:label              "Sulphonylureas intolerance symptoms is not present"@en ;
+:SitSulfonylureaSymptomsNotPresent rdf:type owl:NamedIndividual , vocab:SituationType;
+        rdfs:label              "Sulfonylurea intolerance symptoms is not present"@en ;
         vocab:stateOf   "not present" ;
         vocab:umlsCode  "null" .
 
-:SitSulphonylureasSymptomsPresent rdf:type owl:NamedIndividual , vocab:SituationType;
-        rdfs:label              "Sulphonylureas intolerance symptoms is present"@en ;
+:SitSulfonylureaSymptomsPresent rdf:type owl:NamedIndividual , vocab:SituationType;
+        rdfs:label              "Sulfonylurea intolerance symptoms is present"@en ;
         vocab:stateOf   "present" ;
         vocab:umlsCode  "null" .
 
@@ -130,7 +130,6 @@
         rdfs:label              "Weight gain is high"@en ;
         vocab:stateOf   "high" ;
         vocab:umlsCode  "null" .
-
 
 :SitDUHealed  a         vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Ulcer is healed"@en ;
@@ -178,7 +177,7 @@
         rdfs:label     "Risk of Gastrointestinal Bleeding is low"@en ;
         vocab:stateOf  "low" .
 
-:SitHighRiskThrombus  a  vocab:SituationType , owl:NamedIndividual ;
+:  a  vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Risk of Thrombus is High"@en ;
         vocab:stateOf   "high" ;
         vocab:umlsCode  "C0155749" .
@@ -331,12 +330,12 @@
         rdfs:label              "Contraindications for metformin" .
 :PredMetforminTherapy rdf:type vocab:PredicateType;
         rdfs:label              "Metformin therapy" .
-:PredSulphonylureasTherapy rdf:type vocab:PredicateType;
-        rdfs:label              "Sulphonylureas therapy" .
+:PredSulfonylureaTherapy rdf:type vocab:PredicateType;
+        rdfs:label              "Sulfonylurea therapy" .
 :PredIntolerantForMetformin rdf:type vocab:PredicateType;
         rdfs:label              "Intolerant for metformin" .
-:PredIntolerantForSulphonylureas rdf:type vocab:PredicateType;
-        rdfs:label              "Intolerant for sulphonylureas" .
+:PredIntolerantForSulfonylurea rdf:type vocab:PredicateType;
+        rdfs:label              "Intolerant for sulfonylurea" .
 
 :PCType2AndOverweight rdf:type vocab:PreconditionType;
         rdfs:label              "Has DM type 2 and is overweight"@en ;
@@ -353,10 +352,10 @@
         vocab:or               :PredIntolerantForMetformin;
         vocab:or               :PredContraindicationsForMetformin.
 
-:PCMetforminAndSulphonylureasTherapy rdf:type vocab:PreconditionType;
+:PCMetforminAndSulfonylureaTherapy rdf:type vocab:PreconditionType;
         rdfs:label             "Metformin and sulphonylureas therapy"@en ;
         vocab:and               :PredMetforminTherapy ;
-        vocab:and               :PredSulphonylureasTherapy.
+        vocab:and               :PredSulfonylureaTherapy.
 
 :TrAntinflammatory  a  owl:NamedIndividual , vocab:TransitionType .
 

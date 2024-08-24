@@ -30,8 +30,8 @@
 :RecDM-ReduceLBS {
     :RecDM-ReduceLBS  rdf:type    tmr:ClinicalRecommendation ;
             rdfs:label            "Reduce blood sugar level"@en ;
-            tmr:aboutExecutionOf  :ActAdministerInsulin ;
-            tmr:basedOn           :CBInsulinLBS ;
+            tmr:aboutExecutionOf  :ActAdministerInsulinHuman ;
+            tmr:basedOn           :CBInsulinHuman ;
             tmr:partOf            :CIG-DB ;
             tmr:strength          "should" .
     

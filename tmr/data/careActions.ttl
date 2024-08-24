@@ -523,7 +523,7 @@ data:ActAdministerSimvastatin40mg
         vocab:administrationOf  data:DrugTSimvastatin40mg .
 
 #[ rdf:type             owl:AllDifferent ;
-#  owl:distinctMembers  ( data:ActAdministerPiaglitazone data:ActAdministerMetformin data:ActAdministerSulphonylureas data:ActAdministerAspirin data:ActAdministerClopidogrel data:ActAdministerDipyridamole data:ActAdministerThiazide data:ActAdministerTramadol data:ActAdministerPPI data:ActAdministerIbuprofen data:ActAdministerInsulin data:ActAdministerNSAID data:ActEradicationTherapy )
+#  owl:distinctMembers  ( data:ActAdministerPiaglitazone data:ActAdministerMetformin data:ActAdministerSulfonylureaphonylureas data:ActAdministerAspirin data:ActAdministerClopidogrel data:ActAdministerDipyridamole data:ActAdministerThiazide data:ActAdministerTramadol data:ActAdministerPPI data:ActAdministerIbuprofen data:ActAdministerInsulin data:ActAdministerNSAID data:ActEradicationTherapy )
 #] .
 
 #[ rdf:type             owl:AllDifferent ;

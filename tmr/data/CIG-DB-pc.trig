@@ -26,9 +26,9 @@
         tmr:isSubGuidelineOf  :CIG-DB .
 
 :RecDB-Thiazolidinediones2
-        tmr:isPartOf  :CIG-DB , :subCIG-Sulphonylureas1 .
+        tmr:isPartOf  :CIG-DB , :subCIG-Sulfonylurea1 .
 
-:subCIG-Sulphonylureas1
+:subCIG-Sulfonylurea1
         rdf:type              owl:NamedIndividual , tmr:subGuideline ;
         rdfs:label            "first line oral treatment pathway for patients which are not overweight, or intolerant or contraindications for metformin "@en ;
         tmr:isSubGuidelineOf  :CIG-DB .
@@ -143,26 +143,26 @@
     
     :RecDB-Thiazolidinediones3c
             rdf:type                tmr:ClinicalRecommendation ;
-            rdfs:label              "Use pioglitazone if intolerant for sulphonylureas"@en ;
+            rdfs:label              "Use pioglitazone if intolerant for sulfonylurea"@en ;
             tmr:aboutExecutionOf    :ActAdministerPiaglitazone ;
             tmr:basedOn             :CBPiaglitazone ;
-            tmr:hasFilterSituation  :PredIntolerantForSulphonylureas ;
+            tmr:hasFilterSituation  :PredIntolerantForSulfonylurea ;
             tmr:partOf              :CIG-DB ;
             tmr:strength            "should" .
 }
 
 
 :RecDB-Thiazolidinediones2 {
-    :CBSulphonylureas_LHb
+    :CBSulfonylurea_LHb
             tmr:contribution  "positive" .
 
-     :CBSulphonylureas_IW   tmr:contribution  "negative" .
+     :CBSulfonylurea_IW   tmr:contribution  "negative" .
     
     :RecDB-Thiazolidinediones2
             rdf:type                tmr:ClinicalRecommendation ;
-            rdfs:label              "Sulphonylureas if not overweight, or intolerant or contraindications for metformin"@en ;
-            tmr:aboutExecutionOf    :ActAdministerSulphonylureas ;
-            tmr:basedOn             :CBSulphonylureas_LHb , :CBSulphonylureas_IW ;
+            rdfs:label              "Sulfonylurea if not overweight, or intolerant or contraindications for metformin"@en ;
+            tmr:aboutExecutionOf    :ActAdministerSulfonylurea ;
+            tmr:basedOn             :CBSulfonylurea_LHb , :CBSulfonylurea_IW ;
             tmr:hasFilterSituation  :PCNotOverweightOrIntolerantOrContraindications ;
             tmr:partOf              :CIG-DB ;
             tmr:strength            "should" .
@@ -173,10 +173,10 @@
     
     :RecDB-Thiazolidinediones3a
             rdf:type                tmr:ClinicalRecommendation ;
-            rdfs:label              "Pioglitazone can be added to metformin and sulphonylureas therapy"@en ;
+            rdfs:label              "Pioglitazone can be added to metformin and sulfonylurea therapy"@en ;
             tmr:aboutExecutionOf    :ActAdministerPiaglitazone ;
             tmr:basedOn             :CBPiaglitazone ;
-            tmr:hasFilterSituation  :PCMetforminAndSulphonylureasTherapy ;
+            tmr:hasFilterSituation  :PCMetforminAndSulfonylureaTherapy ;
             tmr:partOf              :CIG-DB ;
             tmr:strength            "should" .
 }
@@ -377,14 +377,14 @@
 
 
 :RecDB-Thiazolidinediones5 {
-    :CBSulphonylureas_IHg
+    :CBSulfonylurea_IHg
             tmr:contribution  "negative" .
     
     :RecDB-Thiazolidinediones5
             rdf:type                tmr:ClinicalRecommendation ;
             rdfs:label              "With intensive insulin therapy, stop sulphonylurea"@en ;
-            tmr:aboutExecutionOf    :ActAdministerSulphonylureas ;
-            tmr:basedOn             :CBSulphonylureas_IHg ;
+            tmr:aboutExecutionOf    :ActAdministerSulfonylurea ;
+            tmr:basedOn             :CBSulfonylurea_IHg ;
             tmr:hasFilterSituation  :PredIntenseInsulinTherapy ;
             tmr:partOf              :CIG-DB ;
             tmr:strength            "should-not" .

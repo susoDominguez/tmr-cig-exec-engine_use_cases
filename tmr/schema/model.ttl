@@ -54,7 +54,7 @@
     rdfs:subClassOf :DrugAdministrationType ;
      owl:disjointWith :NonDrugAdministrationType .
 
-:CombinedCareActionType rdf:type owl:Class ;
+:CombinedDrugAdministrationType rdf:type owl:Class ;
     rdfs:subClassOf :CareActionType .
 # subclass must be unionOf
 
@@ -68,7 +68,7 @@
     rdfs:subClassOf :Type .
 
 # combination of 2 or more drug and/or nonDrug types
-:CombinedCareType rdf:type owl:Class ;
+:DrugTypeCombination rdf:type owl:Class ;
                 rdfs:subClassOf :DrugType, :NonDrugType .
 
 :DrugEffectCategory rdf:type owl:Class ;
@@ -156,10 +156,10 @@ rdfs:subClassOf owl:Thing .
     rdfs:domain :NonDrugAdministrationType ;
     rdfs:range :NonDrugType.
 
-:combinedParticipationOf a owl:ObjectProperty ;
+:CombinedAdministrationOf a owl:ObjectProperty ;
     rdfs:subPropertyOf :participationOf ;
-    rdfs:domain :CombinedCareActionType ;
-    rdfs:range :CombinedCareType .
+    rdfs:domain :CombinedDrugAdministrationType ;
+    rdfs:range :DrugTypeCombination .
 
 :hasPreSituation rdf:type owl:ObjectProperty ;
     rdfs:range :SituationType ;
