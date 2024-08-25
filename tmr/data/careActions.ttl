@@ -16,256 +16,257 @@
 @prefix nanopub: <http://www.nanopub.org/nschema#> .
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 
-# TODO: tmr:CombinedCareType -> tmr:DrugTypeCombination      data:CombDrugT
-# TODO: tmr:CombinedCareActionType -> tmr:CombinedDrugAdministrationType
-# TODO: tmr:combinedParticipationOf -> tmr:CombinedAdministrationOf
-
-data:CombDrugTLabaLama  rdf:type   owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "long-acting muscarinic antagonist and long-acting beta-2 agonist combination therapy"@en ;
-        vocab:snomedCode  "1115171000000107" ;
-        tmr:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls .
+data:CombDrugTLabaLama
+        rdf:type                   owl:NamedIndividual , vocab:DrugCombinationType ;
+        rdfs:label                 "long-acting muscarinic antagonist and long-acting beta-2 agonist combination therapy"@en ;
+        vocab:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls ;
+        vocab:sctid           "1115171000000107" .
 
 data:ActAdministerLabaLama
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer LABA and LAMA combination therapy"@en ;
-        tmr:CombinedAdministrationOf  data:CombDrugTLabaLama ;
-        tmr:hasComponent          data:ActAdministerLaba , data:ActAdministerLama .
-
-data:CombDrugTLabaIcs  rdf:type    owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "LabaIcs"@en ;
-        vocab:snomedCode  "" ;
-        tmr:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls .
-
-data:ActAdministerLabaIcs
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer a combination of LABA and ICS bronchodilators"@en ;
-        tmr:CombinedAdministrationOf  data:CombDrugTLabaIcs ;
-        tmr:subsumes          data:ActAdministerLaba , data:ActAdministerIcs .
-
-data:CombDrugTSabaSama  rdf:type   owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "SabaSama"@en ;
-        vocab:snomedCode  "" ;
-        tmr:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls .
-
-data:ActAdministerSabaSama
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer a combination of SABA and SAMA bronchodilators"@en ;
-        tmr:CombinedAdministrationOf  data:DrugCatSabaSama ;
-        tmr:subsumes          data:ActAdministerSaba .
-
-data:ActAdministerSabaCvd
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer a beta agonist bronchodilator when cardiovascular disease is present"@en ;
-        tmr:CombinedAdministrationOf  data:CombDrugTSabaCvd ;
-        tmr:subsumes          data:ActAdministerSaba , data:ActAdministerSabaSama .
-
-data:CombDrugTSabaCvd  rdf:type    owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "SabaCvd"@en ;
-        vocab:snomedCode  "" ;
-        tmr:hasGroupingCriteria  data:TrIncPropRskCrd .
-
-data:ActAdministerLabaCvd
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer a beta agonist bronchodilator when cardiovascular disease is present"@en ;
-        tmr:CombinedAdministrationOf  data:CombDrugTLabaCvd ;
-        tmr:subsumes          data:ActAdministerLaba , data:ActAdministerLabaIcs , data:ActAdministerLabaLamaComorbid , data:ActAdministerLabaLamaIcsComorbid .
-
-data:CombDrugTLabaCvd  rdf:type    owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "LabaCvd"@en ;
-        vocab:snomedCode  "" ;
-        tmr:hasGroupingCriteria  data:TrIncPropRskCrd .
-
-data:CombDrugTLabaLamaIcs
-        rdf:type                 owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "LabaLamaIcs"@en ;
-        vocab:snomedCode  "" ;
-        tmr:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls .
-
-data:ActAdministerLabaLamaIcs
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer a combination of LABA, LAMA and ICS bronchodilators"@en ;
-        tmr:CombinedAdministrationOf  data:CombDrugTLabaLamaIcs ;
-        tmr:subsumes          data:ActAdministerLaba , data:ActAdministerLama , data:ActAdministerIcs .
-
-data:ActAdministerLabaLamaCkd
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer a LABA or LAMA bronchodilator when renal or nephrotic disease is present"@en ;
-        tmr:CombinedAdministrationOf  data:CombDrugTLabaLamaCkd ;
-        tmr:subsumes          data:ActAdministerLaba , data:ActAdministerLama , data:ActAdministerLabaLama , data:ActAdministerLabaIcs , data:ActAdministerLabaLamaIcs .
-
-data:CombDrugTLabaLamaCkd
-        rdf:type                 owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "LabaLamaCkd"@en ;
-        vocab:snomedCode  "" ;
-        tmr:hasGroupingCriteria  data:TrIncPropRskHypo .
-
-data:CombDrugTBetaAgonist
-        rdf:type                 owl:NamedIndividual , tmr:DrugTypeCombination ;
-        rdfs:label               "BetaAgonist"@en ;
-        vocab:snomedCode  "" ;
-        tmr:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls .
-
-data:ActAdministerBetaAgonist
-        rdf:type              owl:NamedIndividual , tmr:CombinedDrugAdministrationType ;
-        rdfs:label            "administer Beta Agonists when cardiovascular disease is present"@en ;
-        tmr:CombinedAdministrationOf  data:CombDrugTBetaAgonist ;
-        tmr:subsumes          data:ActAdministerLaba , data:ActAdministerSaba , data:ActAdministerLabaLama , data:ActAdministerLabaIcs , data:ActAdministerSabaSama , data:ActAdministerLabaLamaIcs .
-
-data:NonDrugTCvHlth  rdf:type  owl:NamedIndividual , tmr:NonDrugType ;
-        rdfs:label  "Assessment for risk of cardiovascular disease (procedure)"@en ;
-        vocab:snomedCode  "441829007" .
-
-data:ActAdministerCvHlth
-        rdf:type           owl:NamedIndividual , tmr:NonDrugAdministrationType ;
-        rdfs:label         "perform cardiovascular health risk assessment"@en ;
-        tmr:applicationOf  data:NonDrugTCvHlth .
-
-data:NonDrugTMrcDScale
-        rdf:type    owl:NamedIndividual , tmr:NonDrugType ;
-        rdfs:label  "Assessment using modified Medical Research Council Dyspnea Scale (procedure)"@en ;
-         vocab:snomedCode  "870180004" .
-
-data:ActAdministerMrcDScale
-        rdf:type           owl:NamedIndividual , tmr:NonDrugAdministrationType ;
-        rdfs:label         "perform mMRC dyspnoea scale"@en ;
-        tmr:applicationOf  data:NonDrugTMrcDScale .
-
-data:NonDrugTCatRslt  rdf:type  owl:NamedIndividual , tmr:NonDrugType ;
-        rdfs:label  "Assessment using chronic obstructive pulmonary disease assessment test (procedure)"@en ;
-        vocab:snomedCode  "445811006" .
-
-data:ActAdministerCatRslt
-        rdf:type           owl:NamedIndividual , tmr:NonDrugAdministrationType ;
-        rdfs:label         "perform COPD assessment test"@en ;
-        tmr:applicationOf  data:NonDrugTCatRslt .
-
-data:NonDrugTXraysScn
-        rdf:type    owl:NamedIndividual , tmr:NonDrugType ;
-        rdfs:label  "Radiographic imaging procedure (procedure)"@en ;
-        vocab:snomedCode  "363680008" .
-
-data:ActAdministerXraysScn
-        rdf:type           owl:NamedIndividual , tmr:NonDrugAdministrationType ;
-        rdfs:label         "perform x-ray procedure"@en ;
-        tmr:applicationOf  data:NonDrugTXraysScn .
-
-data:NonDrugTCtScn  rdf:type  owl:NamedIndividual , tmr:NonDrugType ;
-        rdfs:label  "Computed tomography (procedure)"@en ;
-        vocab:snomedCode  "77477000" .
-
-data:ActAdministerCtScn
-        rdf:type           owl:NamedIndividual , tmr:NonDrugAdministrationType ;
-        rdfs:label         "perform CT scan"@en ;
-        tmr:applicationOf  data:NonDrugTCtScn .
-
-data:NonDrugTSmokeThrpy
-        rdf:type    owl:NamedIndividual , tmr:NonDrugType ;
-        rdfs:label  "Smoking cessation therapy (regime/therapy)"@en ;
-        vocab:snomedCode  "710081004" .
-
-data:ActAdministerSmokeThrpy
-        rdf:type           owl:NamedIndividual , tmr:NonDrugAdministrationType ;
-        rdfs:label         "administer smoking cessation therapy"@en ;
-        tmr:applicationOf  data:NonDrugTSmokeThrpy .
-
-data:NonDrugTLngRehab
-        rdf:type    owl:NamedIndividual , tmr:NonDrugType ;
-        rdfs:label  "Pulmonary rehabilitation (regime/therapy)"@en ;
-        vocab:snomedCode  "15081005" .
-
-
-data:ActAdministerLngRehab
-        rdf:type           owl:NamedIndividual , tmr:NonDrugAdministrationType ;
-        rdfs:label         "administer pulmonary rehabilitation therapy"@en ;
-        tmr:applicationOf  data:NonDrugTLngRehab .
-
-data:DrugTPneumnVac  rdf:type  tmr:DrugType , owl:NamedIndividual ;
-        rdfs:label  "pneumococcal vaccine product"@en ;
-        vocab:snomedCode  "9894911000001101" .
-
-data:ActAdministerPneumnVac
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer pneumococcal vaccine"@en ;
-        tmr:administrationOf  data:DrugTPneumnVac .
-
-data:DrugTFluVac  rdf:type  tmr:DrugType , owl:NamedIndividual ;
-        rdfs:label  "influenza vaccine product"@en ;
-        vocab:snomedCode  "9894511000001108" .
-
-data:ActAdministerFluVac
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer influenza vaccine"@en ;
-        tmr:administrationOf  data:DrugTFluVac .
-
-data:DrugCatVccnPrdct  rdf:type  tmr:DrugCategory , owl:NamedIndividual ;
-        rdfs:label  "Vaccine product"@en ;
-        vocab:snomedCode  "787859002" . 
-
-data:ActAdministerVccnPrdct
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer vaccine product"@en ;
-        tmr:administrationOf  data:DrugCatVccnPrdct ;
-        tmr:subsumes          data:ActAdministerFluVac , data:ActAdministerPneumnVac .
-
-data:DrugCatIcs  rdf:type  tmr:DrugCategory , owl:NamedIndividual ;
-        rdfs:label  "ICS"@en ;
-        vocab:snomedCode  "413290006" . 
-
-data:ActAdministerIcs
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer inhaled corticosteroids (ICS) therapy"@en ;
-        tmr:administrationOf  data:DrugCatIcs .
-
-data:DrugCatGluccorticds
-        rdf:type    tmr:DrugCategory , owl:NamedIndividual ;
-        rdfs:label  "Glucocorticoids"@en ;
-        vocab:snomedCode  "385155001" . 
-
-data:ActAdministerGluccorticds
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer Glucocorticoid therapy"@en ;
-        tmr:administrationOf  data:DrugCatGluccorticds ;
-        tmr:subsumes          data:ActAdministerIcs .
-
-data:DrugCatSaba  rdf:type  tmr:DrugCategory , owl:NamedIndividual ;
-        rdfs:label  "SABA"@en ;
-        vocab:snomedCode  "108698007" .
-
-data:ActAdministerSaba
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer short-acting beta agonist (SABA) therapy"@en ;
-        tmr:administrationOf  data:DrugCatLaba .
-
-data:DrugCatSama  rdf:type  tmr:DrugCategory , owl:NamedIndividual ;
-        rdfs:label  "SAMA"@en ;
-         vocab:snomedCode  "447278004" .
-
-data:ActAdministerSama
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer short-acting muscarinic antagonist (SAMA) therapy"@en ;
-        tmr:administrationOf  data:DrugCatSama .
-
-data:DrugCatLama  rdf:type  tmr:DrugCategory , owl:NamedIndividual ;
-        rdfs:label  "LAMA"@en ;
-         vocab:snomedCode  "426144009" .
-
-data:ActAdministerLama
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer long-acting muscarinic antagonist (LAMA) therapy"@en ;
-        tmr:administrationOf  data:DrugCatLama .
-
-data:DrugCatLaba  rdf:type  tmr:DrugCategory , owl:NamedIndividual ;
-        rdfs:label  "LABA"@en ;
-         vocab:snomedCode  "761772007" .
+        rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
+        rdfs:label                      "administer LABA and LAMA combination therapy"@en ;
+        vocab:CombinedAdministrationOf  data:CombDrugTLabaLama ;
+        vocab:hasComponent              data:ActAdministerLaba , data:ActAdministerLama .
 
 data:ActAdministerLaba
-        rdf:type              owl:NamedIndividual , tmr:DrugAdministrationType ;
-        rdfs:label            "administer long-acting beta agonist (LABA) therapy"@en ;
-        tmr:administrationOf  data:DrugCatLaba .
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer long-acting beta agonist (LABA) therapy"@en ;
+        vocab:administrationOf  data:DrugCatLaba .
+
+data:ActAdministerLama
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer long-acting muscarinic antagonist (LAMA) therapy"@en ;
+        vocab:administrationOf  data:DrugCatLama .
+
+data:CombDrugTLabaIcs
+        rdf:type                   owl:NamedIndividual , vocab:DrugCombinationType ;
+        rdfs:label                 "LabaIcs"@en ;
+        vocab:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls ;
+        vocab:sctid           "" .
+
+data:ActAdministerLabaIcs
+        rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
+        rdfs:label                      "administer a combination of LABA and ICS bronchodilators"@en ;
+        vocab:CombinedAdministrationOf  data:CombDrugTLabaIcs ;
+        vocab:subsumes                  data:ActAdministerLaba , data:ActAdministerIcs .
+
+data:ActAdministerIcs
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer inhaled corticosteroids (ICS) therapy"@en ;
+        vocab:administrationOf  data:DrugCatIcs .
+
+data:CombDrugTSabaSama
+        rdf:type                   owl:NamedIndividual , vocab:DrugCombinationType ;
+        rdfs:label                 "SabaSama"@en ;
+        vocab:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls ;
+        vocab:sctid           "" .
+
+data:ActAdministerSabaSama
+        rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
+        rdfs:label                      "administer a combination of SABA and SAMA bronchodilators"@en ;
+        vocab:CombinedAdministrationOf  data:DrugCatSabaSama ;
+        vocab:subsumes                  data:ActAdministerSaba .
+
+data:ActAdministerSaba
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer short-acting beta agonist (SABA) therapy"@en ;
+        vocab:administrationOf  data:DrugCatLaba .
+
+data:ActAdministerSabaCvd
+        rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
+        rdfs:label                      "administer a beta agonist bronchodilator when cardiovascular disease is present"@en ;
+        vocab:CombinedAdministrationOf  data:CombDrugTSabaCvd ;
+        vocab:subsumes                  data:ActAdministerSabaSama , data:ActAdministerSaba .
+
+data:CombDrugTSabaCvd
+        rdf:type                   owl:NamedIndividual , vocab:DrugCombinationType ;
+        rdfs:label                 "SabaCvd"@en ;
+        vocab:hasGroupingCriteria  data:TrIncPropRskCrd ;
+        vocab:sctid           "" .
+
+data:ActAdministerLabaCvd
+        rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
+        rdfs:label                      "administer a beta agonist bronchodilator when cardiovascular disease is present"@en ;
+        vocab:CombinedAdministrationOf  data:CombDrugTLabaCvd ;
+        vocab:subsumes                  data:ActAdministerLaba , data:ActAdministerLabaIcs , data:ActAdministerLabaLamaComorbid , data:ActAdministerLabaLamaIcsComorbid .
+
+data:CombDrugTLabaCvd
+        rdf:type                   owl:NamedIndividual , vocab:DrugCombinationType ;
+        rdfs:label                 "LabaCvd"@en ;
+        vocab:hasGroupingCriteria  data:TrIncPropRskCrd ;
+        vocab:sctid           "" .
+
+data:CombDrugTLabaLamaIcs
+        rdf:type                   owl:NamedIndividual , vocab:DrugCombinationType ;
+        rdfs:label                 "LabaLamaIcs"@en ;
+        vocab:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls ;
+        vocab:sctid           "" .
+
+data:ActAdministerLabaLamaIcs
+        rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
+        rdfs:label                      "administer a combination of LABA, LAMA and ICS bronchodilators"@en ;
+        vocab:CombinedAdministrationOf  data:CombDrugTLabaLamaIcs ;
+        vocab:subsumes                  data:ActAdministerLaba , data:ActAdministerLama , data:ActAdministerIcs .
+
+data:ActAdministerLabaLamaCkd
+        rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
+        rdfs:label                      "administer a LABA or LAMA bronchodilator when renal or nephrotic disease is present"@en ;
+        vocab:CombinedAdministrationOf  data:CombDrugTLabaLamaCkd ;
+        vocab:subsumes                  data:ActAdministerLabaLama , data:ActAdministerLaba , data:ActAdministerLama , data:ActAdministerLabaIcs , data:ActAdministerLabaLamaIcs .
+
+data:CombDrugTLabaLamaCkd
+        rdf:type                   owl:NamedIndividual , vocab:DrugCombinationType ;
+        rdfs:label                 "LabaLamaCkd"@en ;
+        vocab:hasGroupingCriteria  data:TrIncPropRskHypo ;
+        vocab:sctid           "" .
+
+data:DrugCatBetaAgonist
+        rdf:type                   owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label                 "BetaAgonist"@en ;
+        vocab:hasGroupingCriteria  data:TrMainMildPropAls , data:TrDecModPropAls , data:TrDecSevPropAls , data:TrDecVerySevPropAls ;
+        vocab:sctid           "" .
+
+data:ActAdministerBetaAgonist
+        rdf:type                        owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label                      "administer Beta Agonists when cardiovascular disease is present"@en ;
+        vocab:AdministrationOf  data:DrugCatBetaAgonist ;
+        vocab:subsumes                  data:ActAdministerLabaLama , data:ActAdministerLaba , data:ActAdministerLabaIcs , data:ActAdministerSabaSama , data:ActAdministerSaba , data:ActAdministerLabaLamaIcs .
+
+data:NonDrugTCvHlth  rdf:type  owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Assessment for risk of cardiovascular disease (procedure)"@en ;
+        vocab:sctid  "441829007" .
+
+data:ActAdministerCvHlth
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "perform cardiovascular health risk assessment"@en ;
+        vocab:applicationOf  data:NonDrugTCvHlth .
+
+data:NonDrugTMrcDScale
+        rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Assessment using modified Medical Research Council Dyspnea Scale (procedure)"@en ;
+        vocab:sctid  "870180004" .
+
+data:ActAdministerMrcDScale
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "perform mMRC dyspnoea scale"@en ;
+        vocab:applicationOf  data:NonDrugTMrcDScale .
+
+data:NonDrugTCatRslt  rdf:type  owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Assessment using chronic obstructive pulmonary disease assessment test (procedure)"@en ;
+        vocab:sctid  "445811006" .
+
+data:ActAdministerCatRslt
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "perform COPD assessment test"@en ;
+        vocab:applicationOf  data:NonDrugTCatRslt .
+
+data:NonDrugTXraysScn
+        rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Radiographic imaging procedure (procedure)"@en ;
+        vocab:sctid  "363680008" .
+
+data:ActAdministerXraysScn
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "perform x-ray procedure"@en ;
+        vocab:applicationOf  data:NonDrugTXraysScn .
+
+data:NonDrugTCtScn  rdf:type  owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Computed tomography (procedure)"@en ;
+        vocab:sctid  "77477000" .
+
+data:ActAdministerCtScn
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "perform CT scan"@en ;
+        vocab:applicationOf  data:NonDrugTCtScn .
+
+data:NonDrugTSmokeThrpy
+        rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Smoking cessation therapy (regime/therapy)"@en ;
+        vocab:sctid  "710081004" .
+
+data:ActAdministerSmokeThrpy
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "administer smoking cessation therapy"@en ;
+        vocab:applicationOf  data:NonDrugTSmokeThrpy .
+
+data:NonDrugTLngRehab
+        rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
+        rdfs:label        "Pulmonary rehabilitation (regime/therapy)"@en ;
+        vocab:sctid  "15081005" .
+
+data:ActAdministerLngRehab
+        rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
+        rdfs:label           "administer pulmonary rehabilitation therapy"@en ;
+        vocab:applicationOf  data:NonDrugTLngRehab .
+
+data:DrugTPneumnVac  rdf:type  owl:NamedIndividual , vocab:VaccineType ;
+        rdfs:label        "pneumococcal vaccine product"@en ;
+        vocab:sctid  "9894911000001101" .
+
+data:ActAdministerPneumnVac
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer pneumococcal vaccine"@en ;
+        vocab:administrationOf  data:DrugTPneumnVac .
+
+data:DrugTFluVac  rdf:type  owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "influenza vaccine product"@en ;
+        vocab:sctid  "9894511000001108" .
+
+data:ActAdministerFluVac
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer influenza vaccine"@en ;
+        vocab:administrationOf  data:DrugTFluVac .
+
+data:DrugCatVccnPrdct
+        rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Vaccine product"@en ;
+        vocab:sctid  "787859002" .
+
+data:ActAdministerVccnPrdct
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer vaccine product"@en ;
+        vocab:administrationOf  data:DrugCatVccnPrdct ;
+        vocab:subsumes          data:ActAdministerPneumnVac , data:ActAdministerFluVac .
+
+data:DrugCatIcs  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "ICS"@en ;
+        vocab:sctid  "413290006" .
+
+data:DrugCatGluccorticds
+        rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "Glucocorticoids"@en ;
+        vocab:sctid  "385155001" .
+
+data:ActAdministerGluccorticds
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer Glucocorticoid therapy"@en ;
+        vocab:administrationOf  data:DrugCatGluccorticds ;
+        vocab:subsumes          data:ActAdministerIcs .
+
+data:DrugCatSaba  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "SABA"@en ;
+        vocab:sctid  "108698007" .
+
+data:DrugCatLaba  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "LABA"@en ;
+        vocab:sctid  "761772007" .
+
+data:DrugCatSama  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "SAMA"@en ;
+        vocab:sctid  "447278004" .
+
+data:ActAdministerSama
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer short-acting muscarinic antagonist (SAMA) therapy"@en ;
+        vocab:administrationOf  data:DrugCatSama .
+
+data:DrugCatLama  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
+        rdfs:label        "LAMA"@en ;
+        vocab:sctid  "426144009" .
 
 data:DrugTMetformin  rdf:type  owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing metformin"@en ;
-        vocab:snomedCode  "109081006" .
+        vocab:sctid  "109081006" .
 
 data:ActAdministerMetformin
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -280,12 +281,12 @@ data:ActAdministerPioglitazone
 data:DrugTPioglitazone
         rdf:type          owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing pioglitazone"@en ;
-        vocab:snomedCode  "326058001" .
+        vocab:sctid  "326058001" .
 
 data:DrugCatNSAID  rdf:type        owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label                 "Non-steroidal anti-inflammatory agent"@en ;
         vocab:hasGroupingCriteria  data:TrAntinflammatory , data:SitNonSteroidalDrug ;
-        vocab:snomedCode           "16403005" .
+        vocab:sctid           "16403005" .
 
 data:ActAdministerNSAID
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -295,7 +296,7 @@ data:ActAdministerNSAID
 
 data:DrugTTramadol  rdf:type  owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing tramadol"@en ;
-        vocab:snomedCode  "108507005" .
+        vocab:sctid  "108507005" .
 
 data:ActAdministerTramadol
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -306,7 +307,7 @@ data:DrugCatAnalgesic
         rdf:type                   owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label                 "medicinal product acting as analgesic agent"@en ;
         vocab:hasGroupingCriteria  data:TrPainkiller ;
-        vocab:snomedCode           "53009005" .
+        vocab:sctid           "53009005" .
 
 data:ActAdministerAnalgesic
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -318,12 +319,12 @@ data:DrugCatPlateletAggregationInhibitor
         rdf:type                   owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label                 "product containing platelet aggregation inhibitor"@en ;
         vocab:hasGroupingCriteria  data:TrDecreaseBC ;
-        vocab:snomedCode           "773388004" .
+        vocab:sctid           "773388004" .
 
 data:DrugTDipyridamole
         rdf:type          owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing dipyridamole"@en ;
-        vocab:snomedCode  "66859009" .
+        vocab:sctid  "66859009" .
 
 data:ActAdministerDipyridamole
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -333,7 +334,7 @@ data:ActAdministerDipyridamole
 data:DrugCatAntiBacterialAgent
         rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "medicinal product acting as antibacterial agent"@en ;
-        vocab:snomedCode  "346325008" .
+        vocab:sctid  "346325008" .
 
 data:ActAdministerAntiBacterialAgent
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -342,7 +343,7 @@ data:ActAdministerAntiBacterialAgent
 
 data:DrugCatInsulin  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "product containing insulin"@en ;
-        vocab:snomedCode  "39487003" .
+        vocab:sctid  "39487003" .
 
 data:ActAdministerInsulin
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -350,19 +351,20 @@ data:ActAdministerInsulin
         vocab:administrationOf  data:DrugCatInsulin ;
         vocab:subsumes          data:ActAdministerInsulinHuman .
 
-data:DrugTInsulinHuman  rdf:type  owl:NamedIndividual , vocab:DrugType ;
-        rdfs:label        "product containing human insulin"@en ;
-        vocab:snomedCode  "126210001" .
-
 data:ActAdministerInsulinHuman
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
         rdfs:label              "administer product containing human insulin"@en ;
         vocab:administrationOf  data:DrugTInsulinHuman .
 
+data:DrugTInsulinHuman
+        rdf:type          owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "product containing human insulin"@en ;
+        vocab:sctid  "126210001" .
+
 data:DrugTBendroflumethiazide
         rdf:type          owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing bendroflumethiazide"@en ;
-        vocab:snomedCode  "91135008" .
+        vocab:sctid  "91135008" .
 
 data:ActAdministerBendroflumethiazide
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -372,7 +374,7 @@ data:ActAdministerBendroflumethiazide
 data:DrugTClopidogrel
         rdf:type          owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing clopidogrel"@en ;
-        vocab:snomedCode  "108979001" .
+        vocab:sctid  "108979001" .
 
 data:ActAdministerClopidogrel
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -385,9 +387,14 @@ data:ActAdministerPlateletAggregationInhibitor
         vocab:administrationOf  data:DrugCatPlateletAggregationInhibitor ;
         vocab:subsumes          data:ActAdministerClopidogrel , data:ActAdministerAspirin .
 
+data:ActAdministerAspirin
+        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdfs:label              "administer product containing aspirin"@en ;
+        vocab:administrationOf  data:DrugTAspirin .
+
 data:DrugCatThiazide  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "medicinal product containing thiazide and acting as diuretic agent"@en ;
-        vocab:snomedCode  "45518007" .
+        vocab:sctid  "45518007" .
 
 data:ActAdministerThiazide
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -395,19 +402,14 @@ data:ActAdministerThiazide
         vocab:administrationOf  data:DrugCatThiazide ;
         vocab:subsumes          data:ActAdministerBendroflumethiazide .
 
-data:ActAdministerAspirin
-        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
-        rdfs:label              "administer product containing aspirin"@en ;
-        vocab:administrationOf  data:DrugTAspirin .
-
-data:DrugTAspirin  rdf:type  vocab:DrugType , owl:NamedIndividual ;
-        rdfs:label  "product containing aspirin"@en ;
-        vocab:snomedCode  "7947003" .
+data:DrugTAspirin  rdf:type  owl:NamedIndividual , vocab:DrugType ;
+        rdfs:label        "product containing aspirin"@en ;
+        vocab:sctid  "7947003" .
 
 data:DrugTEpoprostenol
         rdf:type          owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing epoprostenol"@en ;
-        vocab:snomedCode  "108593000" .
+        vocab:sctid  "108593000" .
 
 data:ActAdministerEpoprostenol
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -416,7 +418,7 @@ data:ActAdministerEpoprostenol
 
 data:DrugTIbuprofen  rdf:type  owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "product containing ibuprofen"@en ;
-        vocab:snomedCode  "38268001" .
+        vocab:sctid  "38268001" .
 
 data:ActAdministerIbuprofen
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -426,7 +428,7 @@ data:ActAdministerIbuprofen
 data:DrugCatPPI  rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label                 "product containing hydrogen/potassium adenosine triphosphatase enzyme system inhibitor"@en ;
         vocab:hasGroupingCriteria  data:TrtoCheck ;
-        vocab:snomedCode           "108665006" .
+        vocab:sctid           "108665006" .
 
 data:ActAdministerPPI
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -437,7 +439,7 @@ data:ActAdministerPPI
 data:DrugCatAntihypertensive
         rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "Antihypertensive agent"@en ;
-        vocab:snomedCode  "1182007" .
+        vocab:sctid  "1182007" .
 
 data:ActAdministerAntihypertensive
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -447,7 +449,7 @@ data:ActAdministerAntihypertensive
 data:DrugCatSulfonylurea
         rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "product containing sulfonylurea"@en ;
-        vocab:snomedCode  "34012005" .
+        vocab:sctid  "34012005" .
 
 data:ActAdministerSulfonylurea
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -457,7 +459,7 @@ data:ActAdministerSulfonylurea
 data:DrugCatAceInhibitors
         rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "product containing angiotensin-converting enzyme inhibitor"@en ;
-        vocab:snomedCode  "41549009" .
+        vocab:sctid  "41549009" .
 
 data:ActAdministerAceInhibitors
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -466,7 +468,7 @@ data:ActAdministerAceInhibitors
 
 data:DrugCatARB  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "product containing angiotensin II receptor antagonist"@en ;
-        vocab:snomedCode  "96308008" .
+        vocab:sctid  "96308008" .
 
 data:ActAdministerARB
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -475,7 +477,7 @@ data:ActAdministerARB
 
 data:DrugCatCCB  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
         rdfs:label        "product containing calcium channel blocker"@en ;
-        vocab:snomedCode  "48698004" .
+        vocab:sctid  "48698004" .
 
 data:ActAdministerCCB
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
@@ -485,7 +487,7 @@ data:ActAdministerCCB
 data:NonDrugTSelfMntrBldGlcs
         rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
         rdfs:label        "Self-monitoring of blood glucose (procedure)"@en ;
-        vocab:snomedCode  "308113006" .
+        vocab:sctid  "308113006" .
 
 data:ActAdministerSelfMntrBldGlcs
         rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
@@ -495,7 +497,7 @@ data:ActAdministerSelfMntrBldGlcs
 data:NonDrugTPerformExercise
         rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
         rdfs:label        "Recommendation to exercise (procedure)"@en ;
-        vocab:snomedCode  "281090004" .
+        vocab:sctid  "281090004" .
 
 data:ActAdministerPerformExercise
         rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
@@ -505,7 +507,7 @@ data:ActAdministerPerformExercise
 data:NonDrugTScanRetina
         rdf:type          owl:NamedIndividual , vocab:NonDrugType ;
         rdfs:label        "Diabetic retinopathy screening (procedure)"@en ;
-        vocab:snomedCode  "134395001" .
+        vocab:sctid  "134395001" .
 
 data:ActAdministerScanRetina
         rdf:type             owl:NamedIndividual , vocab:NonDrugAdministrationType ;
@@ -515,17 +517,9 @@ data:ActAdministerScanRetina
 data:DrugTSimvastatin40mg
         rdf:type          owl:NamedIndividual , vocab:DrugType ;
         rdfs:label        "Simvastatin 40mg tablets"@en ;
-        vocab:snomedCode  "42382311000001100" .
+        vocab:sctid  "42382311000001100" .
 
 data:ActAdministerSimvastatin40mg
         rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
         rdfs:label              "administer product containing Simvastatin 40mg tablets "@en ;
         vocab:administrationOf  data:DrugTSimvastatin40mg .
-
-#[ rdf:type             owl:AllDifferent ;
-#  owl:distinctMembers  ( data:ActAdministerPiaglitazone data:ActAdministerMetformin data:ActAdministerSulfonylureaphonylureas data:ActAdministerAspirin data:ActAdministerClopidogrel data:ActAdministerDipyridamole data:ActAdministerThiazide data:ActAdministerTramadol data:ActAdministerPPI data:ActAdministerIbuprofen data:ActAdministerInsulin data:ActAdministerNSAID data:ActEradicationTherapy )
-#] .
-
-#[ rdf:type             owl:AllDifferent ;
-#  owl:distinctMembers  ( data:DrugTPiaglitazone data:DrugTMetformin data:DrugTSulphonylureas data:DrugTAspirin data:DrugTClopidogrel data:DrugTDipyridamole data:DrugCatThiazide data:DrugTTramadol data:DrugCatPPI data:DrugCatNSAID data:DrugTIbuprofen data:DrugTnsulin data:DrugCatDiuretic data:DrugCatAntiBacterialAgent data:DrugCatPlateletAggregationInhibitor data:DrugCatAnalgesic data:DrugCatAntiHypertensiveAgent )
-#] .
