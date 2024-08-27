@@ -44,32 +44,35 @@
     rdfs:subClassOf :ActionType .
 
 :DrugAdministrationType rdf:type owl:Class ;
-    rdfs:subClassOf :CareActionType .
+    rdfs:subClassOf :CareActionType ;
+     owl:disjointWith :NonDrugAdministrationType .
 
 #special case for non drug therapies
 :NonDrugAdministrationType rdf:type owl:Class ;
     rdfs:subClassOf :CareActionType .
 
 :VaccinationType rdf:type owl:Class ;
-    rdfs:subClassOf :DrugAdministrationType ;
-     owl:disjointWith :NonDrugAdministrationType .
+    rdfs:subClassOf :CareActionType ;
+     owl:disjointWith :NonDrugAdministrationType , :DrugAdministrationType.
 
 :CombinedAdministrationType rdf:type owl:Class ;
      rdfs:subClassOf :CareActionType .
 
 :DrugCombinationAdministrationType rdf:type owl:Class ;
     rdfs:subClassOf :CombinedAdministrationType , :DrugAdministrationType  ;
-     owl:disjointWith :NonDrugAdministrationType .
+     owl:disjointWith :NonDrugAdministrationType , :VaccinationType.
 # subclass must be unionOf
 
 :DrugType rdf:type owl:Class;
-    rdfs:subClassOf :Type .
+    rdfs:subClassOf :Type ;
+    owl:disjointWith :NonDrugType , :VaccineType .
 
 :DrugCategory rdf:type owl:Class ;
                 rdfs:subClassOf :DrugType .
 
 :NonDrugType rdf:type owl:Class;
-    rdfs:subClassOf :Type .
+        rdfs:subClassOf :Type ;
+        owl:disjointWith :DrugType , :VaccineType .
 
 # combination of distinct care action types
 :CombinationType rdf:type owl:Class ;
@@ -77,7 +80,7 @@
 
 :DrugCombinationType rdf:type owl:Class ;
                 rdfs:subClassOf :CombinationType :DrugType ;
-                owl:disjointWith :NonDrugType .
+                owl:disjointWith :NonDrugType , :VaccineType .
 
 :DrugEffectCategory rdf:type owl:Class ;
                         rdfs:subClassOf :DrugCategory .
@@ -153,8 +156,8 @@ rdfs:subClassOf owl:Thing .
     rdfs:domain :DrugAdministrationType ;
     rdfs:range :DrugType.
 
-:inoculationOf a owl:ObjectProperty ;
-    rdfs:subPropertyOf :administrationOf ;
+:vaccinationWith a owl:ObjectProperty ;
+    rdfs:subPropertyOf :participationOf ;
     rdfs:domain :VaccinationType ;
     rdfs:range :VaccineType.
 

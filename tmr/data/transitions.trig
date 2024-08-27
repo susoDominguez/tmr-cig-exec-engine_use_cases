@@ -127,7 +127,7 @@
         vocab:umlsCode  "null" .
 
 :SitHighWeightGain rdf:type owl:NamedIndividual , vocab:SituationType;
-        rdfs:label              "Weight gain is high"@en ;
+        rdfs:label      "Weight gain is high"@en ;
         vocab:stateOf   "high" ;
         vocab:umlsCode  "null" .
 

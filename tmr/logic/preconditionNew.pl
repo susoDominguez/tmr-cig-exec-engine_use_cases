@@ -1,5 +1,6 @@
 :- use_module(library(clpb)).
 :- include(auxiliaryFunctions).
+:- use_module(library(http/json)).
 
 getNonSatRecommendationPair(Interaction, R1, R2) :-
     create_formula_interaction(Interaction, R1, R2, F),
@@ -82,3 +83,20 @@ create_formula_interaction(Interaction, Rec1, Rec2, Formula) :-
   findall(TreeTemp, build_tree(PC1, TreeTemp), [Tree1|_]),
   findall(TreeTemp, build_tree(PC2, TreeTemp), [Tree2|_]),
   assign_prolog_vars(*([Tree1, Tree2, KBTree]), Formula, _Mapping).
+
+
+% Base case: Leaf node, represented by p(Label)
+tree_to_json(p(Label), json{type: "leaf", label: Label}).
+
+% Recursive case: AND node, represented by *(Parts)
+tree_to_json(*(Parts), json{type: "and", children: ChildrenJson}) :-
+    maplist(tree_to_json, Parts, ChildrenJson).
+
+% Recursive case: OR node, represented by +(Parts)
+tree_to_json(+(Parts), json{type: "or", children: ChildrenJson}) :-
+    maplist(tree_to_json, Parts, ChildrenJson).
+
+% Recursive case: NOT node, represented by ~(Part)
+tree_to_json(~(Part), json{type: "not", child: ChildJson}) :-
+    tree_to_json(Part, ChildJson).
+

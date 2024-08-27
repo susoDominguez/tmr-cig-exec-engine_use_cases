@@ -25,7 +25,7 @@ data:CombDrugTLabaLama
 data:ActAdministerLabaLama
         rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
         rdfs:label                      "administer LABA and LAMA combination therapy"@en ;
-        vocab:CombinedAdministrationOf  data:CombDrugTLabaLama ;
+        vocab:combinedAdministrationOf  data:CombDrugTLabaLama ;
         vocab:hasComponent              data:ActAdministerLaba , data:ActAdministerLama .
 
 data:ActAdministerLaba
@@ -47,7 +47,7 @@ data:CombDrugTLabaIcs
 data:ActAdministerLabaIcs
         rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
         rdfs:label                      "administer a combination of LABA and ICS bronchodilators"@en ;
-        vocab:CombinedAdministrationOf  data:CombDrugTLabaIcs ;
+        vocab:combinedAdministrationOf  data:CombDrugTLabaIcs ;
         vocab:subsumes                  data:ActAdministerLaba , data:ActAdministerIcs .
 
 data:ActAdministerIcs
@@ -64,7 +64,7 @@ data:CombDrugTSabaSama
 data:ActAdministerSabaSama
         rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
         rdfs:label                      "administer a combination of SABA and SAMA bronchodilators"@en ;
-        vocab:CombinedAdministrationOf  data:DrugCatSabaSama ;
+        vocab:combinedAdministrationOf  data:DrugCatSabaSama ;
         vocab:subsumes                  data:ActAdministerSaba .
 
 data:ActAdministerSaba
@@ -75,7 +75,7 @@ data:ActAdministerSaba
 data:ActAdministerSabaCvd
         rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
         rdfs:label                      "administer a beta agonist bronchodilator when cardiovascular disease is present"@en ;
-        vocab:CombinedAdministrationOf  data:CombDrugTSabaCvd ;
+        vocab:combinedAdministrationOf  data:CombDrugTSabaCvd ;
         vocab:subsumes                  data:ActAdministerSabaSama , data:ActAdministerSaba .
 
 data:CombDrugTSabaCvd
@@ -87,7 +87,7 @@ data:CombDrugTSabaCvd
 data:ActAdministerLabaCvd
         rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
         rdfs:label                      "administer a beta agonist bronchodilator when cardiovascular disease is present"@en ;
-        vocab:CombinedAdministrationOf  data:CombDrugTLabaCvd ;
+        vocab:combinedAdministrationOf  data:CombDrugTLabaCvd ;
         vocab:subsumes                  data:ActAdministerLaba , data:ActAdministerLabaIcs , data:ActAdministerLabaLamaComorbid , data:ActAdministerLabaLamaIcsComorbid .
 
 data:CombDrugTLabaCvd
@@ -105,13 +105,13 @@ data:CombDrugTLabaLamaIcs
 data:ActAdministerLabaLamaIcs
         rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
         rdfs:label                      "administer a combination of LABA, LAMA and ICS bronchodilators"@en ;
-        vocab:CombinedAdministrationOf  data:CombDrugTLabaLamaIcs ;
+        vocab:combinedAdministrationOf  data:CombDrugTLabaLamaIcs ;
         vocab:subsumes                  data:ActAdministerLaba , data:ActAdministerLama , data:ActAdministerIcs .
 
 data:ActAdministerLabaLamaCkd
         rdf:type                        owl:NamedIndividual , vocab:DrugCombinationAdministrationType ;
         rdfs:label                      "administer a LABA or LAMA bronchodilator when renal or nephrotic disease is present"@en ;
-        vocab:CombinedAdministrationOf  data:CombDrugTLabaLamaCkd ;
+        vocab:combinedAdministrationOf  data:CombDrugTLabaLamaCkd ;
         vocab:subsumes                  data:ActAdministerLabaLama , data:ActAdministerLaba , data:ActAdministerLama , data:ActAdministerLabaIcs , data:ActAdministerLabaLamaIcs .
 
 data:CombDrugTLabaLamaCkd
@@ -129,7 +129,7 @@ data:DrugCatBetaAgonist
 data:ActAdministerBetaAgonist
         rdf:type                        owl:NamedIndividual , vocab:DrugAdministrationType ;
         rdfs:label                      "administer Beta Agonists when cardiovascular disease is present"@en ;
-        vocab:AdministrationOf  data:DrugCatBetaAgonist ;
+        vocab:administrationOf  data:DrugCatBetaAgonist ;
         vocab:subsumes                  data:ActAdministerLabaLama , data:ActAdministerLaba , data:ActAdministerLabaIcs , data:ActAdministerSabaSama , data:ActAdministerSaba , data:ActAdministerLabaLamaIcs .
 
 data:NonDrugTCvHlth  rdf:type  owl:NamedIndividual , vocab:NonDrugType ;
@@ -199,33 +199,33 @@ data:ActAdministerLngRehab
         rdfs:label           "administer pulmonary rehabilitation therapy"@en ;
         vocab:applicationOf  data:NonDrugTLngRehab .
 
-data:DrugTPneumnVac  rdf:type  owl:NamedIndividual , vocab:VaccineType ;
+data:VacTPneumnVac  rdf:type  owl:NamedIndividual , vocab:VaccineType ;
         rdfs:label        "pneumococcal vaccine product"@en ;
         vocab:sctid  "9894911000001101" .
 
 data:ActAdministerPneumnVac
-        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdf:type                owl:NamedIndividual , vocab:VaccinationType ;
         rdfs:label              "administer pneumococcal vaccine"@en ;
-        vocab:administrationOf  data:DrugTPneumnVac .
+        vocab:vaccinationWith  data:VacTPneumnVac .
 
-data:DrugTFluVac  rdf:type  owl:NamedIndividual , vocab:DrugType ;
+data:VacTFluVac  rdf:type  owl:NamedIndividual , vocab:VaccineType ;
         rdfs:label        "influenza vaccine product"@en ;
         vocab:sctid  "9894511000001108" .
 
 data:ActAdministerFluVac
-        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdf:type                owl:NamedIndividual , vocab:VaccinationType ;
         rdfs:label              "administer influenza vaccine"@en ;
-        vocab:administrationOf  data:DrugTFluVac .
+        vocab:vaccinationWith   data:VacTFluVac .
 
-data:DrugCatVccnPrdct
-        rdf:type          owl:NamedIndividual , vocab:DrugCategory ;
+data:VacCatVccnPrdct
+        rdf:type          owl:NamedIndividual , vocab:VaccineCategory ;
         rdfs:label        "Vaccine product"@en ;
         vocab:sctid  "787859002" .
 
 data:ActAdministerVccnPrdct
-        rdf:type                owl:NamedIndividual , vocab:DrugAdministrationType ;
+        rdf:type                owl:NamedIndividual , vocab:VaccinationType ;
         rdfs:label              "administer vaccine product"@en ;
-        vocab:administrationOf  data:DrugCatVccnPrdct ;
+        vocab:vaccinationWith   data:VacCatVccnPrdct ;
         vocab:subsumes          data:ActAdministerPneumnVac , data:ActAdministerFluVac .
 
 data:DrugCatIcs  rdf:type  owl:NamedIndividual , vocab:DrugCategory ;
