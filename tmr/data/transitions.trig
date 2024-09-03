@@ -17,24 +17,40 @@
 @prefix nanopub: <http://www.nanopub.org/nschema#> .
 
 
-:TrPioglitazoneSideEffects rdf:type owl:NamedIndividual , vocab:TransitionType;
+:TrPioglitazoneLH rdf:type owl:NamedIndividual , vocab:TransitionType;
                     vocab:affects               :PropHeartFailureRisk ;
                     vocab:derivative            "increase" ;
                     vocab:hasTransformableSituation :SitLowHeartFailureRisk ;
                     vocab:hasExpectedSituation :SitHighHeartFailureRisk .
 
+:TrPioglitazoneUknAtRsk rdf:type owl:NamedIndividual , vocab:TransitionType;
+                    vocab:affects               :PropHeartFailureRisk ;
+                    vocab:derivative            "increase" ;
+                    vocab:hasTransformableSituation :SitUnknHeartFailureRisk ;
+                    vocab:hasExpectedSituation :SitAtRskHeartFailureRisk .
+
 :PropHeartFailureRisk  a       owl:NamedIndividual , vocab:TropeType ;
                     rdfs:label  "risk of heart failure"@en .
 
 :SitLowHeartFailureRisk rdf:type owl:NamedIndividual , vocab:SituationType;
-        rdfs:label              "Heart failure risk is low"@en ;
+        rdfs:label              "heart failure risk is low"@en ;
         vocab:stateOf   "low" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
+
+:SitUnknHeartFailureRisk rdf:type owl:NamedIndividual , vocab:SituationType;
+        rdfs:label              "heart failure risk is unknown"@en ;
+        vocab:stateOf   "unknown" ;
+        vocab:sctid  "" .
 
 :SitHighHeartFailureRisk rdf:type vocab:SituationType , owl:NamedIndividual ;
-        rdfs:label              "Heart failure risk is high"@en ;
+        rdfs:label              "heart failure risk is high"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
+
+:SitAtRskHeartFailureRisk rdf:type vocab:SituationType , owl:NamedIndividual ;
+        rdfs:label              "at risk of heart failure risk"@en ;
+        vocab:stateOf   "at risk" ;
+        vocab:sctid  "" .
 
 :TrLowerHbA1c rdf:type owl:NamedIndividual , vocab:TransitionType;
                     vocab:affects               :PropHbA1c ;
@@ -48,12 +64,12 @@
 :SitHighHbA1c rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "HbA1c is high"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :SitNormalHbA1c rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "HbA1c is normal"@en ;
         vocab:stateOf   "normal" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :TrMetforminIntolerance rdf:type owl:NamedIndividual , vocab:TransitionType;
                     vocab:affects               :PropMetforminSymptoms ;
@@ -67,12 +83,12 @@
 :SitMetforminSymptomsNotPresent rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "Metformin intolerance symptoms is not present"@en ;
         vocab:stateOf   "not present" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :SitMetforminSymptomsPresent rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "Metformin intolerance symptoms is present"@en ;
         vocab:stateOf   "present" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :TrSulfonylureaIntolerance rdf:type owl:NamedIndividual , vocab:TransitionType;
                     vocab:affects               :PropSulfonylureaSymptoms ;
@@ -86,12 +102,12 @@
 :SitSulfonylureaSymptomsNotPresent rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "Sulfonylurea intolerance symptoms is not present"@en ;
         vocab:stateOf   "not present" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :SitSulfonylureaSymptomsPresent rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "Sulfonylurea intolerance symptoms is present"@en ;
         vocab:stateOf   "present" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :TrIncreaseHypoglycaemia rdf:type owl:NamedIndividual , vocab:TransitionType;
                     vocab:affects               :PropHypoglycaemiaRate ;
@@ -105,12 +121,12 @@
 :SitNormalHypoglycaemiaRate rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "Hypoglycaemia rate is normal"@en ;
         vocab:stateOf   "normal" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :SitIncreasedHypoglycaemiaRate rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "Hypoglycaemia rate is high"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :TrIncreaseWeight rdf:type owl:NamedIndividual , vocab:TransitionType;
                     vocab:affects               :PropWeightGain ;
@@ -124,22 +140,22 @@
 :SitNormalWeightGain rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label              "Weight gain is normal"@en ;
         vocab:stateOf   "normal" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :SitHighWeightGain rdf:type owl:NamedIndividual , vocab:SituationType;
         rdfs:label      "Weight gain is high"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :SitDUHealed  a         vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Ulcer is healed"@en ;
         vocab:stateOf   "healed" ;
-        vocab:umlsCode  "C1265810" .
+        vocab:sctid  "C1265810" .
 
 :SitDUUnhealed  a       vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Ulcer is unhealed"@en ;
         vocab:stateOf   "unhealed" ;
-        vocab:umlsCode  "C0041582" .
+        vocab:sctid  "C0041582" .
 
 :SitHPyloriNegative  a  vocab:SituationType , owl:NamedIndividual ;
         rdfs:label     "H. Pylori exam is negative"@en ;
@@ -148,12 +164,12 @@
 :SitHPyloriPositive  a  vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "H. Pylori exam is positive"@en ;
         vocab:stateOf   "positive" ;
-        vocab:umlsCode  "C0079488" .
+        vocab:sctid  "C0079488" .
 
 :SitHighBP  a           vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Blood pressure is high"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "C3843080" .
+        vocab:sctid  "C3843080" .
 
 :SitNormalBP  a        vocab:SituationType , owl:NamedIndividual ;
         rdfs:label     "Blood pressure is normal"@en ;
@@ -162,7 +178,7 @@
 :SitHighLBS  a          vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Level of Blood Sugar is High"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "C3843079" .
+        vocab:sctid  "C3843079" .
 
 :SitNormalLBS  a       vocab:SituationType , owl:NamedIndividual ;
         rdfs:label     "Level of Blood Sugar is normal"@en ;
@@ -171,27 +187,27 @@
 :SitHighRiskGIB  a      vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Risk of Gastrointestinal Bleeding is High"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "C0017181" .
+        vocab:sctid  "C0017181" .
 
 :SitLowRiskGIB  a      vocab:SituationType , owl:NamedIndividual ;
         rdfs:label     "Risk of Gastrointestinal Bleeding is low"@en ;
         vocab:stateOf  "low" .
 
-:  a  vocab:SituationType , owl:NamedIndividual ;
+:SitHighRiskThrombus  a  vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Risk of Thrombus is High"@en ;
         vocab:stateOf   "high" ;
-        vocab:umlsCode  "C0155749" .
+        vocab:sctid  "C0155749" .
 
 :SitLowRiskThrombus  a  vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Risk of Thrombus is Low"@en ;
         vocab:stateOf   "low" ;
-        vocab:umlsCode  "null" .
+        vocab:sctid  "" .
 
 :SitMediumRiskThrombus
         a               vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Risk of Thrombus is Medium"@en ;
         vocab:stateOf   "medium" ;
-        vocab:umlsCode  "C0155749" .
+        vocab:sctid  "C0155749" .
 
 :SitNormalBC  a        vocab:SituationType , owl:NamedIndividual ;
         rdfs:label     "Blood Coagulation is Normal"@en ;
@@ -200,7 +216,7 @@
 :SitLowBC  a            vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Blood Coagulation is Low"@en ;
         vocab:stateOf   "low" ;
-        vocab:umlsCode  "C0005779" .
+        vocab:sctid  "C0005779" .
 
 :SitPatientHasNoPain  a  vocab:SituationType , owl:NamedIndividual ;
         rdfs:label     "Patient has no Pain"@en ;
@@ -209,7 +225,7 @@
 :SitPatientHasPain  a   vocab:SituationType , owl:NamedIndividual ;
         rdfs:label      "Patient has Pain"@en ;
         vocab:stateOf   "pain" ;
-        vocab:umlsCode  "C0030193" .
+        vocab:sctid  "C0030193" .
 
 :SitNonSteroidalDrug  a  vocab:SituationType , owl:NamedIndividual ;
         rdfs:label     "Drug Type is non steroidal"@en ;
@@ -321,7 +337,7 @@
 :PredDM2 rdf:type vocab:PredicateType;
         rdfs:label              "DM 2" .
 :PredHeartFailure rdf:type vocab:PredicateType;
-        rdfs:label              "Heart failure" .
+        rdfs:label              "heart failure" .
 :PredIntenseInsulinTherapy rdf:type vocab:PredicateType;
         rdfs:label              "Intense insulin therapy" .
 :PredOverweight rdf:type vocab:PredicateType;
@@ -433,3 +449,1200 @@
 [ a                    owl:AllDifferent ;
   owl:distinctMembers  ( :SitDUHealed :SitDUUnhealed :SitHPyloriNegative :SitHPyloriPositive :SitHighBP :SitHighLBS :SitHighRiskGIB :SitHighRiskThrombus :SitLowRiskGIB :SitLowRiskThrombus :SitMediumRiskThrombus :SitNormalBP :SitNormalLBS :SitPatientHasNoPain :SitPatientHasPain :SitNormalBC :SitLowBC )
 ] .
+
+############################
+
+@prefix np:    <http://www.nanopub.org/nschema#> .
+@prefix data:  <http://anonymous.org/tmr/data/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix tmr:   <http://anonymous.org/tmr/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix swrl:  <http://www.w3.org/2003/11/swrl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nanopub: <http://www.nanopub.org/nschema#> .
+
+data:SitLwBP  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Low blood pressure (disorder)"@en ;
+        tmr:snomedCode  "45007003" ;
+        tmr:stateOf     "low" .
+
+data:SitHghBP  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Hypertensive disorder, systemic arterial (disorder)"@en ;
+        tmr:snomedCode  "38341003" ;
+        tmr:stateOf     "high" .
+
+data:PropHT  rdf:type   owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Hypertensive disorder, systemic arterial (disorder)"@en ;
+        tmr:snomedCode  "38341003" .
+
+data:SitIncBP  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "A finding of increased blood pressure; not necessarily hypertensive disorder"@en ;
+        tmr:snomedCode  "24184005" ;
+        tmr:stateOf     "increased" .
+
+data:SitNrmlBP  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Normal blood pressure (finding)"@en ;
+        tmr:snomedCode  "2004005" ;
+        tmr:stateOf     "normal" ;
+        owl:sameAs      data:SitStblBP .
+
+data:SitStblBP  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Stable blood pressure (finding)"@en ;
+        tmr:snomedCode  "271651005" ;
+        tmr:stateOf     "stable" .
+
+data:SitDecBP  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Finding of decreased blood pressure (finding)"@en ;
+        tmr:snomedCode  "12763006" ;
+        tmr:stateOf     "decreased" .
+
+data:PropBP  rdf:type   owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Blood pressure (observable entity)"@en ;
+        tmr:snomedCode  "75367002" .
+
+data:PropBPFndn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Blood pressure finding (finding)"@en ;
+        tmr:snomedCode  "392570002" .
+
+data:TrDecHT  rdf:type                 owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBP ;
+        tmr:derivative                 tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitStblBP ;
+        tmr:hasTransformableSituation  data:SitHghBP ;
+        owl:sameAs                     data:TrDecBPFall .
+
+data:TrDecBPFall  rdf:type             owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBP ;
+        tmr:derivative                 tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitBPFall ;
+        tmr:hasTransformableSituation  data:SitHghBP .
+
+data:TrMainBP  rdf:type                owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBP ;
+        tmr:derivative                 tmr:Maintain ;
+        tmr:hasExpectedSituation       data:SitStblBP ;
+        tmr:hasTransformableSituation  data:SitStblBP .
+
+data:TrIncLwBP  rdf:type               owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBP ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitStblBP ;
+        tmr:hasTransformableSituation  data:SitLwBP .
+
+data:TrDecIncBPFndn  rdf:type          owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBPFndn ;
+        tmr:derivative                 tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitNrmlBP ;
+        tmr:hasTransformableSituation  data:SitIncBP .
+
+data:TrIncDecBPFndn  rdf:type          owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBPFndn ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitNrmlBP ;
+        tmr:hasTransformableSituation  data:SitDecBP .
+
+data:TrMainBPFndn  rdf:type            owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBPFndn ;
+        tmr:derivative                 tmr:Maintain ;
+        tmr:hasExpectedSituation       data:SitNrmlBP ;
+        tmr:hasTransformableSituation  data:SitNrmlBP .
+
+data:SitHghAlbmn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Albuminuria (finding)"@en ;
+        tmr:snomedCode  "274769005" ;
+        tmr:stateOf     "high level" .
+
+data:SitLwLvlAlbmn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Albumin below reference range (finding)"@en ;
+        tmr:snomedCode  "127355002" ;
+        tmr:stateOf     "below reference range" .
+
+data:SitHghLvlAlbmn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Albumin above reference range (finding)"@en ;
+        tmr:snomedCode  "127354003" ;
+        tmr:stateOf     "above reference range" .
+
+data:SitNrmlAlbmn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Serum albumin within reference range (finding)"@en ;
+        tmr:snomedCode  "166783005" ;
+        tmr:stateOf     "within reference range" .
+
+data:SitNS  rdf:type    tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Nephrotic syndrome (disorder)"@en ;
+        tmr:snomedCode  "52254009" ;
+        tmr:stateOf     "low level" .
+
+data:PropAlbmnFndn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Finding of albumin level (finding)"@en ;
+        tmr:snomedCode  "365801005" .
+
+data:TrDecHghAlbmn  rdf:type           owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAlbmnFndn ;
+        tmr:derivative                 tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitNrmlAlbmn ;
+        tmr:hasTransformableSituation  data:SitHghAlbmn .
+
+data:TrDecHghLvlAlbmn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAlbmnFndn ;
+        tmr:derivative                 tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitNrmlAlbmn ;
+        tmr:hasTransformableSituation  data:SitHghLvlAlbmn .
+
+data:TrIncLwLvlAlbmn  rdf:type         owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAlbmnFndn ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitNrmlAlbmn ;
+        tmr:hasTransformableSituation  data:SitLwLvlAlbmn .
+
+data:TrIncNS  rdf:type                 owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAlbmnFndn ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitNrmlAlbmn ;
+        tmr:hasTransformableSituation  data:SitNS .
+
+data:SitStblAngn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "stable angina (disorder)"@en ;
+        tmr:snomedCode  "233819005" ;
+        tmr:stateOf     "stable" .
+
+data:SitHghHTDrgDsg  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Patient on maximal tolerated antihypertensive therapy (finding)"@en ;
+        tmr:snomedCode  "407567007" ;
+        tmr:stateOf     "patient on maximum tolerated dosage" .
+
+data:PropChstDscmfrt  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Chest discomfort (finding)"@en ;
+        tmr:snomedCode  "279084009" .
+
+data:PropChstPain  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Chest pain (finding)"@en ;
+        tmr:snomedCode  "29857009" .
+
+data:SitHstrChstPain  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "history of chest pain (situation)"@en ;
+        tmr:snomedCode  "16089411000119109" .
+
+data:SitRskHrtDss  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "at risk of heart disease (finding)"@en ;
+        tmr:snomedCode  "161639008" .
+
+data:PropDrugThrpFndn
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Drug therapy finding (finding)"@en ;
+        tmr:snomedCode  "309298003" .
+
+data:PropIHD  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Ischemic heart disease (disorder)"@en ;
+        tmr:snomedCode  "414545008" .
+
+data:PropAngn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "angina (disorder)"@en ;
+        tmr:snomedCode  "194828000" .
+
+data:SitStrkTIA  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Stroke and transient ischaemic attack (qualifier value)"@en ;
+        tmr:snomedCode  "720191000000104" .
+
+data:SitCrbVscAcdnt  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "cerebrovascular accident (disorder)"@en ;
+        tmr:snomedCode  "230690007" .
+
+data:SitTIA  rdf:type   tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Transient ischemic attack (disorder)"@en ;
+        tmr:snomedCode  "266257000" .
+
+data:SitPregnancy  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Pregnancy (finding)"@en ;
+        tmr:snomedCode  "77386006" .
+
+data:SitHepatopathy  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Disorder of liver (disorder)"@en ;
+        tmr:snomedCode  "235856003" .
+
+data:SitProteinuria  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Proteinuria (finding)"@en ;
+        tmr:snomedCode  "29738008" .
+
+data:SitAngioedema  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Angioedema (disorder)"@en ;
+        tmr:snomedCode  "41291007" .
+
+data:SitSystolicBPReadng
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "On examination - Systolic blood pressure reading (finding)"@en ;
+        tmr:snomedCode  "163030003" .
+
+data:SitDiastolicBPReadng
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "On examination - Diastolic blood pressure reading (finding)"@en ;
+        tmr:snomedCode  "163031004" .
+
+data:SitRAS  rdf:type   tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Renal artery stenosis (disorder)"@en ;
+        tmr:snomedCode  "302233006" .
+
+data:PropPotassiumLvl
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Potassium level (observable entity)"@en ;
+        tmr:snomedCode  "1028441000000104" .
+
+data:SitUnknownPrblm  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "unknown problem (finding)"@en ;
+        tmr:snomedCode  "240031000000109" ;
+        owl:sameAs      data:SitUnknwn .
+
+data:SitUnknwn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Unknown (qualifier value)"@en ;
+        tmr:snomedCode  "261665006" .
+
+data:SitUnknownSvrt  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "unknown severity (qualifier value)"@en ;
+        tmr:snomedCode  "764991000000104" .
+
+data:SitKnown  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "known (qualifier value)"@en ;
+        tmr:snomedCode  "36692007" .
+
+data:SitIncMedDosage  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "increasing dosage of medication (procedure)"@en ;
+        tmr:snomedCode  "763779006" .
+
+data:PropDrugAdminMgmt
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "procedure related to management of drug administration (procedure)"@en ;
+        tmr:snomedCode  "182832007" .
+
+data:SitBPFall  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "blood pressure fall (qualifier value)"@en ;
+        tmr:snomedCode  "255329004" .
+
+data:SitUnknwnScreening
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "screening status unknown (situation)"@en ;
+        tmr:snomedCode  "406011002" ;
+        owl:sameAs      data:SitUnknownPrblm , data:SitUnknownSvrt .
+
+data:SitSvrModifier  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Severe (severity modifier) (qualifier value)"@en ;
+        tmr:snomedCode  "24484000" .
+
+data:PropStrkRsk  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Stroke risk (assessment scale)"@en ;
+        tmr:snomedCode  "135877001" .
+
+data:SitRskStrk  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "At risk of cerebrovascular accident (finding)"@en ;
+        tmr:snomedCode  "866240007" ;
+        tmr:stateOf     "at risk of stroke" .
+
+data:SitHghRsk  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "High risk of (contextual qualifier) (qualifier value)"@en ;
+        tmr:snomedCode  "15508007" ;
+        tmr:stateOf     "high risk" .
+
+data:TrIncStrkRskHgh  rdf:type         owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropStrkRsk ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitHghRsk ;
+        tmr:hasTransformableSituation  data:SitUnknownSvrt .
+
+data:PropBPMonitoring
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Blood pressure monitoring (regime/therapy)"@en ;
+        tmr:snomedCode  "135840009" .
+
+data:TrIncBPMonitoring
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropBPMonitoring ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnown ;
+        tmr:hasTransformableSituation  data:SitUnknwn .
+
+data:PropCVDAssmnt  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Assessment for risk of cardiovascular disease (procedure)"@en ;
+        tmr:snomedCode  "802421000000103"  .
+
+data:TrIncCVDAssmnt  rdf:type          owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropCVDAssmnt ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnown ;
+        tmr:hasTransformableSituation  data:SitUnknownPrblm .
+
+data:SitIncRskCVD  rdf:type  tmr:SituationType ;
+        tmr:snomedCode  "16434071000119108" ;
+        tmr:stateOf     "increased risk" .
+
+data:SitCntrlld  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Controlled (qualifier value)"@en ;
+        tmr:snomedCode  "31509003" ;
+        tmr:stateOf     "controlled" .
+
+data:TrDecCVDRsk  rdf:type             owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropHT ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitCntrlld ;
+        tmr:hasTransformableSituation  data:SitIncRskCVD .
+
+data:SitRskFctrsPrsnt
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Risk factors present at hypertension screening (finding)"@en ;
+        tmr:snomedCode  "171225004" ;
+        tmr:stateOf     "risk factors present" .
+
+data:PropHTRskLvl  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Hypertension risk level (observable entity)"@en ;
+        tmr:snomedCode  "268607006" .
+
+data:TrMainKnwnHTRskLvl
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropHTRskLvl ;
+        tmr:derivative                 tmr:Maintain ;
+        tmr:hasExpectedSituation       data:SitUnknownPrblm ;
+        tmr:hasTransformableSituation  data:SitUnknownPrblm .
+
+data:TrIncKnwnHTRskLvl
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropHTRskLvl ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnown ;
+        tmr:hasTransformableSituation  data:SitUnknownPrblm .
+
+data:PropFndng  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Finding reported by subject or history provider (finding)"@en ;
+        tmr:snomedCode  "418799008" .
+
+data:SitRskAssmntDn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Able to assess risk (finding)"@en ;
+        tmr:snomedCode  "716394001" ;
+        tmr:stateOf     "Able to assess risk" .
+
+data:SitPainlss  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "No pain (situation)"@en ;
+        tmr:snomedCode  "81765008" ;
+        tmr:stateOf     "no pain" .
+
+data:SitActPain  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Acute pain (finding)"@en ;
+        tmr:snomedCode  "274663001" ;
+        tmr:stateOf     "acute" .
+
+data:SitPatCondAddrssd
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Patient condition assessed (procedure)"@en ;
+        tmr:snomedCode  "398214005" ;
+        tmr:stateOf     "condition addressed" .
+
+data:PropPainLvl  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Pain level (observable entity)"@en ;
+        tmr:snomedCode  "405161002" .
+
+data:SitActInflmmtn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Acute inflammation (morphologic abnormality)"@en ;
+        tmr:snomedCode  "763779006" ;
+        tmr:stateOf     "acute" .
+
+data:SitMdctnSdEffctsPrsnt
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Medication side effects present (finding)"@en ;
+        tmr:snomedCode  "4532008" ;
+        tmr:stateOf     "present" .
+
+data:SitUsesCmbndOrlCntrcptn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Uses combined oral contraception (finding)"@en ;
+        tmr:snomedCode  "401207004" ;
+        tmr:stateOf     "use of" .
+
+data:SitSxlBhvrUnknwn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Sexual behaviour unknown (finding)"@en ;
+        tmr:snomedCode  "268458002" ;
+        tmr:stateOf     "sexual behaviour unknown" .
+
+data:SitIncrsngDsgMdctn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Increasing dosage of medication (procedure)"@en ;
+        tmr:snomedCode  "702770006" ;
+        tmr:stateOf     "increasing dosage" .
+
+data:SitAgeMrThn65yrs
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Age more than 65 years (finding)"@en ;
+        tmr:snomedCode  "102528008" ;
+        tmr:stateOf     "Age more than 65 years" .
+
+data:PropScndrHT  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Secondary hypertension (disorder)"@en ;
+        tmr:snomedCode  "31992008" .
+
+data:PropScrngFndng  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Screening finding (finding)"@en ;
+        tmr:snomedCode  "365856005" .
+
+data:PropCntrcptnCrAssmnt
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Contraception care assessment (procedure)"@en ;
+        tmr:snomedCode  "408967003" .
+
+data:PropScrngStts  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Screening status (finding)"@en ;
+        tmr:snomedCode  "243876005" .
+
+data:PropFmlPlngKnwLvl
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Knowledge level: family planning (observable entity)"@en ;
+        tmr:snomedCode  "422900000" .
+
+data:PropSxlBhvrFndn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Finding relating to sexual behavior (finding)"@en ;
+        tmr:snomedCode  "473013003" .
+
+data:PropSxlBhvr  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Sexual behavior (observable entity)"@en ;
+        tmr:snomedCode  "363903009" .
+
+data:SitPrgnancyRltdFndn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Finding related to pregnancy (finding)"@en ;
+        tmr:snomedCode  "118185001" ;
+        tmr:stateOf     "related finding" .
+
+data:PropPrgncyKnwLvl
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Knowledge level: pregnancy (observable entity)"@en ;
+        tmr:snomedCode  "405114003" .
+
+data:PropBMI  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Body mass index (observable entity)"@en ;
+        tmr:snomedCode  "60621009" .
+
+data:SitProcStrtd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Procedure started (situation)"@en ;
+        tmr:snomedCode  "394906002" ;
+        tmr:stateOf     "procedure started" .
+
+data:SitMedStrtd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Medication commenced (situation)"@en ;
+        tmr:snomedCode  "266709005" ;
+        tmr:stateOf     "medication started" .
+
+data:SitProStpd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Procedure stopped (situation)"@en ;
+        tmr:snomedCode  "394908001" ;
+        tmr:stateOf     "procedure stopped" .
+
+data:SitStp  rdf:type   tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Stop (qualifier value)"@en ;
+        tmr:snomedCode  "422117008" ;
+        tmr:stateOf     "stop" .
+
+data:SitInPrgrs  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "In progress (qualifier value)"@en ;
+        tmr:snomedCode  "385651009" ;
+        tmr:stateOf     "in progress" .
+
+data:SitNsaidAssmntCmpltd
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "non-steroidal anti-inflammatory drug risk assessment completed (finding)"@en ;
+        tmr:icd10Code   "" ;
+        tmr:snomedCode  "710421000000101" ;
+        tmr:stateOf     "NSAID assessment completed" ;
+        tmr:umlsCode    "" .
+
+data:SithrtFailrRsk  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "at risk for heart failure (finding)"@en ;
+        tmr:icd10Code   "" ;
+        tmr:snomedCode  "609386002" ;
+        tmr:stateOf     "at risk" ;
+        tmr:umlsCode    "" .
+
+data:PropHrtFailrRsk  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "at risk for heart failure (finding)"@en ;
+        tmr:snomedCode  "609386002" .
+
+data:TrHrtFailrRsk  rdf:type           owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropHrtFailrRsk ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitSitKnown ;
+        tmr:hasTransformableSituation  data:SitSitUnknownPrblm .
+
+data:TrIHDKnwn  rdf:type               owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropIHD ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitSitKnown ;
+        tmr:hasTransformableSituation  data:SitSitUnknownPrblm .
+
+data:TrStrkTIAKnwn  rdf:type           owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropPropStrkTIA ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitSitKnown ;
+        tmr:hasTransformableSituation  data:SitSitUnknownPrblm .
+
+data:PropStrkTIA  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Stroke and transient ischaemic attack (qualifier value)"@en ;
+        tmr:snomedCode  "720191000000104" .
+
+data:PropIncrsdBP  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Finding of increased blood pressure (finding)"@en ;
+        tmr:snomedCode  "24184005" .
+
+data:TrIncrsdBPFndn  rdf:type          owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropIncrsdBP ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitSitKnown ;
+        tmr:hasTransformableSituation  data:SitSitUnknownPrblm .
+
+data:PropTrtmntDscsn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Discussion - action (qualifier value)"@en ;
+        tmr:snomedCode  "223484005" , "360272007" .
+
+data:SitDscsdWthDctr  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Discussed with doctor (situation)"@en ;
+        tmr:snomedCode  "394696007" ;
+        tmr:stateOf     "discussed" .
+
+data:TrTrtmntDscsn  tmr:derivative  tmr:Increase .
+
+data:SitAntidprsntStrtd
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Antidepressant drug treatment started (situation)"@en ;
+        tmr:snomedCode  "764639002" ;
+        tmr:stateOf     "drug treatment started" .
+
+data:SitDrgRvwdByDctr
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Medication review done by doctor (situation)"@en ;
+        tmr:snomedCode  "719328007" ;
+        tmr:stateOf     "reviewed by doctor" .
+
+data:PropAntidprsntThrp
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "antidepressant therapy (procedure)"@en ;
+        tmr:snomedCode  "698456001" .
+
+data:TrAntidprsntThrpRvwd
+        tmr:affects                    data:PropAntidprsntThrp ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitDrgRvwdByDctr ;
+        tmr:hasTransformableSituation  data:SitSitUnknownPrblm .
+
+data:PropCmbndOralCntrcptnUse
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Uses combined oral contraception (finding)"@en ;
+        tmr:snomedCode  "268458002" .
+
+data:SitActStatsUnknwn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Action status unknown (qualifier value)"@en ;
+        tmr:snomedCode  "410537005" ;
+        tmr:stateOf     "action status unknown" .
+
+data:SitDrgCmplncChkd
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Drug compliance checked (finding)"@en ;
+        tmr:snomedCode  "408373006" ;
+        tmr:stateOf     "drug compliance checked" , "drug compkliance checked" .
+
+data:PropMdctnSdEffctsPrsnt
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Medication side effects present (finding)"@en ;
+        tmr:snomedCode  "401207004" .
+
+data:SitDrgSdEffctCheckd
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Drug side effects checked (finding)"@en ;
+        tmr:snomedCode  "408356009" ;
+        tmr:stateOf     "drug side effects checked" .
+
+data:PropMdctnCmplnc  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Medication compliance (observable entity)"@en ;
+        tmr:snomedCode  "418633004" .
+
+data:SitDrgCmplncGd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Drug compliance good (finding)"@en ;
+        tmr:snomedCode  "182884001" ;
+        tmr:stateOf     "good compliance" .
+
+data:SitDrgAdhrncChkd
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Medicines adherence checked (situation)"@en ;
+        tmr:snomedCode  "526431000000106" ;
+        tmr:stateOf     "adherence checked" .
+
+data:PropDrgThrpCmplncObsrvtns
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Drug therapy compliance observations (finding)"@en ;
+        tmr:snomedCode  "414059009" .
+
+data:TrDrgThrpCmplncChkd
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropDrgThrpCmplncObsrvtns ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitDrgCmplncChkd ;
+        tmr:hasTransformableSituation  data:SitActStatsUnknwn .
+
+data:PropAssmntSdEffctsMdctn
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Assessment of side effects of medication (procedure)"@en ;
+        tmr:snomedCode  "1177155004" .
+
+data:TrAssmntSdEffctsMdctn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAssmntSdEffctsMdctn ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitDrgSdEffctCheckd ;
+        tmr:hasTransformableSituation  data:SitActStatsUnknwn .
+
+data:SitHTTrmntStrtd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Treatment for hypertension started (situation)"@en ;
+        tmr:snomedCode  "170586008" ;
+        tmr:stateOf     "HT treatment started" .
+
+data:PropFamPlnngObsrvbl
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Family planning observable (observable entity)"@en ;
+        tmr:snomedCode  "423925001" .
+
+data:SitCntrcptnSttsUnknwn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Contraception status unknown (finding)"@en ;
+        tmr:snomedCode  "169556005" ;
+        tmr:stateOf     "status unknown" .
+
+data:TrCntrcptnStatsKnwn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropFamPlnngObsrvbl ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnown ;
+        tmr:hasTransformableSituation  data:SitCntrcptnSttsUnknwn .
+
+data:SitPrgnant  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Pregnancy (finding)"@en ;
+        tmr:snomedCode  "77386006" ;
+        tmr:stateOf     "pregnant" .
+
+data:SitPlnngPrgnancy
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Trying to conceive (finding)"@en ;
+        tmr:snomedCode  "169449001" ;
+        tmr:stateOf     "planning pregnancy" .
+
+data:SitUndrCrObsttrcn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Under care of obstetrician (finding)"@en ;
+        tmr:snomedCode  "305522002" ;
+        tmr:stateOf     "Under care of obstetrician" .
+
+data:SitRfrrlMd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Referral placed (situation)"@en ;
+        tmr:snomedCode  "439980006" ;
+        tmr:stateOf     "referral made" .
+
+data:PropRfrrlAction  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Referral - action (qualifier value)"@en ;
+        tmr:snomedCode  "129276002" .
+
+data:TrRfrrlActionMd  rdf:type         owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRfrrlAction ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitRfrrlMd ;
+        tmr:hasTransformableSituation  data:SitActStatsUnknwn .
+
+data:SitPrgntOrPlnng  rdf:type  owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "pregnant or planning pregnancy"@en ;
+        tmr:or      data:SitPrgnant , data:SitPlnngPrgnancy .
+
+data:PropAlchlDrnkngBhvrDtls
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Details of alcohol drinking behavior (observable entity)"@en ;
+        tmr:snomedCode  "363905002" .
+
+data:PropDrgMisuseBhvrDtls
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Details of drug misuse behavior (observable entity)"@en ;
+        tmr:snomedCode  "363908000" .
+
+data:TrIncAlchlDrnkngBhvrDtls
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAlchlDrnkngBhvrDtls ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnown ;
+        tmr:hasTransformableSituation  data:SitUnknwn .
+
+data:TrIncDrgMisuseBhvrDtls
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropDrgMisuseBhvrDtls ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnown ;
+        tmr:hasTransformableSituation  data:SitUnknwn .
+
+data:PropSbstncUseBhvr
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Substance use behavior (observable entity)"@en ;
+        tmr:snomedCode  "1187057000" .
+
+data:TrIncSbstncUseBhvr
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropSbstncUseBhvr ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnown ;
+        tmr:hasTransformableSituation  data:SitUnknwn .
+
+data:PropOnExmntonBPFndng
+        rdf:type        owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "On examination - blood pressure reading (finding)"@en ;
+        tmr:snomedCode  "163020007" .
+
+data:TrIncOnExmntonBPFndngCntrlld
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropOnExmntonBPFndng ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitCntrlld ;
+        tmr:hasTransformableSituation  data:SitUnknwn .
+
+data:SitOEBPRdngNrml  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "On examination - blood pressure reading normal (finding)"@en ;
+        tmr:snomedCode  "163025002" ;
+        tmr:stateOf     "normal" .
+
+data:SitOEBPRdngNrmlOrStbl
+        rdf:type    owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "On examination - BP normal or BP stable (finding)"@en ;
+        tmr:or      data:SitOEBPRdngNrml , data:SitOEBPRdngStbl .
+
+data:SitOESBPRdng  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "On examination - Systolic blood pressure reading (finding)"@en ;
+        tmr:snomedCode  "163030003" ;
+        tmr:stateOf     "O/E SBP reading" .
+
+data:SitHasDM  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Diabetes mellitus (disorder)"@en ;
+        tmr:snomedCode  "73211009" ;
+        tmr:stateOf     "has diabetes" .
+
+data:SitHasCVD  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Disorder of cardiovascular system (disorder)"@en ;
+        tmr:snomedCode  "49601007" ;
+        tmr:stateOf     "has CVD" .
+
+data:SitHasKD  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Kidney disease (disorder)"@en ;
+        tmr:snomedCode  "90708001" ;
+        tmr:stateOf     "has kidney disease" .
+
+data:SitCVDRskAssmntDone
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Cardiovascular disease risk assessment done (situation)"@en ;
+        tmr:snomedCode  "990301000000105" ;
+        tmr:stateOf     "CVD risk assessment done" .
+
+data:SitCVDAtIncrsdRsk
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "At increased risk of cardiovascular disease (finding)"@en ;
+        tmr:snomedCode  "16434071000119108" ;
+        tmr:stateOf     "at increased risk" .
+
+data:SithasDMOrCVDOrKD
+        rdf:type    owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "has DM or CVD or KD"@en ;
+        tmr:or      data:SitHasDM , data:SitHasCVD , data:SitHasKD .
+
+data:SitCVDRskIncrsdAnd
+        rdf:type    owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "CVD assessment done and CVD risk increased"@en ;
+        tmr:and     data:SitCVDRskAssmntDone , data:SitCVDAtIncrsdRsk .
+
+data:SithasOtherFactorsBPControlled
+        rdf:type    owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "has DM or has CVD or has KD or (CVD assessment done and CVD risk increased)"@en ;
+        tmr:or      data:SithasDMOrCVDOrKD , data:SitCVDRskIncrsdAnd .
+
+data:SitBPContrlldAndhasOtherFactors
+        rdf:type    owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "BP controlled and has DM or has CVD or has KD or (CVD assessment done and CVD risk increased)"@en ;
+        tmr:and     data:SitOEBPRdngNrmlOrStbl , data:SithasOtherFactorsBPControlled .
+
+data:SitBPIsControlled
+        rdf:type    owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "BP controlled and has DM or has CVD or has KD or (CVD assessment done and CVD risk increased)"@en ;
+        tmr:or      data:SitOEBPRdngNrmlOrStbl , data:SitBPContrlldAndhasOtherFactors .
+
+data:SitUncntrlld  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Uncontrolled (qualifier value)"@en ;
+        tmr:snomedCode  "19032002" ;
+        tmr:stateOf     "uncontrolled" .
+
+data:TrIncOnExmntonBPFndngUncntrlld
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropOnExmntonBPFndng ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitUncntrlld ;
+        tmr:hasTransformableSituation  data:SitUnknwn .
+
+data:SitOEBPVrHgh  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "On examination - blood pressure reading very high (finding)"@en ;
+        tmr:snomedCode  "163028000" ;
+        tmr:stateOf     "On examination BP very high" .
+
+data:SitSrmChlstrlAbvRfrncRng
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Serum cholesterol above reference range (finding)"@en ;
+        tmr:snomedCode  "166830008" ;
+        tmr:stateOf     "high level" .
+
+data:PropRskCVD  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Risk of cardiovascular disease (observable entity)"@en ;
+        tmr:snomedCode  "827181004" .
+
+data:SitDcrsd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Decreased (qualifier value)"@en ;
+        tmr:snomedCode  "1250004" ;
+        tmr:stateOf     "decreased" .
+
+data:TrDecCVDAtIncrsdRsk
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRskCVD ;
+        tmr:derivative                 tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitDcrsd ;
+        tmr:hasTransformableSituation  data:SitCVDAtIncrsdRsk .
+
+data:SitRepeatd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Repeat (qualifier value)"@en ;
+        tmr:snomedCode  "27582007" ;
+        tmr:stateOf     "repeated" .
+
+data:SitRepeatdHghChlstrlLevels
+        rdf:type    owl:NamedIndividual , tmr:CompoundSituationType ;
+        rdfs:label  "cholesterol >= 8mmol/L AND repeated AND cholesterol > 5mmol/L"@en ;
+        tmr:and     data:SitSrmChlstrlAbvRfrncRng , data:SitRepeatd .
+
+data:PropCVDCare  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label      "Cardiovascular care (regime/therapy)"@en ;
+        tmr:snomedCode  "718348005" .
+
+data:SitCVDRskAssmntDn
+        rdf:type        tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Cardiovascular disease risk assessment done (situation)"@en ;
+        tmr:snomedCode  "990301000000105" ;
+        tmr:stateOf     "CVD risk assessment done" .
+
+data:SitNtAwrOfRfrrl  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "Not aware of referral (finding)"@en ;
+        tmr:snomedCode  "838721000000101" ;
+        tmr:stateOf     "not aware of referral" .
+
+data:TrIncCVDAssmntCVDRskAssmntDn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropCVDAssmnt ;
+        tmr:derivative                 tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitCVDRskAssmntDn ;
+        tmr:hasTransformableSituation  data:Situnknw .
+
+data:SitPrLngHlth  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "having a poor pulmonary health"@en ;
+        tmr:stateOf     "poor"  .
+
+data:SitNrmLngHlth  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "having a standard pulmonary health"@en ;
+        tmr:stateOf     "standard"  .
+
+data:SitLwRskHypo  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "having a low risk of hypokalaemia"@en ;
+        tmr:stateOf     "low risk" .
+
+data:SitHghRskHypo  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "having a high risk of hypokalaemia"@en ;
+        tmr:stateOf     "high risk" .
+
+data:SitUnkLngTst  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "being in disagreement with lung function test results"@en ;
+        tmr:stateOf     "disagreement" .
+
+data:SitKnwLngTst  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "in agreement with lung function test results"@en ;
+        tmr:stateOf    "agreement" .
+
+data:SitUnkCvHlth  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having an unknown or invalid cardiovascular health assessment"@en ;
+        tmr:stateOf    "unknown" .
+
+data:SitKnwCvHlth  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a known and valid cardiovascular health assessment"@en ;
+        tmr:stateOf    "known and valid" .
+
+data:SitMildAls  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "having a mild airflow limitation severity"@en ;
+        tmr:stateOf     "mild"  .
+
+data:SitModAls  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "having a moderate airflow limitation severity"@en ;
+        tmr:stateOf     "moderate" .
+
+data:SitSevAls  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a severe airflow limitation severity"@en ;
+        tmr:stateOf    "severe" .
+
+data:SitVerySevAls  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label      "having a very severe airflow limitation severity"@en ;
+        tmr:stateOf     "very severe"  .
+
+data:SitUnkImgng  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having an unknown or invalid CAT or X-rays scan"@en ;
+        tmr:stateOf    "unknown or invalid" .
+
+data:SitKnwImgng  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a known and valid CAT or X-rays scan"@en ;
+        tmr:stateOf    "known and valid" .
+
+data:SitUnkCtScn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having an unknown or invalid CAT  scan"@en ;
+        tmr:stateOf    "unknown or invalid" .
+
+data:SitUnkXrayScn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having an unknown or invalid X-rays scan"@en ;
+        tmr:stateOf    "unknown or invalid"  .
+
+data:SitKnwCtScn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a known and valid CAT scan"@en ;
+        tmr:stateOf    "known and valid" .
+
+data:SitKnwXrayScn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a known and valid X-rays scan"@en ;
+        tmr:stateOf    "known and valid" .
+
+data:SitUnkCatRslt  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "unknown or invalid CAT score"@en ;
+        tmr:stateOf    "unknown or invalid" .
+
+data:SitKnwCatRslt  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a known and valid CAT score"@en ;
+        tmr:stateOf    "known and valid" .
+
+data:SitUnkMrcDScale  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having an unknown or invalid mMRC dyspnoea scale"@en ;
+        tmr:stateOf    "unknown or invalid" .
+
+data:SitKnwMrcDScale  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a known and valid mMRC dyspnoea scale"@en ;
+        tmr:stateOf    "known and valid" .
+
+data:SitLwRskCrd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "low risk of having cardiac rhythm disturbances"@en ;
+        tmr:stateOf    "low risk" .
+
+data:SitHghRskCrd  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "high risk of having cardiac rhythm disturbances"@en ;
+        tmr:stateOf    "high risk" .
+
+data:SitLwRskFlu  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a low risk of contracting influenza disease"@en ;
+        tmr:stateOf    "low risk" .
+
+data:SitHghRskFlu  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a high risk of contracting influenza disease"@en ;
+        tmr:stateOf    "high risk" .
+
+data:SitLwRskPneumoc  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a low risk of contracting pneumococcal pneumonia"@en ;
+        tmr:stateOf    "low risk" .
+
+data:SitHghRskPneumoc
+        rdf:type       tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a high risk of  contracting pneumococcal pneumonia"@en ;
+        tmr:stateOf    "high risk" .
+
+data:SitLwRskPneumn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a low risk of contracting pneumonia"@en ;
+        tmr:stateOf    "low risk" .
+
+data:SitHghRskPneumn  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a high risk of contracting pneumonia"@en ;
+        tmr:stateOf    "high risk" .
+
+data:SitPrQol  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a poor quality of life"@en ;
+        tmr:stateOf    "poor" .
+
+data:SitNrmQol  rdf:type  tmr:SituationType , owl:NamedIndividual ;
+        rdfs:label     "having a standard quality of life"@en ;
+        tmr:stateOf    "standard" .
+
+data:PropServImgng  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "medical imaging including CT and X-rays scan"@en .
+
+data:PropRskFlu  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "risk of contracting influenza disease"@en .
+
+data:PropRskPneumoc  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "risk of pneumococcal pneumonia"@en .
+
+data:PropRskPneumn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "risk of pneumonia"@en .
+
+data:PropRskCrd  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "risk of cardiac rhythm disturbances"@en .
+
+data:PropQol  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "quality of life"@en .
+
+data:PropAls  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "airflow limitation severity"@en .
+
+data:PropServCatRslt  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "CAT score"@en .
+
+data:PropServMrcDScale
+        rdf:type    owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "mMRC Dyspnoea scale score"@en .
+
+data:PropServCtScn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "CAT scan"@en .
+
+data:PropServXrayScn  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "X-rays scan"@en .
+
+data:PropRskHypo  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "risk of hypokalaemia"@en .
+
+data:PropServLngTst  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "lung function tests"@en .
+
+data:PropLngHlth  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "pulmonary health"@en .
+
+data:PropServCvHlth  rdf:type  owl:NamedIndividual , tmr:TropeType ;
+        rdfs:label  "cardiovascular health assessment"@en .
+
+data:TrIncPropRskHypo
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRskHypo ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitHghRskHypo ;
+        tmr:hasTransformableSituation  data:SitLwRskHypo .
+
+data:TrIncPropLngHlth
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropLngHlth ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitNrmLngHlth ;
+        tmr:hasTransformableSituation  data:SitPrLngHlth .
+
+data:TrIncPropServCvHlth
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropServCvHlth ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnwCvHlth ;
+        tmr:hasTransformableSituation  data:SitUnkCvHlth .
+
+data:TrIncPropServLngTst
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropServLngTst ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnwLngTst ;
+        tmr:hasTransformableSituation  data:SitUnkLngTst .
+
+data:TrMainMildPropAls
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAls ;
+        tmr:derivative                  tmr:Maintain ;
+        tmr:hasExpectedSituation       data:SitMildAls ;
+        tmr:hasTransformableSituation  data:SitMildAls .
+
+data:TrDecModPropAls  rdf:type         owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAls ;
+        tmr:derivative                  tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitMildAls ;
+        tmr:hasTransformableSituation  data:SitModAls .
+
+data:TrDecSevPropAls  rdf:type         owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAls ;
+        tmr:derivative                  tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitModAls ;
+        tmr:hasTransformableSituation  data:SitSevAls .
+
+data:TrDecVerySevPropAls
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropAls ;
+        tmr:derivative                  tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitSevAls ;
+        tmr:hasTransformableSituation  data:SitVerySevAls .
+
+data:TrDecPropRskFlu  rdf:type         owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRskFlu ;
+        tmr:derivative                  tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitLwRskFlu ;
+        tmr:hasTransformableSituation  data:SitHghRskFlu .
+
+data:TrDecPropRskPneumoc
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRskPneumoc ;
+        tmr:derivative                  tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitLwRskPneumoc ;
+        tmr:hasTransformableSituation  data:SitHghRskPneumoc .
+
+data:TrIncPropRskPneumoc
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropPropRskPneumoc ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitHghRskPneumoc ;
+        tmr:hasTransformableSituation  data:SitLwRskPneumoc .
+
+data:TrIncPropRskPneumn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRskPneumn ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitHghRskPneumn ;
+        tmr:hasTransformableSituation  data:SitLwRskPneumn .
+
+data:TrDecPropRskPneumn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRskPneumn ;
+        tmr:derivative                  tmr:Decrease ;
+        tmr:hasExpectedSituation       data:SitLwRskPneumn ;
+        tmr:hasTransformableSituation  data:SitHghRskPneumn .
+
+data:TrIncPropRskCrd  rdf:type         owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropRskCrd ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitHghRskCrd ;
+        tmr:hasTransformableSituation  data:SitLwRskCrd .
+
+data:TrIncPropQol  rdf:type            owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropQol ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitNrmQol ;
+        tmr:hasTransformableSituation  data:SitPrQol .
+
+data:TrIncPropServCtScn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropServCtScn ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnwCtScn ;
+        tmr:hasTransformableSituation  data:SitUnkCtScn .
+
+data:TrIncPropServXrayScn
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropServXrayScn ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnwXrayScn ;
+        tmr:hasTransformableSituation  data:SitUnkXrayScn .
+
+data:TrIncPropServCatRslt
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropServCatRslt ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnwCatRslt ;
+        tmr:hasTransformableSituation  data:SitUnkCatRslt .
+
+data:TrIncPropServMrcDScale
+        rdf:type                       owl:NamedIndividual , tmr:TransitionType ;
+        tmr:affects                    data:PropServMrcDScale ;
+        tmr:derivative                  tmr:Increase ;
+        tmr:hasExpectedSituation       data:SitKnwMrcDScale ;
+        tmr:hasTransformableSituation  data:SitUnkMrcDScale .

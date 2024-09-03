@@ -28,7 +28,7 @@
 
 data:CBPioglitazoneHeartFailure {
     data:ActAdministerPioglitazone
-        vocab:causes                  data:TrPioglitazoneSideEffects .
+        vocab:causes                  data:TrPioglitazoneLH .
     data:CBPioglitazoneHeartFailure
         a                             vocab:CausationBelief ;
         vocab:strength                "L1"^^xsd:string;
@@ -568,5 +568,2691 @@ data:CBSulfonylureaIntolerance {
     :CBClopidogrelThrombus_nanopub
             prov:generatedAtTime  "2015-10-01"^^xsd:dateTime ;
             prov:wasAttributedTo  :Veruska .
+}
+
+
+data:CBAskSmpmsHrtFailrRsk_publicationinfo {
+    data:CBAskSmpmsHrtFailrRsk_head
+            prov:generatedAtTime  "2023-09-06T10:22:15.848Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBSabaIncPropRskCrd_head {
+    data:CBSabaIncPropRskCrd_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaIncPropRskCrd ;
+            np:hasProvenance       data:CBSabaIncPropRskCrd_provenance ;
+            np:hasPublicationInfo  data:CBSabaIncPropRskCrd_publicationinfo .
+}
+
+data:CBSabaDecModPropAls_publicationinfo {
+    data:CBSabaDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaIcsDecModPropAls_head {
+    data:CBLabaLamaIcsDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaIcsDecModPropAls ;
+            np:hasProvenance       data:CBLabaLamaIcsDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaIcsDecModPropAls_publicationinfo .
+}
+
+data:CBLngTstIncPropServLngTst {
+    data:CBLngTstIncPropServLngTst
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLngTst
+            tmr:causes  data:TrIncPropServLngTst .
+}
+
+data:CBLabaMainMildPropAls_head {
+    data:CBLabaMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaMainMildPropAls ;
+            np:hasProvenance       data:CBLabaMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaMainMildPropAls_publicationinfo .
+}
+
+data:CBLabaLamaMainMildPropAls_head {
+    data:CBLabaLamaMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaMainMildPropAls ;
+            np:hasProvenance       data:CBLabaLamaMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaMainMildPropAls_publicationinfo .
+}
+
+data:CBAntiHTSDecBPFall_provenance {
+    data:CBAntiHTSDecBPFall_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAntiHTSDecBPFall ;
+            oa:hasTarget  [ oa:hasSource  <http://www.uptodate.com/contents/evaluation-and-treatment-of-hypertensive-emergencies-in-adults> ] .
+    
+    data:CBAntiHTSDecBPFall
+            prov:wasDerivedFrom  <http://www.uptodate.com/contents/evaluation-and-treatment-of-hypertensive-emergencies-in-adults> .
+}
+
+data:CBSamaDecSevPropAls {
+    data:ActAdministerSama
+            tmr:causes  data:TrDecSevPropAls .
+    
+    data:CBSamaDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBSabaDecSevPropAls_provenance {
+    data:CBSabaDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBSabaDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaLamaIcsDecSevPropAls_provenance {
+    data:CBLabaLamaIcsDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaIcsDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaLamaIcsDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBAskSmpmsHrtFailrRsk_provenance {
+    data:CBAskSmpmsHrtFailrRsk
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> .
+    
+    data:CBAskSmpmsHrtFailrRsk_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAskSmpmsHrtFailrRsk ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBCatRsltIncPropServCatRslt {
+    data:CBCatRsltIncPropServCatRslt
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerCatRslt
+            tmr:causes  data:TrIncPropServCatRslt .
+}
+
+data:CBSamaDecModPropAls {
+    data:ActAdministerSama
+            tmr:causes  data:TrDecModPropAls .
+    
+    data:CBSamaDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBIncDrgMisuseBhvrDtls {
+    data:CBIncDrgMisuseBhvrDtls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerAssmntDrgMisuse
+            tmr:causes  data:TrIncDrgMisuseBhvrDtls .
+}
+
+data:CBCtScnIncPropServCtScn {
+    data:CBCtScnIncPropServCtScn
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerCtScn
+            tmr:causes  data:TrIncPropServCtScn .
+}
+
+data:CBSabaSamaMainMildPropAls_head {
+    data:CBSabaSamaMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaSamaMainMildPropAls ;
+            np:hasProvenance       data:CBSabaSamaMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaSamaMainMildPropAls_publicationinfo .
+}
+
+data:CBLabaIcsMainMildPropAls_head {
+    data:CBLabaIcsMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaIcsMainMildPropAls ;
+            np:hasProvenance       data:CBLabaIcsMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaIcsMainMildPropAls_publicationinfo .
+}
+
+data:CBIncSbstncUseBhvr_provenance {
+    data:CBIncSbstncUseBhvr
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> , <https://apps.who.int/iris/handle/10665/112736> , <https://apps.who.int/iris/handle/10665/250239> .
+    
+    data:CBIncSbstncUseBhvr_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncSbstncUseBhvr ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBBetaAgonistIncPropRskCrd_provenance {
+    data:CBBetaAgonistIncPropRskCrd_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBBetaAgonistIncPropRskCrd ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBBetaAgonistIncPropRskCrd
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaLamaDecVerySevPropAls {
+    data:ActAdministerLabaLama
+            tmr:causes  data:TrDecVerySevPropAls .
+    
+    data:CBLabaLamaDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBAssmntSdEffctsMdctn_head {
+    data:CBAssmntSdEffctsMdctn_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAssmntSdEffctsMdctn ;
+            np:hasProvenance       data:CBAssmntSdEffctsMdctn_provenance ;
+            np:hasPublicationInfo  data:CBAssmntSdEffctsMdctn_publicationinfo .
+}
+
+data:CBLabaLamaIcsDecVerySevPropAls {
+    data:ActAdministerLabaLamaIcs
+            tmr:causes  data:TrDecVerySevPropAls .
+    
+    data:CBLabaLamaIcsDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBLabaLamaDecModPropAls_provenance {
+    data:CBLabaLamaDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaLamaDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLamaDecSevPropAls_publicationinfo {
+    data:CBLamaDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncAlchlDrnkngBhvrDtls_provenance {
+    data:CBIncAlchlDrnkngBhvrDtls
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> , <https://apps.who.int/iris/handle/10665/112736> , <https://apps.who.int/iris/handle/10665/250239> .
+    
+    data:CBIncAlchlDrnkngBhvrDtls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncAlchlDrnkngBhvrDtls ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBLabaLamaIcsMainMildPropAls_provenance {
+    data:CBLabaLamaIcsMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaLamaIcsMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaIcsMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBHTDrgCmplnChkd_head {
+    data:CBHTDrgCmplnChkd_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBHTDrgCmplnChkd ;
+            np:hasProvenance       data:CBHTDrgCmplnChkd_provenance ;
+            np:hasPublicationInfo  data:CBHTDrgCmplnChkd_publicationinfo .
+}
+
+data:CBLabaIcsDecVerySevPropAls {
+    data:CBLabaIcsDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLabaIcs
+            tmr:causes  data:TrDecVerySevPropAls .
+}
+
+data:CBLamaMainMildPropAls {
+    data:CBLamaMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLama
+            tmr:causes  data:TrMainMildPropAls .
+}
+
+data:CBLabaLamaMainMildPropAls_provenance {
+    data:CBLabaLamaMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaLamaMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBIncrsdBPFndn_head {
+    data:CBIncrsdBPFndn_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncrsdBPFndn ;
+            np:hasProvenance       data:CBIncrsdBPFndn_provenance ;
+            np:hasPublicationInfo  data:CBIncrsdBPFndn_publicationinfo .
+}
+
+data:CBSabaSamaDecModPropAls {
+    data:CBSabaSamaDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSabaSama
+            tmr:causes  data:TrDecModPropAls .
+}
+
+data:CBXraysScnIncPropServXrayScn_head {
+    data:CBXraysScnIncPropServXrayScn_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBXraysScnIncPropServXrayScn ;
+            np:hasProvenance       data:CBXraysScnIncPropServXrayScn_provenance ;
+            np:hasPublicationInfo  data:CBXraysScnIncPropServXrayScn_publicationinfo .
+}
+
+data:CBBetaAgonistIncPropRskCrd_publicationinfo {
+    data:CBBetaAgonistIncPropRskCrd_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBAntiHTSIncStrkRskHgh_head {
+    data:CBAntiHTSIncStrkRskHgh_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAntiHTSIncStrkRskHgh ;
+            np:hasProvenance       data:CBAntiHTSIncStrkRskHgh_provenance ;
+            np:hasPublicationInfo  data:CBAntiHTSIncStrkRskHgh_publicationinfo .
+}
+
+data:CBLabaMainMildPropAls_provenance {
+    data:CBLabaMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBIncAlchlDrnkngBhvrDtls_head {
+    data:CBIncAlchlDrnkngBhvrDtls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncAlchlDrnkngBhvrDtls ;
+            np:hasProvenance       data:CBIncAlchlDrnkngBhvrDtls_provenance ;
+            np:hasPublicationInfo  data:CBIncAlchlDrnkngBhvrDtls_publicationinfo .
+}
+
+data:CBDecCVDAtIncrsdRsk_provenance {
+    data:CBDecCVDAtIncrsdRsk
+            prov:wasDerivedFrom  <http://apps.who.int/iris/handle/10665/252661> , <http://www.medicinescomplete.com/mc/martindale/current/2452-l.htm> , <http://www.who.int/cardiovascular_diseases/guidelines/PocketGL.ENGLISH.AFR-D-E.rev1.pdf> , <http://us.bestpractice.bmj.com/best-practice/monograph/24/treatment/details.html> .
+    
+    data:CBDecCVDAtIncrsdRsk_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBDecCVDAtIncrsdRsk ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBLngRehabIncPropLngHlth {
+    data:CBLngRehabIncPropLngHlth
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLngRehab
+            tmr:causes  data:TrIncPropLngHlth .
+}
+
+data:CBSabaMainMildPropAls_publicationinfo {
+    data:CBSabaMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLngRehabIncPropLngHlth_publicationinfo {
+    data:CBLngRehabIncPropLngHlth_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaIcsMainMildPropAls {
+    data:CBLabaIcsMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLabaIcs
+            tmr:causes  data:TrMainMildPropAls .
+}
+
+data:CBSamaDecSevPropAls_head {
+    data:CBSamaDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSamaDecSevPropAls ;
+            np:hasProvenance       data:CBSamaDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSamaDecSevPropAls_publicationinfo .
+}
+
+data:CBAssmntSdEffctsMdctn_publicationinfo {
+    data:CBAssmntSdEffctsMdctn_head
+            prov:generatedAtTime  "2023-09-07T10:03:53.571Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBRfrrlActionMd_provenance {
+    data:CBRfrrlActionMd
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> .
+    
+    data:CBRfrrlActionMd_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBRfrrlActionMd ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBIncCVDAssmntchk5yrs {
+    data:ActAdministerCVDAssmnt
+            tmr:causes  data:TrTrIncCVDAssmnt .
+    
+    data:CBIncCVDAssmntchk5yrs
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBIncCVDAssmntchk6mnth {
+    data:ActAdministerCVDAssmnt
+            tmr:causes  data:TrTrIncCVDAssmnt .
+    
+    data:CBIncCVDAssmntchk6mnth
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBXraysScnIncPropServXrayScn {
+    data:CBXraysScnIncPropServXrayScn
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerXraysScn
+            tmr:causes  data:TrIncPropServXrayScn .
+}
+
+data:CBUCIRfrlShould_head {
+    data:CBUCIRfrlShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBUCIRfrlShould ;
+            np:hasProvenance       data:CBUCIRfrlShould_provenance ;
+            np:hasPublicationInfo  data:CBUCIRfrlShould_publicationinfo .
+}
+
+data:CBLabaDecModPropAls {
+    data:CBLabaDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLaba
+            tmr:causes  data:TrDecModPropAls .
+}
+
+data:CBRfrrlActionMd_publicationinfo {
+    data:CBRfrrlActionMd_head
+            prov:generatedAtTime  "2023-09-07T12:10:18.007Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBHTMdctnRvwDrgCmplnChkd {
+    data:CBHTMdctnRvwDrgCmplnChkd
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerHTMdctnRvwProc
+            tmr:causes  data:TrDrgThrpCmplncChkd .
+}
+
+data:CBLabaLamaIcsDecVerySevPropAls_publicationinfo {
+    data:CBLabaLamaIcsDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBPneumnVacDecPropRskPneumoc_publicationinfo {
+    data:CBPneumnVacDecPropRskPneumoc_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBSabaSamaDecSevPropAls_provenance {
+    data:CBSabaSamaDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSabaSamaDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaSamaDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBSabaIncPropRskCrd {
+    data:CBSabaIncPropRskCrd
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSabaCvd
+            tmr:causes  data:TrIncPropRskCrd .
+}
+
+data:CBLamaIncPropRskHypo_head {
+    data:CBLamaIncPropRskHypo_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLamaIncPropRskHypo ;
+            np:hasProvenance       data:CBLamaIncPropRskHypo_provenance ;
+            np:hasPublicationInfo  data:CBLamaIncPropRskHypo_publicationinfo .
+}
+
+data:CBMrcDScaleIncPropServMrcDScale {
+    data:CBMrcDScaleIncPropServMrcDScale
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerMrcDScale
+            tmr:causes  data:TrIncPropServMrcDScale .
+}
+
+data:CBSabaDecSevPropAls_head {
+    data:CBSabaDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaDecSevPropAls ;
+            np:hasProvenance       data:CBSabaDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaDecSevPropAls_publicationinfo .
+}
+
+data:CBLabaIcsDecSevPropAls_head {
+    data:CBLabaIcsDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaIcsDecSevPropAls ;
+            np:hasProvenance       data:CBLabaIcsDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaIcsDecSevPropAls_publicationinfo .
+}
+
+data:CBIncOExmntonBPFndngUncntrlld {
+    data:CBIncOExmntonBPFndngUncntrlld
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerMdctnRvw
+            tmr:causes  data:TrIncOnExmntonBPFndngUncntrlld .
+}
+
+data:CBIncrsdBPFndn_provenance {
+    data:CBIncrsdBPFndn
+            prov:wasDerivedFrom  <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> , <http://who.int/reproductivehealth/publications/family_planning/MEC-5/en/> .
+    
+    data:CBIncrsdBPFndn_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncrsdBPFndn ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBAskSmpmsIHD {
+    data:ActAdministerSymptmsDscss
+            tmr:causes  data:TrIHDKnwn .
+    
+    data:CBAskSmpmsIHD
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBUCIRfrlShould_publicationinfo {
+    data:CBUCIRfrlShould_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBIncKnwnHTRskLvl_publicationinfo {
+    data:CBIncKnwnHTRskLvl_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaDecSevPropAls {
+    data:CBLabaDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLaba
+            tmr:causes  data:TrDecSevPropAls .
+}
+
+data:CBIcsIncPropRskPneumn {
+    data:CBIcsIncPropRskPneumn
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerIcs
+            tmr:causes  data:TrIncPropRskPneumn .
+}
+
+data:CBLabaLamaDecVerySevPropAls_publicationinfo {
+    data:CBLabaLamaDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBSabaSamaMainMildPropAls_provenance {
+    data:CBSabaSamaMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaSamaMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBSabaSamaMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBFluVacDecPropRskFlu_provenance {
+    data:CBFluVacDecPropRskFlu
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBFluVacDecPropRskFlu_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBFluVacDecPropRskFlu ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBSabaSamaDecSevPropAls_head {
+    data:CBSabaSamaDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaSamaDecSevPropAls ;
+            np:hasProvenance       data:CBSabaSamaDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaSamaDecSevPropAls_publicationinfo .
+}
+
+data:CBHTMdctnRvwDrgCmplnChkd_head {
+    data:CBHTMdctnRvwDrgCmplnChkd_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBHTMdctnRvwDrgCmplnChkd ;
+            np:hasProvenance       data:CBHTMdctnRvwDrgCmplnChkd_provenance ;
+            np:hasPublicationInfo  data:CBHTMdctnRvwDrgCmplnChkd_publicationinfo .
+}
+
+data:CBPneumnVacDecPropRskPneumoc {
+    data:CBPneumnVacDecPropRskPneumoc
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerPneumnVac
+            tmr:causes  data:TrDecPropRskPneumoc .
+}
+
+data:CBIncKnwnHTRskLvl_head {
+    data:CBIncKnwnHTRskLvl_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncKnwnHTRskLvl ;
+            np:hasProvenance       data:CBIncKnwnHTRskLvl_provenance ;
+            np:hasPublicationInfo  data:CBIncKnwnHTRskLvl_publicationinfo .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn40_provenance {
+    data:CBDecCVDAtIncrsdRskSmvsttn40_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBDecCVDAtIncrsdRskSmvsttn40 ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+    
+    data:CBDecCVDAtIncrsdRskSmvsttn40
+            prov:wasDerivedFrom  <http://apps.who.int/iris/handle/10665/252661> , <http://www.medicinescomplete.com/mc/martindale/current/2452-l.htm> , <http://www.who.int/cardiovascular_diseases/guidelines/PocketGL.ENGLISH.AFR-D-E.rev1.pdf> , <http://us.bestpractice.bmj.com/best-practice/monograph/24/treatment/details.html> .
+}
+
+data:CBIncSbstncUseBhvr_head {
+    data:CBIncSbstncUseBhvr_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncSbstncUseBhvr ;
+            np:hasProvenance       data:CBIncSbstncUseBhvr_provenance ;
+            np:hasPublicationInfo  data:CBIncSbstncUseBhvr_publicationinfo .
+}
+
+data:CBSabaMainMildPropAls_head {
+    data:CBSabaMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaMainMildPropAls ;
+            np:hasProvenance       data:CBSabaMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaMainMildPropAls_publicationinfo .
+}
+
+data:CBPneumnVacDecPropRskPneumoc_head {
+    data:CBPneumnVacDecPropRskPneumoc_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBPneumnVacDecPropRskPneumoc ;
+            np:hasProvenance       data:CBPneumnVacDecPropRskPneumoc_provenance ;
+            np:hasPublicationInfo  data:CBPneumnVacDecPropRskPneumoc_publicationinfo .
+}
+
+data:CBLabaLamaDecModPropAls {
+    data:ActAdministerLabaLama
+            tmr:causes  data:TrDecModPropAls .
+    
+    data:CBLabaLamaDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBLabaLamaMainMildPropAls_publicationinfo {
+    data:CBLabaLamaMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBHTMdctnRvwDrgCmplnChkd_publicationinfo {
+    data:CBHTMdctnRvwDrgCmplnChkd_head
+            prov:generatedAtTime  "2023-09-07T09:54:06.914Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaLamaIcsMainMildPropAls_publicationinfo {
+    data:CBLabaLamaIcsMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaIcsDecSevPropAls_publicationinfo {
+    data:CBLabaLamaIcsDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBAntidprsntTrtmntDscsn_publicationinfo {
+    data:CBAntidprsntTrtmntDscsn_head
+            prov:generatedAtTime  "2023-09-06T14:50:06.826Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn40 {
+    data:ActAdministerSmvsttn40
+            tmr:causes  data:TrDecCVDAtIncrsdRsk .
+    
+    data:CBDecCVDAtIncrsdRskSmvsttn40
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBLamaDecModPropAls_publicationinfo {
+    data:CBLamaDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLamaDecVerySevPropAls_publicationinfo {
+    data:CBLamaDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBFluVacDecPropRskFlu_head {
+    data:CBFluVacDecPropRskFlu_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBFluVacDecPropRskFlu ;
+            np:hasProvenance       data:CBFluVacDecPropRskFlu_provenance ;
+            np:hasPublicationInfo  data:CBFluVacDecPropRskFlu_publicationinfo .
+}
+
+data:CBSamaDecVerySevPropAls {
+    data:CBSamaDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSama
+            tmr:causes  data:TrDecVerySevPropAls .
+}
+
+data:CBIncrsdBPFndn_publicationinfo {
+    data:CBIncrsdBPFndn_head
+            prov:generatedAtTime  "2023-09-06T13:35:02.384Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBSamaDecVerySevPropAls_publicationinfo {
+    data:CBSamaDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBSabaDecSevPropAls_publicationinfo {
+    data:CBSabaDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncOnExmntonBPFndngCntrlld_head {
+    data:CBIncOnExmntonBPFndngCntrlld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncOnExmntonBPFndngCntrlld ;
+            np:hasProvenance       data:CBIncOnExmntonBPFndngCntrlld_provenance ;
+            np:hasPublicationInfo  data:CBIncOnExmntonBPFndngCntrlld_publicationinfo .
+}
+
+data:CBSabaDecVerySevPropAls_provenance {
+    data:CBSabaDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSabaDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBSamaDecModPropAls_publicationinfo {
+    data:CBSamaDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaDecSevPropAls_provenance {
+    data:CBLabaDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBAntidprsntTrtmntDscsn_head {
+    data:CBAntidprsntTrtmntDscsn_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAntidprsntTrtmntDscsn ;
+            np:hasProvenance       data:CBAntidprsntTrtmntDscsn_provenance ;
+            np:hasPublicationInfo  data:CBAntidprsntTrtmntDscsn_publicationinfo .
+}
+
+data:CBIncCVDAssmnt {
+    data:CBIncCVDAssmnt
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerCVDAssmnt
+            tmr:causes  data:TrTrIncCVDAssmnt .
+}
+
+data:CBLabaLamaDecSevPropAls_provenance {
+    data:CBLabaLamaDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaLamaDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaLamaDecModPropAls_publicationinfo {
+    data:CBLabaLamaDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncCVDAssmnt_provenance {
+    data:CBIncCVDAssmnt_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncCVDAssmnt ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+    
+    data:CBIncCVDAssmnt
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071.html> .
+}
+
+data:CBIncOnExmntonBPFndngCntrlld_provenance {
+    data:CBIncOnExmntonBPFndngCntrlld
+            prov:wasDerivedFrom  <https://www.nice.org.uk/guidance/ng136/resources/hypertension-in-adults-diagnosis-and-management-pdf-66141722710213> , <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <http://bestpractice.bmj.com/best-practice/monograph/26/treatment/step-by-step.html> , <http://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf?sequence=1> , <http://www.esh2013.org/wordpress/wp-content/uploads/2013/06/ESC-ESH-Guidelines-2013.pdf> , <http://www.nhlbi.nih.gov/files/docs/guidelines/jnc7full.pdf> , <https://www.who.int/publications/i/item/9789240033986> .
+    
+    data:CBIncOnExmntonBPFndngCntrlld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncOnExmntonBPFndngCntrlld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBLabaIncPropRskHypo_publicationinfo {
+    data:CBLabaIncPropRskHypo_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBBetaAgonistIncPropRskCrd_head {
+    data:CBBetaAgonistIncPropRskCrd_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBBetaAgonistIncPropRskCrd ;
+            np:hasProvenance       data:CBBetaAgonistIncPropRskCrd_provenance ;
+            np:hasPublicationInfo  data:CBBetaAgonistIncPropRskCrd_publicationinfo .
+}
+
+data:CBSabaDecVerySevPropAls_head {
+    data:CBSabaDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaDecVerySevPropAls ;
+            np:hasProvenance       data:CBSabaDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaDecVerySevPropAls_publicationinfo .
+}
+
+data:CBSabaDecSevPropAls {
+    data:CBSabaDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSaba
+            tmr:causes  data:TrDecSevPropAls .
+}
+
+data:CBLabaIncPropRskCrd_head {
+    data:CBLabaIncPropRskCrd_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaIncPropRskCrd ;
+            np:hasProvenance       data:CBLabaIncPropRskCrd_provenance ;
+            np:hasPublicationInfo  data:CBLabaIncPropRskCrd_publicationinfo .
+}
+
+data:CBSmokeThrpyIncPropQol_head {
+    data:CBSmokeThrpyIncPropQol_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSmokeThrpyIncPropQol ;
+            np:hasProvenance       data:CBSmokeThrpyIncPropQol_provenance ;
+            np:hasPublicationInfo  data:CBSmokeThrpyIncPropQol_publicationinfo .
+}
+
+data:CBAntiHTSIncStrkRskHgh {
+    data:CBAntiHTSIncStrkRskHgh
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerAntiHTS
+            tmr:causes  data:TrIncStrkRskHgh .
+}
+
+data:CBAntiHTSDecBPFall_publicationinfo {
+    data:CBAntiHTSDecBPFall_head
+            prov:generatedAtTime  "2023-08-20T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaIncPropRskHypo {
+    data:CBLabaLamaIncPropRskHypo
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLabaLamaCkd
+            tmr:causes  data:TrIncPropRskHypo .
+}
+
+data:CBCtScnIncPropServCtScn_head {
+    data:CBCtScnIncPropServCtScn_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBCtScnIncPropServCtScn ;
+            np:hasProvenance       data:CBCtScnIncPropServCtScn_provenance ;
+            np:hasPublicationInfo  data:CBCtScnIncPropServCtScn_publicationinfo .
+}
+
+data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_publicationinfo {
+    data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_head
+            prov:generatedAtTime  "2023-09-08T11:45:02.413Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBIcsIncPropRskPneumn_provenance {
+    data:CBIcsIncPropRskPneumn_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIcsIncPropRskPneumn ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBIcsIncPropRskPneumn
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaLamaIcsDecVerySevPropAls_head {
+    data:CBLabaLamaIcsDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaIcsDecVerySevPropAls ;
+            np:hasProvenance       data:CBLabaLamaIcsDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaIcsDecVerySevPropAls_publicationinfo .
+}
+
+data:CBLabaIncPropRskHypo_provenance {
+    data:CBLabaIncPropRskHypo_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaIncPropRskHypo ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaIncPropRskHypo
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLamaMainMildPropAls_publicationinfo {
+    data:CBLamaMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBCntrcptnStatsKnwn_publicationinfo {
+    data:CBCntrcptnStatsKnwn_head
+            prov:generatedAtTime  "2023-09-07T11:30:42.426Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBIncOExmntonBPFndngUncntrlld_publicationinfo {
+    data:CBIncOExmntonBPFndngUncntrlld_head
+            prov:generatedAtTime  "2023-09-07T20:35:21.521Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaLamaIncPropRskHypo_head {
+    data:CBLabaLamIncPropRskHypo_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaIncPropRskHypo ;
+            np:hasProvenance       data:CBLabaLamaIncPropRskHypo_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaIncPropRskHypo_publicationinfo .
+}
+
+data:CBSamaDecSevPropAls_provenance {
+    data:CBSamaDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSamaDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSamaDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLabaLamaIcsMainMildPropAls_head {
+    data:CBLabaLamaIcsMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaIcsMainMildPropAls ;
+            np:hasProvenance       data:CBLabaLamaIcsMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaIcsMainMildPropAls_publicationinfo .
+}
+
+data:CBSabaSamaDecModPropAls_publicationinfo {
+    data:CBSabaSamaDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaDecSevPropAls_publicationinfo {
+    data:CBLabaLamaDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLamaIncPropRskHypo_publicationinfo {
+    data:CBLamaIncPropRskHypo_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLngTstIncPropServLngTst_publicationinfo {
+    data:CBLngTstIncPropServLngTst_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBAskSmpmsHrtFailrRsk {
+    data:CBAskSmpmsHrtFailrRsk
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSymptmsDscss
+            tmr:causes  data:TrHrtFailrRskKnwn .
+}
+
+data:CBLabaLamaIncPropRskHypo_publicationinfo {
+    data:CBLabaLamaIncPropRskHypo_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaMainMildPropAls {
+    data:CBLabaLamaMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLabaLama
+            tmr:causes  data:TrMainMildPropAls .
+}
+
+data:CBLabaIcsDecSevPropAls {
+    data:ActAdministerLabaIcs
+            tmr:causes  data:TrDecSevPropAls .
+    
+    data:CBLabaIcsDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBLabaIcsMainMildPropAls_provenance {
+    data:CBLabaIcsMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaIcsMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaIcsMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBAntidprsntThrpRvwd_provenance {
+    data:CBAntidprsntThrpRvwd
+            prov:wasDerivedFrom  <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> , <http://who.int/reproductivehealth/publications/family_planning/MEC-5/en/> .
+    
+    data:CBAntidprsntThrpRvwd_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAntidprsntThrpRvwd ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBSabaSamaDecVerySevPropAls_provenance {
+    data:CBSabaSamaDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSabaSamaDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaSamaDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLabaLamaIcsDecModPropAls_publicationinfo {
+    data:CBLabaLamaIcsDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBCtScnIncPropServCtScn_provenance {
+    data:CBCtScnIncPropServCtScn_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBCtScnIncPropServCtScn ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBCtScnIncPropServCtScn
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBIncOnExmntonBPFndngUncntrlld {
+    data:CBIncOnExmntonBPFndngUncntrlld
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerDrgContRec
+            tmr:causes  data:TrIncOnExmntonBPFndngUncntrlld .
+}
+
+data:CBLngTstIncPropServLngTst_provenance {
+    data:CBLngTstIncPropServLngTst
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLngTstIncPropServLngTst_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLngTstIncPropServLngTst ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLabaIcsDecModPropAls_publicationinfo {
+    data:CBLabaIcsDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaIcsDecSevPropAls_head {
+    data:CBLabaLamaIcsDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaIcsDecSevPropAls ;
+            np:hasProvenance       data:CBLabaLamaIcsDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaIcsDecSevPropAls_publicationinfo .
+}
+
+data:CBSabaSamaDecSevPropAls {
+    data:CBSabaSamaDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSabaSama
+            tmr:causes  data:TrDecSevPropAls .
+}
+
+data:CBSmokeThrpyIncPropQol_provenance {
+    data:CBSmokeThrpyIncPropQol_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSmokeThrpyIncPropQol ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBSmokeThrpyIncPropQol
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_head {
+    data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare ;
+            np:hasProvenance       data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_provenance ;
+            np:hasPublicationInfo  data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_publicationinfo .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn20 {
+    data:CBDecCVDAtIncrsdRskSmvsttn20
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSmvsttn20
+            tmr:causes  data:TrDecCVDAtIncrsdRsk .
+}
+
+data:CBLamaDecVerySevPropAls_provenance {
+    data:CBLamaDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLamaDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLamaDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn20_publicationinfo {
+    data:CBDecCVDAtIncrsdRskSmvsttn20_head
+            prov:generatedAtTime  "2023-09-08T11:08:09.372Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBAskSmpmsHrtFailrRsk_head {
+    data:CBAskSmpmsHrtFailrRsk_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAskSmpmsHrtFailrRsk ;
+            np:hasProvenance       data:CBAskSmpmsHrtFailrRsk_provenance ;
+            np:hasPublicationInfo  data:CBAskSmpmsHrtFailrRsk_publicationinfo .
+}
+
+data:CBLabaIcsDecSevPropAls_publicationinfo {
+    data:CBLabaIcsDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncOnExmntonBPFndngCntrlld_publicationinfo {
+    data:CBIncOnExmntonBPFndngCntrlld_head
+            prov:generatedAtTime  "2023-09-07T14:23:52.379Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaMainMildPropAls {
+    data:CBLabaMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLaba
+            tmr:causes  data:TrMainMildPropAls .
+}
+
+data:CBCntrcptnStatsKnwn {
+    data:CBCntrcptnStatsKnwn
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerCntrcptnCrAssmnt
+            tmr:causes  data:TrCntrcptnStatsKnwn .
+}
+
+data:CBSamaDecModPropAls_provenance {
+    data:CBSamaDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSamaDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBSamaDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBXraysScnIncPropServXrayScn_publicationinfo {
+    data:CBXraysScnIncPropServXrayScn_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncrsdBPFndn {
+    data:CBIncrsdBPFndn
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerMdctnRvw
+            tmr:causes  data:TrIncrsdBPFndn .
+}
+
+data:CBAntidprsntThrpRvwd_publicationinfo {
+    data:CBAntidprsntThrpRvwd_head
+            prov:generatedAtTime  "2023-09-06T15:04:26.636Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBSamaMainMildPropAls_publicationinfo {
+    data:CBSamaMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBCatRsltIncPropServCatRslt_publicationinfo {
+    data:CBCatRsltIncPropServCatRslt_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncAlchlDrnkngBhvrDtls_publicationinfo {
+    data:CBIncAlchlDrnkngBhvrDtls_head
+            prov:generatedAtTime  "2023-09-07T14:00:17.406Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBCtScnIncPropServCtScn_publicationinfo {
+    data:CBCtScnIncPropServCtScn_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBHTMdctnRvwDrgCmplnChkd_provenance {
+    data:CBHTMdctnRvwDrgCmplnChkd
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:CBHTMdctnRvwDrgCmplnChkd_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBHTMdctnRvwDrgCmplnChkd ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBIncAlchlDrnkngBhvrDtls {
+    data:CBIncAlchlDrnkngBhvrDtls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerAssmntAlchlUse
+            tmr:causes  data:TrIncAlchlDrnkngBhvrDtls .
+}
+
+data:CBIncOnExmntonBPFndngUncntrlld_head {
+    data:CBIncOnExmntonBPFndngUncntrlld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncOnExmntonBPFndngUncntrlld ;
+            np:hasProvenance       data:CBIncOnExmntonBPFndngUncntrlld_provenance ;
+            np:hasPublicationInfo  data:CBIncOnExmntonBPFndngUncntrlld_publicationinfo .
+}
+
+data:CBLngRehabIncPropLngHlth_provenance {
+    data:CBLngRehabIncPropLngHlth_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLngRehabIncPropLngHlth ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLngRehabIncPropLngHlth
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBIcsIncPropRskPneumn_publicationinfo {
+    data:CBIcsIncPropRskPneumn_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaIcsDecVerySevPropAls_provenance {
+    data:CBLabaIcsDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaIcsDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaIcsDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaIcsDecSevPropAls_provenance {
+    data:CBLabaIcsDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaIcsDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaIcsDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLabaLamaIcsDecModPropAls_provenance {
+    data:CBLabaLamaIcsDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaLamaIcsDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaIcsDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBSabaDecModPropAls_provenance {
+    data:CBSabaDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSabaDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBAskSmptmsStrkTIA_provenance {
+    data:CBAskSmptmsStrkTIA
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> .
+    
+    data:CBAskSmptmsStrkTIA_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAskSmptmsStrkTIA ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBIncCVDAssmntchk5yrs_provenance {
+    data:CBIncCVDAssmntchk5yrs
+            prov:wasDerivedFrom  <https://www.nice.org.uk/guidance/ng136/resources/hypertension-in-adults-diagnosis-and-management-pdf-66141722710213> .
+    
+    data:CBIncCVDAssmntchk5yrs_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncCVDAssmntchk5yrs ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBIncCVDAssmntchk6mnth_provenance {
+    data:CBIncCVDAssmntchk6mnth
+            prov:wasDerivedFrom  <https://www.nice.org.uk/guidance/ng136/resources/hypertension-in-adults-diagnosis-and-management-pdf-66141722710213> .
+    
+    data:CBIncCVDAssmntchk6mnth_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncCVDAssmntchk6mnth ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBDecCVDAtIncrsdRsk_head {
+    data:CBDecCVDAtIncrsdRsk_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBDecCVDAtIncrsdRsk ;
+            np:hasProvenance       data:CBDecCVDAtIncrsdRsk_provenance ;
+            np:hasPublicationInfo  data:CBDecCVDAtIncrsdRsk_publicationinfo .
+}
+
+data:CBSabaSamaMainMildPropAls {
+    data:ActAdministerSabaSama
+            tmr:causes  data:TrMainMildPropAls .
+    
+    data:CBSabaSamaMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBUCIRfrlShould {
+    data:CBUCIRfrlShould
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerUCIRfrl
+            tmr:causes  data:TrIncBPMonitoring .
+}
+
+data:CBAskSmptmsStrkTIA_publicationinfo {
+    data:CBAskSmptmsStrkTIA_head
+            prov:generatedAtTime  "2023-09-06T12:50:17.933Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn20_head {
+    data:CBDecCVDAtIncrsdRskSmvsttn20_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBDecCVDAtIncrsdRskSmvsttn20 ;
+            np:hasProvenance       data:CBDecCVDAtIncrsdRskSmvsttn20_provenance ;
+            np:hasPublicationInfo  data:CBDecCVDAtIncrsdRskSmvsttn20_publicationinfo .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn40_head {
+    data:CBDecCVDAtIncrsdRskSmvsttn40_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBDecCVDAtIncrsdRskSmvsttn40 ;
+            np:hasProvenance       data:CBDecCVDAtIncrsdRskSmvsttn40_provenance ;
+            np:hasPublicationInfo  data:CBDecCVDAtIncrsdRskSmvsttn40_publicationinfo .
+}
+
+data:CBLabaLamaIcsDecModPropAls {
+    data:CBLabaLamaIcsDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLabaLamaIcs
+            tmr:causes  data:TrDecModPropAls .
+}
+
+data:CBSabaIncPropRskCrd_publicationinfo {
+    data:CBSabaIncPropRskCrd_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLamaIncPropRskHypo_provenance {
+    data:CBLamaIncPropRskHypo_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLamaIncPropRskHypo ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLamaIncPropRskHypo
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBAntidprsntThrpRvwd_head {
+    data:CBAntidprsntThrpRvwd_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAntidprsntThrpRvwd ;
+            np:hasProvenance       data:CBAntidprsntThrpRvwd_provenance ;
+            np:hasPublicationInfo  data:CBAntidprsntThrpRvwd_publicationinfo .
+}
+
+data:CBIncOnExmntonBPFndngCntrlld {
+    data:CBIncOnExmntonBPFndngCntrlld
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerDrgContRec
+            tmr:causes  data:TrIncOnExmntonBPFndngCntrlld .
+}
+
+data:CBHTDrgCmplnChkd_provenance {
+    data:CBHTDrgCmplnChkd
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:CBHTDrgCmplnChkd_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBHTDrgCmplnChkd ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBLamaDecSevPropAls {
+    data:CBLamaDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLama
+            tmr:causes  data:TrDecSevPropAls .
+}
+
+data:CBSabaSamaMainMildPropAls_publicationinfo {
+    data:CBSabaSamaMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaDecSevPropAls_head {
+    data:CBLabaDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaDecSevPropAls ;
+            np:hasProvenance       data:CBLabaDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaDecSevPropAls_publicationinfo .
+}
+
+data:CBDecCVDRsk_provenance {
+    data:CBDecCVDRsk  prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/26/prevention/screening.html> .
+    
+    data:CBDecCVDRsk_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBDecCVDRsk ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBSabaDecModPropAls_head {
+    data:CBSabaDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaDecModPropAls ;
+            np:hasProvenance       data:CBSabaDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaDecModPropAls_publicationinfo .
+}
+
+data:CBIncOnExmntonBPFndngUncntrlld_publicationinfo {
+    data:CBIncOnExmntonBPFndngUncntrlld_head
+            prov:generatedAtTime  "2023-09-07T20:30:54.238Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaMainMildPropAls_publicationinfo {
+    data:CBLabaMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBSamaDecModPropAls_head {
+    data:CBSamaDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSamaDecModPropAls ;
+            np:hasProvenance       data:CBSamaDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSamaDecModPropAls_publicationinfo .
+}
+
+data:CBCatRsltIncPropServCatRslt_provenance {
+    data:CBCatRsltIncPropServCatRslt
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBCatRsltIncPropServCatRslt_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBCatRsltIncPropServCatRslt ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBSabaSamaDecSevPropAls_publicationinfo {
+    data:CBSabaSamaDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLamaDecModPropAls_head {
+    data:CBLamaDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLamaDecModPropAls ;
+            np:hasProvenance       data:CBLamaDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLamaDecModPropAls_publicationinfo .
+}
+
+data:CBSamaMainMildPropAls {
+    data:ActAdministerSama
+            tmr:causes  data:TrMainMildPropAls .
+    
+    data:CBSamaMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBLabaDecVerySevPropAls {
+    data:CBLabaDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLaba
+            tmr:causes  data:TrDecVerySevPropAls .
+}
+
+data:CBCntrcptnStatsKnwn_provenance {
+    data:CBCntrcptnStatsKnwn_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBCntrcptnStatsKnwn ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+    
+    data:CBCntrcptnStatsKnwn
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> .
+}
+
+data:CBSamaMainMildPropAls_provenance {
+    data:CBSamaMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSamaMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSamaMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLamaDecSevPropAls_head {
+    data:CBLamaDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLamaDecSevPropAls ;
+            np:hasProvenance       data:CBLamaDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLamaDecSevPropAls_publicationinfo .
+}
+
+data:CBAntidprsntTrtmntDscsn {
+    data:CBAntidprsntTrtmntDscsn
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerTrmntDscsn
+            tmr:causes  data:TrTrtmntDscsn .
+}
+
+data:CBIncCVDAssmntchk1yr_head {
+    data:CBIncCVDAssmntchk1yr_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncCVDAssmntchk1yr ;
+            np:hasProvenance       data:CBIncCVDAssmntchk1yr_provenance ;
+            np:hasPublicationInfo  data:CBIncCVDAssmntchk1yr_publicationinfo .
+}
+
+data:CBAskSmpmsIHD_head {
+    data:CBAskSmpmsIHD_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAskSmpmsIHD ;
+            np:hasProvenance       data:CBAskSmpmsIHD_provenance ;
+            np:hasPublicationInfo  data:CBAskSmpmsIHD_publicationinfo .
+}
+
+data:CBAssmntSdEffctsMdctn {
+    data:CBAssmntSdEffctsMdctn
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerHTMdctnRvwProc
+            tmr:causes  data:TrAssmntSdEffctsMdctn .
+}
+
+data:CBSamaMainMildPropAls_head {
+    data:CBSamaMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSamaMainMildPropAls ;
+            np:hasProvenance       data:CBSamaMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSamaMainMildPropAls_publicationinfo .
+}
+
+data:CBSabaIncPropRskCrd_provenance {
+    data:CBSabaIncPropRskCrd_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaIncPropRskCrd ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBSabaIncPropRskCrd
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaDecVerySevPropAls_publicationinfo {
+    data:CBLabaDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBPneumnVacDecPropRskPneumoc_provenance {
+    data:CBPneumnVacDecPropRskPneumoc
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBPneumnVacDecPropRskPneumoc_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBPneumnVacDecPropRskPneumoc ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLamaDecVerySevPropAls_head {
+    data:CBLamaDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLamaDecVerySevPropAls ;
+            np:hasProvenance       data:CBLamaDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLamaDecVerySevPropAls_publicationinfo .
+}
+
+data:CBHTDrgCmplnChkd {
+    data:CBHTDrgCmplnChkd
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerDrgCmplncAssmnt
+            tmr:causes  data:TrDrgThrpCmplncChkd .
+}
+
+data:CBMainKnwnHTRskLvl_provenance {
+    data:CBMainKnwnHTRskLvl
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> .
+    
+    data:CBMainKnwnHTRskLvl_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBMainKnwnHTRskLvl ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBSabaDecVerySevPropAls {
+    data:CBSabaDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSaba
+            tmr:causes  data:TrDecVerySevPropAls .
+}
+
+data:CBLamaIncPropRskHypo {
+    data:CBLamaIncPropRskHypo
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLamaCkd
+            tmr:causes  data:TrIncPropRskHypo .
+}
+
+data:CBSmokeThrpyIncPropQol_publicationinfo {
+    data:CBSmokeThrpyIncPropQol_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBSmokeThrpyIncPropQol {
+    data:CBSmokeThrpyIncPropQol
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSmokeThrpy
+            tmr:causes  data:TrIncPropQol .
+}
+
+data:CBSamaDecSevPropAls_publicationinfo {
+    data:CBSamaDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLngTstIncPropServLngTst_head {
+    data:CBLngTstIncPropServLngTst_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLngTstIncPropServLngTst ;
+            np:hasProvenance       data:CBLngTstIncPropServLngTst_provenance ;
+            np:hasPublicationInfo  data:CBLngTstIncPropServLngTst_publicationinfo .
+}
+
+data:CBSabaDecModPropAls {
+    data:CBSabaDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSaba
+            tmr:causes  data:TrDecModPropAls .
+}
+
+data:CBIncOExmntonBPFndngUncntrlld_head {
+    data:CBIncOExmntonBPFndngUncntrlld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncOExmntonBPFndngUncntrlld ;
+            np:hasProvenance       data:CBIncOExmntonBPFndngUncntrlld_provenance ;
+            np:hasPublicationInfo  data:CBIncOExmntonBPFndngUncntrlld_publicationinfo .
+}
+
+data:CBIncCVDAssmnt_head {
+    data:CBIncCVDAssmnt_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncCVDAssmnt ;
+            np:hasProvenance       data:CBIncCVDAssmnt_provenance ;
+            np:hasPublicationInfo  data:CBIncCVDAssmnt_publicationinfo .
+}
+
+data:CBSabaSamaDecVerySevPropAls_head {
+    data:CBSabaSamaDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaSamaDecVerySevPropAls ;
+            np:hasProvenance       data:CBSabaSamaDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaSamaDecVerySevPropAls_publicationinfo .
+}
+
+data:CBLngRehabIncPropLngHlth_head {
+    data:CBLngRehabIncPropLngHlth_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLngRehabIncPropLngHlth ;
+            np:hasProvenance       data:CBLngRehabIncPropLngHlth_provenance ;
+            np:hasPublicationInfo  data:CBLngRehabIncPropLngHlth_publicationinfo .
+}
+
+data:CBLamaDecVerySevPropAls {
+    data:ActAdministerLama
+            tmr:causes  data:TrDecVerySevPropAls .
+    
+    data:CBLamaDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_provenance {
+    data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare
+            prov:wasDerivedFrom  <http://apps.who.int/iris/handle/10665/252661> , <http://www.medicinescomplete.com/mc/martindale/current/2452-l.htm> , <http://www.who.int/cardiovascular_diseases/guidelines/PocketGL.ENGLISH.AFR-D-E.rev1.pdf> , <http://us.bestpractice.bmj.com/best-practice/monograph/24/treatment/details.html> .
+    
+    data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBLamaDecModPropAls {
+    data:ActAdministerLama
+            tmr:causes  data:TrDecModPropAls .
+    
+    data:CBLamaDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBLabaLamaDecModPropAls_head {
+    data:CBLabaLamaDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaDecModPropAls ;
+            np:hasProvenance       data:CBLabaLamaDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaDecModPropAls_publicationinfo .
+}
+
+data:CBLabaDecModPropAls_provenance {
+    data:CBLabaDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBAntiHTSIncStrkRskHgh_provenance {
+    data:CBAntiHTSIncStrkRskHgh_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAntiHTSIncStrkRskHgh ;
+            oa:hasTarget  [ oa:hasSource  <http://bestpractice.bmj.com/best-practice/monograph/27/treatment/step-by-step.html> ] .
+    
+    data:CBAntiHTSIncStrkRskHgh
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/27/treatment/step-by-step.html> .
+}
+
+data:CBSabaSamaDecModPropAls_provenance {
+    data:CBSabaSamaDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaSamaDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBSabaSamaDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaIncPropRskCrd {
+    data:CBLabaIncPropRskCrd
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLabaCvd
+            tmr:causes  data:TrIncPropRskCrd .
+}
+
+data:CBIncDrgMisuseBhvrDtls_head {
+    data:CBIncDrgMisuseBhvrDtls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncDrgMisuseBhvrDtls ;
+            np:hasProvenance       data:CBIncDrgMisuseBhvrDtls_provenance ;
+            np:hasPublicationInfo  data:CBIncDrgMisuseBhvrDtls_publicationinfo .
+}
+
+data:CBAntiHTSDecBPFall_head {
+    data:CBAntiHTSDecBPFall_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAntiHTSDecBPFall ;
+            np:hasProvenance       data:CBAntiHTSDecBPFall_provenance ;
+            np:hasPublicationInfo  data:CBAntiHTSDecBPFall_publicationinfo .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn20_provenance {
+    data:CBDecCVDAtIncrsdRskSmvsttn20
+            prov:wasDerivedFrom  <http://apps.who.int/iris/handle/10665/252661> , <http://www.medicinescomplete.com/mc/martindale/current/2452-l.htm> , <http://www.who.int/cardiovascular_diseases/guidelines/PocketGL.ENGLISH.AFR-D-E.rev1.pdf> , <http://us.bestpractice.bmj.com/best-practice/monograph/24/treatment/details.html> .
+    
+    data:CBDecCVDAtIncrsdRskSmvsttn20_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBDecCVDAtIncrsdRskSmvsttn20 ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBIcsIncPropRskPneumn_head {
+    data:CBIcsIncPropRskPneumn_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIcsIncPropRskPneumn ;
+            np:hasProvenance       data:CBIcsIncPropRskPneumn_provenance ;
+            np:hasPublicationInfo  data:CBIcsIncPropRskPneumn_publicationinfo .
+}
+
+data:CBUCIRfrlShould_provenance {
+    data:CBUCIRfrlShould
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/27/treatment/step-by-step.html> .
+    
+    data:CBUCIRfrlShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBUCIRfrlShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBLabaLamaIncPropRskHypo_provenance {
+    data:CBLabaLamaIncPropRskHypo_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaIncPropRskHypo ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaLamaIncPropRskHypo
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBAssmntSdEffctsMdctn_provenance {
+    data:CBAssmntSdEffctsMdctn
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:CBAssmntSdEffctsMdctn_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAssmntSdEffctsMdctn ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBMrcDScaleIncPropServMrcDScale_head {
+    data:CBMrcDScaleIncPropServMrcDScale_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBMrcDScaleIncPropServMrcDScale ;
+            np:hasProvenance       data:CBMrcDScaleIncPropServMrcDScale_provenance ;
+            np:hasPublicationInfo  data:CBMrcDScaleIncPropServMrcDScale_publicationinfo .
+}
+
+data:CBIncCVDAssmntchk1yr_publicationinfo {
+    data:CBIncCVDAssmntchk1yr_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBFluVacDecPropRskFlu_publicationinfo {
+    data:CBFluVacDecPropRskFlu_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncKnwnHTRskLvl_provenance {
+    data:CBIncKnwnHTRskLvl
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> .
+    
+    data:CBIncKnwnHTRskLvl_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncKnwnHTRskLvl ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBDecCVDAtIncrsdRsk_publicationinfo {
+    data:CBDecCVDAtIncrsdRsk_head
+            prov:generatedAtTime  "2023-09-08T10:58:38.501Z"^^xsd:dateTime , "2023-09-08T11:07:29.805Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBIncCVDAssmntchk5yrs_head {
+    data:CBIncCVDAssmntchk5yrs_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncCVDAssmntchk5yrs ;
+            np:hasProvenance       data:CBIncCVDAssmntchk5yrs_provenance ;
+            np:hasPublicationInfo  data:CBIncCVDAssmntchk5yrs_publicationinfo .
+}
+
+data:CBIncCVDAssmntchk6mnth_head {
+    data:CBIncCVDAssmntchk6mnth_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBIncCVDAssmntchk6mnth ;
+            np:hasProvenance       data:CBIncCVDAssmntchk6mnth_provenance ;
+            np:hasPublicationInfo  data:CBIncCVDAssmntchk6mnth_publicationinfo .
+}
+
+data:CBMrcDScaleIncPropServMrcDScale_publicationinfo {
+    data:CBMrcDScaleIncPropServMrcDScale_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaDecVerySevPropAls_provenance {
+    data:CBLabaDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBCntrcptnStatsKnwn_head {
+    data:CBCntrcptnStatsKnwn_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBCntrcptnStatsKnwn ;
+            np:hasProvenance       data:CBCntrcptnStatsKnwn_provenance ;
+            np:hasPublicationInfo  data:CBCntrcptnStatsKnwn_publicationinfo .
+}
+
+data:CBMrcDScaleIncPropServMrcDScale_provenance {
+    data:CBMrcDScaleIncPropServMrcDScale
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBMrcDScaleIncPropServMrcDScale_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBMrcDScaleIncPropServMrcDScale ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLamaDecSevPropAls_provenance {
+    data:CBLamaDecSevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLamaDecSevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLamaDecSevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLabaLamaDecSevPropAls {
+    data:ActAdministerLabaLama
+            tmr:causes  data:TrDecSevPropAls .
+    
+    data:CBLabaLamaDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBAntiHTSIncStrkRskHgh_publicationinfo {
+    data:CBAntiHTSIncStrkRskHgh_head
+            prov:generatedAtTime  "2023-08-20T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncDrgMisuseBhvrDtls_provenance {
+    data:CBIncDrgMisuseBhvrDtls
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> , <https://apps.who.int/iris/handle/10665/112736> , <https://apps.who.int/iris/handle/10665/250239> .
+    
+    data:CBIncDrgMisuseBhvrDtls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncDrgMisuseBhvrDtls ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBSabaMainMildPropAls_provenance {
+    data:CBSabaMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSabaMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSabaMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBIncCVDAssmntchk1yr_provenance {
+    data:CBIncCVDAssmntchk1yr_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncCVDAssmntchk1yr ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+    
+    data:CBIncCVDAssmntchk1yr
+            prov:wasDerivedFrom  <http://us.bestpractice.bmj.com/best-practice/monograph/886.html> .
+}
+
+data:CBSabaSamaDecModPropAls_head {
+    data:CBSabaSamaDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSabaSamaDecModPropAls ;
+            np:hasProvenance       data:CBSabaSamaDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSabaSamaDecModPropAls_publicationinfo .
+}
+
+data:CBLabaIcsDecModPropAls {
+    data:ActAdministerLabaIcs
+            tmr:causes  data:TrDecModPropAls .
+    
+    data:CBLabaIcsDecModPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBIncOExmntonBPFndngUncntrlld_provenance {
+    data:CBIncOExmntonBPFndngUncntrlld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncOExmntonBPFndngUncntrlld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+    
+    data:CBIncOExmntonBPFndngUncntrlld
+            prov:wasDerivedFrom  <https://www.nice.org.uk/guidance/ng136/resources/hypertension-in-adults-diagnosis-and-management-pdf-66141722710213> , <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <http://bestpractice.bmj.com/best-practice/monograph/26/treatment/step-by-step.html> , <http://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf?sequence=1> , <http://www.esh2013.org/wordpress/wp-content/uploads/2013/06/ESC-ESH-Guidelines-2013.pdf> , <http://www.nhlbi.nih.gov/files/docs/guidelines/jnc7full.pdf> , <https://www.who.int/publications/i/item/9789240033986> .
+}
+
+data:CBIncKnwnHTRskLvl {
+    data:CBIncKnwnHTRskLvl
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerBPScrSnd
+            tmr:causes  data:TrIncKnwnHTRskLvl .
+}
+
+data:CBDecCVDRsk_publicationinfo {
+    data:CBDecCVDRsk_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBSabaSamaDecVerySevPropAls {
+    data:CBSabaSamaDecVerySevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSabaSama
+            tmr:causes  data:TrDecVerySevPropAls .
+}
+
+data:CBLamaDecModPropAls_provenance {
+    data:CBLamaDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLamaDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLamaDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBFluVacDecPropRskFlu {
+    data:CBFluVacDecPropRskFlu
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerFluVac
+            tmr:causes  data:TrDecPropRskFlu .
+}
+
+data:CBAskSmptmsStrkTIA_head {
+    data:CBAskSmptmsStrkTIA_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBAskSmptmsStrkTIA ;
+            np:hasProvenance       data:CBAskSmptmsStrkTIA_provenance ;
+            np:hasPublicationInfo  data:CBAskSmptmsStrkTIA_publicationinfo .
+}
+
+data:CBAskSmpmsIHD_publicationinfo {
+    data:CBAskSmpmsIHD_head
+            prov:generatedAtTime  "2023-09-06T12:46:33.798Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBXraysScnIncPropServXrayScn_provenance {
+    data:CBXraysScnIncPropServXrayScn
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBXraysScnIncPropServXrayScn_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBXraysScnIncPropServXrayScn ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBAntidprsntThrpRvwd {
+    data:ActAdministerMdctnRvw
+            tmr:causes  data:TrAntidprsntThrpRvwd .
+    
+    data:CBAntidprsntThrpRvwd
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBLabaIcsDecVerySevPropAls_head {
+    data:CBLabaIcsDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaIcsDecVerySevPropAls ;
+            np:hasProvenance       data:CBLabaIcsDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaIcsDecVerySevPropAls_publicationinfo .
+}
+
+data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare {
+    data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerRfrrlForFrthrCare
+            tmr:causes  data:TrIncCVDAssmntCVDRskAssmntDn .
+}
+
+data:CBLabaDecSevPropAls_publicationinfo {
+    data:CBLabaDecSevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBMainKnwnHTRskLvl_head {
+    data:CBMainKnwnHTRskLvl_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBMainKnwnHTRskLvl ;
+            np:hasProvenance       data:CBMainKnwnHTRskLvl_provenance ;
+            np:hasPublicationInfo  data:CBMainKnwnHTRskLvl_publicationinfo .
+}
+
+data:CBLabaDecModPropAls_head {
+    data:CBLabaDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaDecModPropAls ;
+            np:hasProvenance       data:CBLabaDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaDecModPropAls_publicationinfo .
+}
+
+data:CBLabaLamaDecSevPropAls_head {
+    data:CBLabaLamaDecSevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaDecSevPropAls ;
+            np:hasProvenance       data:CBLabaLamaDecSevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaDecSevPropAls_publicationinfo .
+}
+
+data:CBLabaIcsDecModPropAls_provenance {
+    data:CBLabaIcsDecModPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaIcsDecModPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaIcsDecModPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBIncSbstncUseBhvr {
+    data:CBIncSbstncUseBhvr
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSbstncUseAssmnt
+            tmr:causes  data:TrIncSbstncUseBhvr .
+}
+
+data:CBIncCVDAssmntchk1yr {
+    data:CBIncCVDAssmntchk1yr
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerCVDAssmnt
+            tmr:causes  data:TrTrIncCVDAssmnt .
+}
+
+data:CBHTDrgCmplnChkd_publicationinfo {
+    data:CBHTDrgCmplnChkd_head
+            prov:generatedAtTime  "2023-09-07T09:40:29.445Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBDecCVDRsk {
+    data:CBDecCVDRsk  rdf:type  tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerCVDThrpy
+            tmr:causes  data:TrDecCVDRsk .
+}
+
+data:CBSabaSamaDecVerySevPropAls_publicationinfo {
+    data:CBSabaSamaDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaIcsDecVerySevPropAls_provenance {
+    data:CBLabaLamaIcsDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaLamaIcsDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaIcsDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBLabaIncPropRskCrd_provenance {
+    data:CBLabaIncPropRskCrd_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaIncPropRskCrd ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLabaIncPropRskCrd
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBLabaDecVerySevPropAls_head {
+    data:CBLabaDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaDecVerySevPropAls ;
+            np:hasProvenance       data:CBLabaDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaDecVerySevPropAls_publicationinfo .
+}
+
+data:CBDecCVDRsk_head {
+    data:CBDecCVDRsk_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBDecCVDRsk ;
+            np:hasProvenance       data:CBDecCVDRsk_provenance ;
+            np:hasPublicationInfo  data:CBDecCVDRsk_publicationinfo .
+}
+
+data:CBCatRsltIncPropServCatRslt_head {
+    data:CBCatRsltIncPropServCatRslt_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBCatRsltIncPropServCatRslt ;
+            np:hasProvenance       data:CBCatRsltIncPropServCatRslt_provenance ;
+            np:hasPublicationInfo  data:CBCatRsltIncPropServCatRslt_publicationinfo .
+}
+
+data:CBLamaMainMildPropAls_provenance {
+    data:CBLamaMainMildPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLamaMainMildPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+    
+    data:CBLamaMainMildPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+}
+
+data:CBIncDrgMisuseBhvrDtls_publicationinfo {
+    data:CBIncDrgMisuseBhvrDtls_head
+            prov:generatedAtTime  "2023-09-07T14:03:09.645Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBAskSmpmsIHD_provenance {
+    data:CBAskSmpmsIHD
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> .
+    
+    data:CBAskSmpmsIHD_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAskSmpmsIHD ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBAskSmptmsStrkTIA {
+    data:ActAdministerSymptmsDscss
+            tmr:causes  data:TrStrkTIAKnwn .
+    
+    data:CBAskSmptmsStrkTIA
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBSamaDecVerySevPropAls_head {
+    data:CBSamaDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBSamaDecVerySevPropAls ;
+            np:hasProvenance       data:CBSamaDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBSamaDecVerySevPropAls_publicationinfo .
+}
+
+data:CBLamaMainMildPropAls_head {
+    data:CBLamaMainMildPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLamaMainMildPropAls ;
+            np:hasProvenance       data:CBLamaMainMildPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLamaMainMildPropAls_publicationinfo .
+}
+
+data:CBLabaIcsDecModPropAls_head {
+    data:CBLabaIcsDecModPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaIcsDecModPropAls ;
+            np:hasProvenance       data:CBLabaIcsDecModPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaIcsDecModPropAls_publicationinfo .
+}
+
+data:CBLabaIcsDecVerySevPropAls_publicationinfo {
+    data:CBLabaIcsDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBIncOnExmntonBPFndngUncntrlld_provenance {
+    data:CBIncOnExmntonBPFndngUncntrlld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBIncOnExmntonBPFndngUncntrlld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+    
+    data:CBIncOnExmntonBPFndngUncntrlld
+            prov:wasDerivedFrom  <https://www.nice.org.uk/guidance/ng136/resources/hypertension-in-adults-diagnosis-and-management-pdf-66141722710213> , <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <http://bestpractice.bmj.com/best-practice/monograph/26/treatment/step-by-step.html> , <http://apps.who.int/iris/bitstream/handle/10665/260421/WHO-NMH-NVI-18.2-eng.pdf?sequence=1> , <http://www.esh2013.org/wordpress/wp-content/uploads/2013/06/ESC-ESH-Guidelines-2013.pdf> , <http://www.nhlbi.nih.gov/files/docs/guidelines/jnc7full.pdf> , <https://www.who.int/publications/i/item/9789240033986> .
+}
+
+data:CBAntiHTSDecBPFall {
+    data:CBAntiHTSDecBPFall
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerAntiHTS
+            tmr:causes  data:TrDecBPFall .
+}
+
+data:CBDecCVDAtIncrsdRskSmvsttn40_publicationinfo {
+    data:CBDecCVDAtIncrsdRskSmvsttn40_head
+            prov:generatedAtTime  "2023-09-08T11:08:02.109Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBSabaMainMildPropAls {
+    data:CBSabaMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerSaba
+            tmr:causes  data:TrMainMildPropAls .
+}
+
+data:CBLabaIncPropRskHypo {
+    data:CBLabaIncPropRskHypo
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerLabaCkd
+            tmr:causes  data:TrIncPropRskHypo .
+}
+
+data:CBSabaDecVerySevPropAls_publicationinfo {
+    data:CBSabaDecVerySevPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBAntidprsntTrtmntDscsn_provenance {
+    data:CBAntidprsntTrtmntDscsn
+            prov:wasDerivedFrom  <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> , <http://who.int/reproductivehealth/publications/family_planning/MEC-5/en/> .
+    
+    data:CBAntidprsntTrtmntDscsn_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBAntidprsntTrtmntDscsn ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:CBLabaLamaIcsDecSevPropAls {
+    data:ActAdministerLabaLamaIcs
+            tmr:causes  data:TrDecSevPropAls .
+    
+    data:CBLabaLamaIcsDecSevPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBMainKnwnHTRskLvl_publicationinfo {
+    data:CBMainKnwnHTRskLvl_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBRfrrlActionMd {
+    data:CBRfrrlActionMd
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerObsttrcnRfrrl
+            tmr:causes  data:TrRfrrlActionMd .
+}
+
+data:CBSamaDecVerySevPropAls_provenance {
+    data:CBSamaDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBSamaDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBSamaDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBDecCVDAtIncrsdRsk {
+    data:ActAdministerSmvsttn20
+            tmr:causes  data:TrDecCVDAtIncrsdRsk .
+    
+    data:CBDecCVDAtIncrsdRsk
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+}
+
+data:CBLabaLamaDecVerySevPropAls_head {
+    data:CBLabaLamaDecVerySevPropAls_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaLamaDecVerySevPropAls ;
+            np:hasProvenance       data:CBLabaLamaDecVerySevPropAls_provenance ;
+            np:hasPublicationInfo  data:CBLabaLamaDecVerySevPropAls_publicationinfo .
+}
+
+data:CBIncCVDAssmnt_publicationinfo {
+    data:CBIncCVDAssmnt_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaLamaIcsMainMildPropAls {
+    data:ActAdministerLabaLamaIcs
+            tmr:causes  data:TrMainMildPropAls .
+    
+    data:CBLabaLamaIcsMainMildPropAls
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+}
+
+data:CBIncSbstncUseBhvr_publicationinfo {
+    data:CBIncSbstncUseBhvr_head
+            prov:generatedAtTime  "2023-09-07T13:57:53.173Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaIncPropRskCrd_publicationinfo {
+    data:CBLabaIncPropRskCrd_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBLabaLamaDecVerySevPropAls_provenance {
+    data:CBLabaLamaDecVerySevPropAls
+            prov:wasDerivedFrom  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> .
+    
+    data:CBLabaLamaDecVerySevPropAls_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:CBLabaLamaDecVerySevPropAls ;
+            oa:hasTarget  [ oa:hasSource  <https://goldcopd.org/wp-content/uploads/2016/12/wms-GOLD-2017-Pocket-Guide.pdf> ] .
+}
+
+data:CBIncCVDAssmntchk5yrs_publicationinfo {
+    data:CBIncCVDAssmntchk5yrs_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBIncCVDAssmntchk6mnth_publicationinfo {
+    data:CBIncCVDAssmntchk6mnth_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:CBLabaIncPropRskHypo_head {
+    data:CBLabaIncPropRskHypo_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBLabaIncPropRskHypo ;
+            np:hasProvenance       data:CBLabaIncPropRskHypo_provenance ;
+            np:hasPublicationInfo  data:CBLabaIncPropRskHypo_publicationinfo .
+}
+
+data:CBLabaIcsMainMildPropAls_publicationinfo {
+    data:CBLabaIcsMainMildPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBBetaAgonistIncPropRskCrd {
+    data:CBBetaAgonistIncPropRskCrd
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerBetaAgonist
+            tmr:causes  data:TrIncPropRskCrd .
+}
+
+data:CBLabaDecModPropAls_publicationinfo {
+    data:CBLabaDecModPropAls_head
+            prov:generatedAtTime  "2019-01-01T13:14:15"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:CBRfrrlActionMd_head {
+    data:CBRfrrlActionMd_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:CBRfrrlActionMd ;
+            np:hasProvenance       data:CBRfrrlActionMd_provenance ;
+            np:hasPublicationInfo  data:CBRfrrlActionMd_publicationinfo .
+}
+
+data:CBMainKnwnHTRskLvl {
+    data:CBMainKnwnHTRskLvl
+            rdf:type       tmr:CausationBelief ;
+            tmr:frequency  tmr:Always ;
+            tmr:strength   tmr:High .
+    
+    data:ActAdministerBPScrFrst
+            tmr:causes  data:TrMainKnwnHTRskLvl .
 }
 

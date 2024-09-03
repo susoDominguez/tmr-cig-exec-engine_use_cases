@@ -1,0 +1,1216 @@
+@prefix np:    <http://www.nanopub.org/nschema#> .
+@prefix data:  <http://anonymous.org/tmr/data/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix tmr:   <http://anonymous.org/tmr/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix swrl:  <http://www.w3.org/2003/11/swrl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nanopub: <http://www.nanopub.org/nschema#> .
+
+data:CIG-HT  rdf:type  tmr:ClinicalGuideline , owl:NamedIndividual ;
+        rdfs:label  "IMPACCT 2022: Hypertension"@en .
+
+data:GPRecHT-BPAssmnt
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-AntiHTSIncStrkRskHghShouldnot
+        tmr:isPartOf  data:CIG-HT .
+
+data:GPRecHT-BPThrpDiscss
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-UCIRfrlShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncCVDAssmntShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncCVDAssmntchk5yrsShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncCVDAssmntchk1yrShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncCVDAssmntchk6mnthShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-DecCVDRskShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-MainKnwnHTRskLvlShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncKnwnHTRskLvl_1Should
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncKnwnHTRskLvl_2Should
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncKnwnHTRskLvl_3Should
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-AskSmptmsStrkTIAShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-AskSmpmsIHDShould
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncrsdBPFndnShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-AntidprsntTrtmntDscsnShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-AntidprsntThrpRvwdShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-HTDrgCmplncAssmnt
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-HTMdctnRvwShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-CntrcptnStatsKnwnShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-RfrrlActionMdShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncSbstncUseAssmntShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncAlchlDrnkngBhvrDtlsShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncDrgMisuseBhvrDtlsShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncOnExmntonBPFndngCntrlldShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncOnExmntonBPFndngUncntrlldShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld
+        tmr:isPartOf  data:CIG-HT .
+
+data:RecHT-MainKnwnHTRskLvlShould_head {
+    data:RecHT-MainKnwnHTRskLvlShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-MainKnwnHTRskLvlShould ;
+            np:hasProvenance       data:RecHT-MainKnwnHTRskLvlShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-MainKnwnHTRskLvlShould_publicationinfo .
+}
+
+data:RecHT-IncCVDAssmntShould_head {
+    data:RecHT-IncCVDAssmntShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncCVDAssmntShould ;
+            np:hasProvenance       data:RecHT-IncCVDAssmntShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncCVDAssmntShould_publicationinfo .
+}
+
+data:RecHT-HTDrgCmplncAssmnt_head {
+    data:RecHT-HTDrgCmplncAssmnt_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-HTDrgCmplncAssmnt ;
+            np:hasProvenance       data:RecHT-HTDrgCmplncAssmnt_provenance ;
+            np:hasPublicationInfo  data:RecHT-HTDrgCmplncAssmnt_publicationinfo .
+}
+
+data:RecHT-IncrsdBPFndnShld_provenance {
+    data:RecHT-IncrsdBPFndnShld
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> , <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <http://who.int/reproductivehealth/publications/family_planning/MEC-5/en/> .
+    
+    data:RecHT-IncrsdBPFndnShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncrsdBPFndnShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_provenance {
+    data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld
+            prov:wasDerivedFrom  <http://apps.who.int/iris/handle/10665/252661> , <http://www.medicinescomplete.com/mc/martindale/current/2452-l.htm> , <http://www.who.int/cardiovascular_diseases/guidelines/PocketGL.ENGLISH.AFR-D-E.rev1.pdf> , <http://us.bestpractice.bmj.com/best-practice/monograph/24/treatment/details.html> .
+    
+    data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncKnwnHTRskLvl_1Should_publicationinfo {
+    data:RecHT-IncKnwnHTRskLvl_1Should_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-CntrcptnStatsKnwnShld_head {
+    data:RecHT-CntrcptnStatsKnwnShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-CntrcptnStatsKnwnShld ;
+            np:hasProvenance       data:RecHT-CntrcptnStatsKnwnShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-CntrcptnStatsKnwnShld_publicationinfo .
+}
+
+data:RecHT-AskSmptmsStrkTIAShould_publicationinfo {
+    data:RecHT-AskSmptmsStrkTIAShould_head
+            prov:generatedAtTime  "2023-09-06T13:24:11.705Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncCVDAssmntShould {
+    data:RecHT-IncCVDAssmntShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Assess CVD Risk"@en ;
+            tmr:aboutExecutionOf  data:ActAdministerCVDAssmnt ;
+            tmr:basedOn           data:CBIncCVDAssmnt ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncCVDAssmnt
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-AntiHTSIncStrkRskHghShouldnot_publicationinfo {
+    data:RecHT-AntiHTSIncStrkRskHghShouldnot_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-CntrcptnStatsKnwnShld_publicationinfo {
+    data:RecHT-CntrcptnStatsKnwnShld_head
+            prov:generatedAtTime  "2023-09-07T11:31:48.722Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-AntiHTSIncStrkRskHghShouldnot_provenance {
+    data:RecHT-AntiHTSIncStrkRskHghShouldnot
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/27/treatment/step-by-step.html> .
+    
+    data:RecHT-AntiHTSIncStrkRskHghShouldnot_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-AntiHTSIncStrkRskHghShouldnot ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncKnwnHTRskLvl_3Should {
+    data:RecHT-IncKnwnHTRskLvl_3Should
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "BP confirmed on 2 occasions ≥ 160/100 with CVD or heart failure present.\nDiagnose hypertension."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerBPScrSnd ;
+            tmr:basedOn           data:CBIncKnwnHTRskLvl ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncKnwnHTRskLvl
+            tmr:contribution  tmr:Positive .
+}
+
+data:GPRecHT-BPThrpDiscss_publicationinfo {
+    data:GPRecHT-BPThrpDiscss_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:RecHT-IncCVDAssmntchk5yrsShould_head {
+    data:RecHT-IncCVDAssmntchk5yrsShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncCVDAssmntchk5yrsShould ;
+            np:hasProvenance       data:RecHT-IncCVDAssmntchk5yrsShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncCVDAssmntchk5yrsShould_publicationinfo .
+}
+
+data:RecHT-IncDrgMisuseBhvrDtlsShld_provenance {
+    data:RecHT-IncDrgMisuseBhvrDtlsShld
+            prov:wasDerivedFrom  <https://apps.who.int/iris/handle/10665/112736> , <https://apps.who.int/iris/handle/10665/250239> , <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> .
+    
+    data:RecHT-IncDrgMisuseBhvrDtlsShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncDrgMisuseBhvrDtlsShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncOnExmntonBPFndngUncntrlldShld {
+    data:RecHT-IncOnExmntonBPFndngUncntrlldShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "If BP >= 140/90 (SBP >= 130 if diabetes, CVD, CVD risk > 20% or kidney disease), BP is controlled: continue current\ntreatment and review 3-6 monthly."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerMdctnRvw ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+}
+
+data:RecHT-IncKnwnHTRskLvl_1Should {
+    data:RecHT-IncKnwnHTRskLvl_1Should
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "BP confirmed on 2 occasions ≥ 140/90\nor ≥ 130/80 with CVD, diabetes,\nCVD risk > 20%, kidney disease.\nDiagnose hypertension."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerBPScrSnd ;
+            tmr:basedOn           data:CBIncKnwnHTRskLvl ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncKnwnHTRskLvl
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-AntidprsntTrtmntDscsnShld_publicationinfo {
+    data:RecHT-AntidprsntTrtmntDscsnShld_head
+            prov:generatedAtTime  "2023-09-06T14:50:59.812Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncrsdBPFndnShld_publicationinfo {
+    data:RecHT-IncrsdBPFndnShld_head
+            prov:generatedAtTime  "2023-09-06T13:36:46.313Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-AntidprsntThrpRvwdShld_head {
+    data:RecHT-AntidprsntThrpRvwdShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-AntidprsntThrpRvwdShld ;
+            np:hasProvenance       data:RecHT-AntidprsntThrpRvwdShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-AntidprsntThrpRvwdShld_publicationinfo .
+}
+
+data:RecHT-IncCVDAssmntchk1yrShould_publicationinfo {
+    data:RecHT-IncCVDAssmntchk1yrShould_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncKnwnHTRskLvl_2Should_publicationinfo {
+    data:RecHT-IncKnwnHTRskLvl_2Should_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-CntrcptnStatsKnwnShld {
+    data:RecHT-CntrcptnStatsKnwnShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Assess Family planning\nEvery visit\nDiscuss contraception needs. If pregnant or planning pregnancy, refer for specialist care."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerCntrcptnCrAssmnt ;
+            tmr:basedOn           data:CBCntrcptnStatsKnwn ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBCntrcptnStatsKnwn
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncOnExmntonBPFndngCntrlldShld_provenance {
+    data:RecHT-IncOnExmntonBPFndngCntrlldShld
+            prov:wasDerivedFrom  <https://apps.who.int/iris/handle/10665/112736> , <https://apps.who.int/iris/handle/10665/250239> , <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> .
+    
+    data:RecHT-IncOnExmntonBPFndngCntrlldShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncOnExmntonBPFndngCntrlldShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncCVDAssmntchk6mnthShould_provenance {
+    data:RecHT-IncCVDAssmntchk6mnthShould
+            prov:wasDerivedFrom  <http://us.bestpractice.bmj.com/best-practice/monograph/886.html> .
+    
+    data:RecHT-IncCVDAssmntchk6mnthShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncCVDAssmntchk6mnthShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-AntidprsntThrpRvwdShld_publicationinfo {
+    data:RecHT-AntidprsntThrpRvwdShld_head
+            prov:generatedAtTime  "2023-09-06T15:04:48.393Z"^^xsd:dateTime , "2023-09-06T15:20:24.787Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-AskSmptmsStrkTIAShould_provenance {
+    data:RecHT-AskSmptmsStrkTIAShould
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> .
+    
+    data:RecHT-AskSmptmsStrkTIAShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-AskSmptmsStrkTIAShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncCVDAssmntchk5yrsShould_publicationinfo {
+    data:RecHT-IncCVDAssmntchk5yrsShould_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncOnExmntonBPFndngCntrlldShld_publicationinfo {
+    data:RecHT-IncOnExmntonBPFndngCntrlldShld_head
+            prov:generatedAtTime  "2023-09-07T14:24:42.023Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-IncrsdBPFndnShld_head {
+    data:RecHT-IncrsdBPFndnShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncrsdBPFndnShld ;
+            np:hasProvenance       data:RecHT-IncrsdBPFndnShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncrsdBPFndnShld_publicationinfo .
+}
+
+data:RecHT-HTMdctnRvwShld {
+    data:RecHT-HTMdctnRvwShld
+            rdf:type                tmr:ClinicalRecommendation ;
+            rdfs:label              "if already on hypertension medication, assess adherence and ask about side effects."@en ;
+            tmr:aboutExecutionOf    data:ActAdministerHTMdctnRvwProc ;
+            tmr:basedOn             data:CBHTMdctnRvwDrgCmplnChkd , data:CBAssmntSdEffctsMdctn ;
+            tmr:hasFilterSituation  data:SitHTTrmntStrtd ;
+            tmr:partOf              data:CIG-HT ;
+            tmr:strength            tmr:Should .
+    
+    data:CBHTMdctnRvwDrgCmplnChkd
+            tmr:contribution  tmr:Positive .
+    
+    data:CBAssmntSdEffctsMdctn
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-HTMdctnRvwShld_publicationinfo {
+    data:RecHT-HTMdctnRvwShld_head
+            prov:generatedAtTime  "2023-09-07T09:54:40.008Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-IncDrgMisuseBhvrDtlsShld_publicationinfo {
+    data:RecHT-IncDrgMisuseBhvrDtlsShld_head
+            prov:generatedAtTime  "2023-09-07T14:04:08.07Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-UCIRfrlShould_publicationinfo {
+    data:RecHT-UCIRfrlShould_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncAlchlDrnkngBhvrDtlsShld_head {
+    data:RecHT-IncAlchlDrnkngBhvrDtlsShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncAlchlDrnkngBhvrDtlsShld ;
+            np:hasProvenance       data:RecHT-IncAlchlDrnkngBhvrDtlsShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncAlchlDrnkngBhvrDtlsShld_publicationinfo .
+}
+
+data:RecHT-IncOnExmntonBPFndngUncntrlldShld_provenance {
+    data:RecHT-IncOnExmntonBPFndngUncntrlldShld
+            prov:wasDerivedFrom  <https://apps.who.int/iris/handle/10665/112736> , <https://apps.who.int/iris/handle/10665/250239> , <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> .
+    
+    data:RecHT-IncOnExmntonBPFndngUncntrlldShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncOnExmntonBPFndngUncntrlldShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld
+            rdf:type                tmr:ClinicalRecommendation ;
+            rdfs:label              "If cholesterol ≥ 8mmol/L start simvastatin"@en ;
+            tmr:aboutExecutionOf    data:ActAdministerSmvsttn20  ;
+            tmr:basedOn             data:CBDecCVDAtIncrsdRskSmvsttn20 ;
+            tmr:hasFilterSituation  data:SitSrmChlstrlAbvRfrncRng ;
+            tmr:partOf              data:CIG-HT .
+    
+    data:CBDecCVDAtIncrsdRskSmvsttn20
+            tmr:contribution  tmr:Positive .
+}
+
+
+
+data:RecHT-IncCVDAssmntchk1yrShould_provenance {
+    data:RecHT-IncCVDAssmntchk1yrShould
+            prov:wasDerivedFrom  <http://us.bestpractice.bmj.com/best-practice/monograph/886.html> .
+    
+    data:RecHT-IncCVDAssmntchk1yrShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncCVDAssmntchk1yrShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-AntiHTSIncStrkRskHghShouldnot {
+    data:RecHT-AntiHTSIncStrkRskHghShouldnot
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Avoid antihypertensives as these can cause a stroke."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerAntiHTS ;
+            tmr:basedOn           data:CBAntiHTSIncStrkRskHgh ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should_not .
+    
+    data:CBAntiHTSIncStrkRskHgh
+            tmr:contribution  tmr:Negative .
+}
+
+data:RecHT-CntrcptnStatsKnwnShld_provenance {
+    data:RecHT-CntrcptnStatsKnwnShld
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:RecHT-CntrcptnStatsKnwnShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-CntrcptnStatsKnwnShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncOnExmntonBPFndngUncntrlldShld_head {
+    data:RecHT-IncOnExmntonBPFndngUncntrlldShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncOnExmntonBPFndngUncntrlldShld ;
+            np:hasProvenance       data:RecHT-IncOnExmntonBPFndngUncntrlldShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncOnExmntonBPFndngUncntrlldShld_publicationinfo .
+}
+
+data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_head {
+    data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld ;
+            np:hasProvenance       data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_publicationinfo .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_provenance {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld
+            prov:wasDerivedFrom  <http://apps.who.int/iris/handle/10665/252661> , <http://www.medicinescomplete.com/mc/martindale/current/2452-l.htm> , <http://www.who.int/cardiovascular_diseases/guidelines/PocketGL.ENGLISH.AFR-D-E.rev1.pdf> , <http://us.bestpractice.bmj.com/best-practice/monograph/24/treatment/details.html> .
+    
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_provenance {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld
+            prov:wasDerivedFrom  <http://apps.who.int/iris/handle/10665/252661> , <http://www.medicinescomplete.com/mc/martindale/current/2452-l.htm> , <http://www.who.int/cardiovascular_diseases/guidelines/PocketGL.ENGLISH.AFR-D-E.rev1.pdf> , <http://us.bestpractice.bmj.com/best-practice/monograph/24/treatment/details.html> .
+    
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncKnwnHTRskLvl_2Should_provenance {
+    data:RecHT-IncKnwnHTRskLvl_2Should
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> .
+    
+    data:RecHT-IncKnwnHTRskLvl_2Should_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncKnwnHTRskLvl_2Should ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncSbstncUseAssmntShld_publicationinfo {
+    data:RecHT-IncSbstncUseAssmntShld_head
+            prov:generatedAtTime  "2023-09-07T13:59:10.182Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-IncSbstncUseAssmntShld {
+    data:RecHT-IncSbstncUseAssmntShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Assess substance use"@en ;
+            tmr:aboutExecutionOf  data:ActAdministerSbstncUseAssmnt ;
+            tmr:basedOn           data:CBIncSbstncUseAssmnt ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncSbstncUseAssmnt
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncKnwnHTRskLvl_2Should {
+    data:RecHT-IncKnwnHTRskLvl_2Should
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "BP confirmed on 2 occasions with neither BP ≥ 140/90 nor ≥ 130/80 with CVD, diabetes, CVD risk > 20%, kidney disease.\nDo not diagnose hypertension"@en ;
+            tmr:aboutExecutionOf  data:ActAdministerBPScrSnd ;
+            tmr:basedOn           data:CBIncKnwnHTRskLvl ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncKnwnHTRskLvl
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-RfrrlActionMdShld_head {
+    data:RecHT-RfrrlActionMdShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-RfrrlActionMdShld ;
+            np:hasProvenance       data:RecHT-RfrrlActionMdShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-RfrrlActionMdShld_publicationinfo .
+}
+
+data:RecHT-AntidprsntTrtmntDscsnShld {
+    data:RecHT-AntidprsntTrtmntDscsnShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "If on antidepressant, discuss with doctor."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerMdctnRvw ;
+            tmr:basedOn           data:CBIncrsdBPFndn ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncrsdBPFndn
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-AskSmpmsIHDShould {
+    data:RecHT-AskSmpmsIHDShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "ask about symptoms of ischemic heart disease"@en ;
+            tmr:aboutExecutionOf  data:ActAdministerSymptmsDscss ;
+            tmr:basedOn           data:CBAskSmpmsIHD ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBAskSmpmsIHD
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_publicationinfo {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_head
+            prov:generatedAtTime  "2023-09-08T11:08:26.027Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-RfrrlActionMdShld_provenance {
+    data:RecHT-RfrrlActionMdShld
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:RecHT-RfrrlActionMdShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-RfrrlActionMdShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-AntidprsntTrtmntDscsnShld_provenance {
+    data:RecHT-AntidprsntTrtmntDscsnShld
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> , <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <http://who.int/reproductivehealth/publications/family_planning/MEC-5/en/> .
+    
+    data:RecHT-AntidprsntTrtmntDscsnShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-AntidprsntTrtmntDscsnShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-AntidprsntTrtmntDscsnShld_head {
+    data:RecHT-AntidprsntTrtmntDscsnShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-AntidprsntTrtmntDscsnShld ;
+            np:hasProvenance       data:RecHT-AntidprsntTrtmntDscsnShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-AntidprsntTrtmntDscsnShld_publicationinfo .
+}
+
+data:RecHT-IncCVDAssmntchk6mnthShould_head {
+    data:RecHT-IncCVDAssmntchk6mnthShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncCVDAssmntchk6mnthShould ;
+            np:hasProvenance       data:RecHT-IncCVDAssmntchk6mnthShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncCVDAssmntchk6mnthShould_publicationinfo .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_publicationinfo {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_head
+            prov:generatedAtTime  "2023-09-08T10:59:46.667Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:GPRecHT-BPAssmnt {
+    data:GPRecHT-BPAssmnt
+            rdf:type                 tmr:GoodPracticeRecommendation ;
+            rdfs:label               "assess blood pressure.\nCheck 2 readings at every visit"@en ;
+            tmr:aboutNotificationOf  data:STBPAssmnt ;
+            tmr:partOf               data:CIG-HT .
+}
+
+data:RecHT-UCIRfrlShould_head {
+    data:RecHT-UCIRfrlShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-UCIRfrlShould ;
+            np:hasProvenance       data:RecHT-UCIRfrlShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-UCIRfrlShould_publicationinfo .
+}
+
+data:RecHT-AntidprsntThrpRvwdShld_provenance {
+    data:RecHT-AntidprsntThrpRvwdShld
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> , <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> , <http://who.int/reproductivehealth/publications/family_planning/MEC-5/en/> .
+    
+    data:RecHT-AntidprsntThrpRvwdShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-AntidprsntThrpRvwdShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-MainKnwnHTRskLvlShould_publicationinfo {
+    data:RecHT-MainKnwnHTRskLvlShould_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncKnwnHTRskLvl_1Should_provenance {
+    data:RecHT-IncKnwnHTRskLvl_1Should
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> .
+    
+    data:RecHT-IncKnwnHTRskLvl_1Should_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncKnwnHTRskLvl_1Should ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_head {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld ;
+            np:hasProvenance       data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_provenance ;
+            np:hasPublicationInfo  data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld_publicationinfo .
+}
+
+data:RecHT-IncCVDAssmntchk6mnthShould {
+    data:RecHT-IncCVDAssmntchk6mnthShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Recheck BP according to CVD risk:\nBP > 20% recheck after 6 months."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerCVDAssmnt ;
+            tmr:basedOn           data:CBIncCVDAssmntchk6mnth ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncCVDAssmntchk6mnth
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncKnwnHTRskLvl_1Should_head {
+    data:RecHT-IncKnwnHTRskLvl_1Should_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncKnwnHTRskLvl_1Should ;
+            np:hasProvenance       data:RecHT-IncKnwnHTRskLvl_1Should_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncKnwnHTRskLvl_1Should_publicationinfo .
+}
+
+data:RecHT-HTMdctnRvwShld_head {
+    data:RecHT-HTMdctnRvwShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-HTMdctnRvwShld ;
+            np:hasProvenance       data:RecHT-HTMdctnRvwShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-HTMdctnRvwShld_publicationinfo .
+}
+
+data:GPRecHT-BPAssmnt_provenance {
+    data:GPRecHT-BPAssmnt
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> .
+    
+    data:GPRecHT-BPAssmnt_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:GPRecHT-BPAssmnt ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncKnwnHTRskLvl_2Should_head {
+    data:RecHT-IncKnwnHTRskLvl_2Should_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncKnwnHTRskLvl_2Should ;
+            np:hasProvenance       data:RecHT-IncKnwnHTRskLvl_2Should_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncKnwnHTRskLvl_2Should_publicationinfo .
+}
+
+data:RecHT-DecCVDRskShould_publicationinfo {
+    data:RecHT-DecCVDRskShould_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncOnExmntonBPFndngUncntrlldShld_publicationinfo {
+    data:RecHT-IncOnExmntonBPFndngUncntrlldShld_head
+            prov:generatedAtTime  "2023-09-07T20:34:57.257Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-IncKnwnHTRskLvl_3Should_head {
+    data:RecHT-IncKnwnHTRskLvl_3Should_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncKnwnHTRskLvl_3Should ;
+            np:hasProvenance       data:RecHT-IncKnwnHTRskLvl_3Should_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncKnwnHTRskLvl_3Should_publicationinfo .
+}
+
+data:RecHT-IncSbstncUseAssmntShld_head {
+    data:RecHT-IncSbstncUseAssmntShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncSbstncUseAssmntShld ;
+            np:hasProvenance       data:RecHT-IncSbstncUseAssmntShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncSbstncUseAssmntShld_publicationinfo .
+}
+
+data:RecHT-IncCVDAssmntShould_publicationinfo {
+    data:RecHT-IncCVDAssmntShould_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-RfrrlActionMdShld {
+    data:RecHT-RfrrlActionMdShld
+            rdf:type                tmr:ClinicalRecommendation ;
+            rdfs:label              "If pregnant or planning pregnancy, refer for specialist care."@en ;
+            tmr:aboutExecutionOf    data:ActAdministerObsttrcnRfrrl ;
+            tmr:basedOn             data:CBRfrrlActionMd ;
+            tmr:hasFilterSituation  data:SitPrgntOrPlnng ;
+            tmr:partOf              data:CIG-HT ;
+            tmr:strength            tmr:Should .
+    
+    data:CBRfrrlActionMd
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-AntiHTSIncStrkRskHghShouldnot_head {
+    data:RecHT-AntiHTSIncStrkRskHghShouldnot_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-AntiHTSIncStrkRskHghShouldnot ;
+            np:hasProvenance       data:RecHT-AntiHTSIncStrkRskHghShouldnot_provenance ;
+            np:hasPublicationInfo  data:RecHT-AntiHTSIncStrkRskHghShouldnot_publicationinfo .
+}
+
+data:RecHT-DecCVDRskShould_head {
+    data:RecHT-DecCVDRskShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-DecCVDRskShould ;
+            np:hasProvenance       data:RecHT-DecCVDRskShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-DecCVDRskShould_publicationinfo .
+}
+
+data:RecHT-MainKnwnHTRskLvlShould {
+    data:RecHT-MainKnwnHTRskLvlShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Repeat BP check on one more occasion, 1-4 weeks later.\nAvoid diagnosing hypertension based on one reading alone."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerBPScrFrst ;
+            tmr:basedOn           data:CBMainKnwnHTRskLvl ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBMainKnwnHTRskLvl
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-HTDrgCmplncAssmnt {
+    data:RecHT-HTDrgCmplncAssmnt
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "if already on hypertension medication, assess adherence and ask about side effects."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerDrgCmplncAssmnt ;
+            tmr:basedOn           data:CBHTDrgCmplnChkd ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBHTDrgCmplnChkd
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-AskSmpmsIHDShould_publicationinfo {
+    data:RecHT-AskSmpmsIHDShould_head
+            prov:generatedAtTime  "2023-09-06T13:28:15.965Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-UCIRfrlShould_provenance {
+    data:RecHT-UCIRfrlShould
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/27/treatment/step-by-step.html> .
+    
+    data:RecHT-UCIRfrlShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-UCIRfrlShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:GPRecHT-BPThrpDiscss_provenance {
+    data:GPRecHT-BPThrpDiscss
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/27/treatment/step-by-step.html> .
+    
+    data:GPRecHT-BPThrpDiscss_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:GPRecHT-BPThrpDiscss ;
+            oa:hasTarget  [ oa:hasSource  <http://bestpractice.bmj.com/best-practice/monograph/27/treatment/step-by-step.html> ] .
+}
+
+data:RecHT-AskSmpmsIHDShould_head {
+    data:RecHT-AskSmpmsIHDShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-AskSmpmsIHDShould ;
+            np:hasProvenance       data:RecHT-AskSmpmsIHDShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-AskSmpmsIHDShould_publicationinfo .
+}
+
+data:RecHT-HTDrgCmplncAssmnt_provenance {
+    data:RecHT-HTDrgCmplncAssmnt
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:RecHT-HTDrgCmplncAssmnt_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-HTDrgCmplncAssmnt ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncAlchlDrnkngBhvrDtlsShld_publicationinfo {
+    data:RecHT-IncAlchlDrnkngBhvrDtlsShld_head
+            prov:generatedAtTime  "2023-09-07T14:01:50.79Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-IncAlchlDrnkngBhvrDtlsShld_provenance {
+    data:RecHT-IncAlchlDrnkngBhvrDtlsShld
+            prov:wasDerivedFrom  <https://apps.who.int/iris/handle/10665/112736> , <https://apps.who.int/iris/handle/10665/250239> , <https://bestpractice.bmj.com/topics/en-gb/26/management-approach> .
+    
+    data:RecHT-IncAlchlDrnkngBhvrDtlsShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncAlchlDrnkngBhvrDtlsShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-RfrrlActionMdShld_publicationinfo {
+    data:RecHT-RfrrlActionMdShld_head
+            prov:generatedAtTime  "2023-09-07T12:10:55.928Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-IncSbstncUseAssmntShld_provenance {
+    data:RecHT-IncSbstncUseAssmntShld
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:RecHT-IncSbstncUseAssmntShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncSbstncUseAssmntShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:GPRecHT-BPThrpDiscss_head {
+    data:GPRecHT-BPThrpDiscss_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:GPRecHT-BPThrpDiscss ;
+            np:hasProvenance       data:GPRecHT-BPThrpDiscss_provenance ;
+            np:hasPublicationInfo  data:GPRecHT-BPThrpDiscss_publicationinfo .
+}
+
+data:GPRecHT-BPThrpDiscss {
+    data:GPRecHT-BPThrpDiscss
+            rdf:type                 tmr:GoodPracticeRecommendation ;
+            rdfs:label               "Hypertensive emergency"@en ;
+            tmr:aboutNotificationOf  data:STBPThrpDiscss ;
+            tmr:partOf               data:CIG-HT .
+}
+
+data:GPRecHT-BPAssmnt_publicationinfo {
+    data:GPRecHT-BPAssmnt_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JesusDominguez .
+}
+
+data:RecHT-DecCVDRskShould {
+    data:RecHT-DecCVDRskShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "BP ≥ 130/80\nPatientU+2019s BP is a CVD risk factor.\nManage CVD risk."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerCVDThrpy ;
+            tmr:basedOn           data:CBDecCVDRsk ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBDecCVDRsk  tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-AskSmpmsIHDShould_provenance {
+    data:RecHT-AskSmpmsIHDShould
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> , <https://bestpractice.bmj.com/topics/en-gb/26/diagnosis-approach> .
+    
+    data:RecHT-AskSmpmsIHDShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-AskSmpmsIHDShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-AntidprsntThrpRvwdShld {
+    data:RecHT-AntidprsntThrpRvwdShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "If on antidepressant, discuss with doctor."@en , "Review medication that can cause raise BP: antidepressants"@en ;
+            tmr:aboutExecutionOf  data:ActAdministerMdctnRvw ;
+            tmr:basedOn           data:CBIncrsdBPFndn , data:CBAntidprsntThrpRvwd ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncrsdBPFndn
+            tmr:contribution  tmr:Positive .
+    
+    data:CBAntidprsntThrpRvwd
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncKnwnHTRskLvl_3Should_provenance {
+    data:RecHT-IncKnwnHTRskLvl_3Should
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> .
+    
+    data:RecHT-IncKnwnHTRskLvl_3Should_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncKnwnHTRskLvl_3Should ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_publicationinfo {
+    data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld_head
+            prov:generatedAtTime  "2023-09-08T11:45:44.968Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld {
+    data:RecHT-IncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCareShld
+            rdf:type                tmr:ClinicalRecommendation ;
+            rdfs:label              "Refer for further CVD assessment."@en ;
+            tmr:aboutExecutionOf    data:ActAdministerRfrrlForFrthrCare ;
+            tmr:basedOn             data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare ;
+            tmr:hasFilterSituation  data:SitSrmChlstrlAbvRfrncRng ;
+            tmr:partOf              data:CIG-HT ;
+            tmr:strength            tmr:Should .
+    
+    data:CBIncCVDAssmntCVDRskAssmntDnRfrrlForFrthrCare
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-HTDrgCmplncAssmnt_publicationinfo {
+    data:RecHT-HTDrgCmplncAssmnt_head
+            prov:generatedAtTime  "2023-09-07T09:11:57.681Z"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:jesusDominguez .
+}
+
+data:RecHT-UCIRfrlShould {
+    data:RecHT-UCIRfrlShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Refer urgently to an intensive care unit for continuous monitoring of blood pressure (BP) and target organ damage and for parenteral administration of appropriate therapeutic agent(s)."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerUCIRfrl ;
+            tmr:basedOn           data:CBUCIRfrlShould ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBUCIRfrlShould
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncDrgMisuseBhvrDtlsShld {
+    data:RecHT-IncDrgMisuseBhvrDtlsShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Assess drug use\nDoes patient use illegal drugs or misuse prescription or over-thecounter medication? If yes : [alcohol/drug use page]."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerAssmntDrgMisuse ;
+            tmr:basedOn           data:CBIncDrgMisuseBhvrDtls ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncDrgMisuseBhvrDtls
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-MainKnwnHTRskLvlShould_provenance {
+    data:RecHT-MainKnwnHTRskLvlShould
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071/diagnosis.html> .
+    
+    data:RecHT-MainKnwnHTRskLvlShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-MainKnwnHTRskLvlShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-AskSmptmsStrkTIAShould {
+    data:RecHT-AskSmptmsStrkTIAShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "ask about symptoms of ischemic heart disease"@en ;
+            tmr:aboutExecutionOf  data:ActAdministerSymptmsDscss ;
+            tmr:basedOn           data:CBAskSmptmsStrkTIA ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBAskSmptmsStrkTIA
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncOnExmntonBPFndngCntrlldShld_head {
+    data:RecHT-IncOnExmntonBPFndngCntrlldShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncOnExmntonBPFndngCntrlldShld ;
+            np:hasProvenance       data:RecHT-IncOnExmntonBPFndngCntrlldShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncOnExmntonBPFndngCntrlldShld_publicationinfo .
+}
+
+data:RecHT-IncKnwnHTRskLvl_3Should_publicationinfo {
+    data:RecHT-IncKnwnHTRskLvl_3Should_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_head {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld ;
+            np:hasProvenance       data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_provenance ;
+            np:hasPublicationInfo  data:RecHT-DecCVDAtIncrsdRskSmvsttn20Shld_publicationinfo .
+}
+
+data:RecHT-IncCVDAssmntchk1yrShould_head {
+    data:RecHT-IncCVDAssmntchk1yrShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncCVDAssmntchk1yrShould ;
+            np:hasProvenance       data:RecHT-IncCVDAssmntchk1yrShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncCVDAssmntchk1yrShould_publicationinfo .
+}
+
+data:RecHT-AskSmptmsStrkTIAShould_head {
+    data:RecHT-AskSmptmsStrkTIAShould_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-AskSmptmsStrkTIAShould ;
+            np:hasProvenance       data:RecHT-AskSmptmsStrkTIAShould_provenance ;
+            np:hasPublicationInfo  data:RecHT-AskSmptmsStrkTIAShould_publicationinfo .
+}
+
+data:RecHT-HTMdctnRvwShld_provenance {
+    data:RecHT-HTMdctnRvwShld
+            prov:wasDerivedFrom  <https://bestpractice.bmj.com/topics/en-gb/26/patient-discussions> .
+    
+    data:RecHT-HTMdctnRvwShld_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-HTMdctnRvwShld ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncCVDAssmntchk5yrsShould {
+    data:RecHT-IncCVDAssmntchk5yrsShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Recheck BP according to CVD risk:\nBP < 10% and no risk factors, recheck after 5 years"@en ;
+            tmr:aboutExecutionOf  data:ActAdministerCVDAssmnt ;
+            tmr:basedOn           data:CBIncCVDAssmntchk5yrs ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncCVDAssmntchk5yrs
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncCVDAssmntchk6mnthShould_publicationinfo {
+    data:RecHT-IncCVDAssmntchk6mnthShould_head
+            prov:generatedAtTime  "2020-03-01"^^xsd:dateTime ;
+            prov:wasAttributedTo  data:JDA .
+}
+
+data:RecHT-IncCVDAssmntchk5yrsShould_provenance {
+    data:RecHT-IncCVDAssmntchk5yrsShould
+            prov:wasDerivedFrom  <https://www.nice.org.uk/guidance/ng136/resources/hypertension-in-adults-diagnosis-and-management-pdf-66141722710213> .
+    
+    data:RecHT-IncCVDAssmntchk5yrsShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncCVDAssmntchk5yrsShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncAlchlDrnkngBhvrDtlsShld {
+    data:RecHT-IncAlchlDrnkngBhvrDtlsShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Assess Alcohol use\nDoes patient drink ≥ 6 drinks/session every month, drink every day?\nIf yes : [alcohol/drug use page]."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerAssmntAlchlUse ;
+            tmr:basedOn           data:CBIncAlchlDrnkngBhvrDtls ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncAlchlDrnkngBhvrDtls
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncOnExmntonBPFndngCntrlldShld {
+    data:RecHT-IncOnExmntonBPFndngCntrlldShld
+            rdf:type                tmr:ClinicalRecommendation ;
+            rdfs:label              "If BP < 140/90 (SBP < 130 if diabetes, CVD, CVD risk > 20% or kidney disease), BP is controlled: continue current\ntreatment and review 3-6 monthly."@en ;
+            tmr:aboutExecutionOf    data:ActAdministerDrgContRec ;
+            tmr:basedOn             data:CBIncOnExmntonBPFndngCntrlld ;
+            tmr:hasFilterSituation  data:SitBPIsControlled ;
+            tmr:partOf              data:CIG-HT ;
+            tmr:strength            tmr:Should .
+    
+    data:CBIncOnExmntonBPFndngCntrlld
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncCVDAssmntShould_provenance {
+    data:RecHT-IncCVDAssmntShould
+            prov:wasDerivedFrom  <http://onlinelibrary.wiley.com/doi/10.1111/jch.12237/pdf> .
+    
+    data:RecHT-IncCVDAssmntShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-IncCVDAssmntShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld {
+    data:RecHT-DecCVDAtIncrsdRskSmvsttn40Shld
+            rdf:type                tmr:ClinicalRecommendation ;
+            rdfs:label              "If repeat cholesterol > 5mmol/L increase simvastatin to 40mg."@en ;
+            tmr:aboutExecutionOf    data:ActAdministerSmvsttn40 ;
+            tmr:basedOn             data:CBDecCVDAtIncrsdRskSmvsttn40 ;
+            tmr:hasFilterSituation  data:SitRepeatdHghChlstrlLevels ;
+            tmr:partOf              data:CIG-HT ;
+            tmr:strength            tmr:Should .
+    
+    data:CBDecCVDAtIncrsdRskSmvsttn40
+            tmr:contribution  tmr:Positive .
+}
+
+data:GPRecHT-BPAssmnt_head {
+    data:GPRecHT-BPAssmnt_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:GPRecHT-BPAssmnt ;
+            np:hasProvenance       data:GPRecHT-BPAssmnt_provenance ;
+            np:hasPublicationInfo  data:GPRecHT-BPAssmnt_publicationinfo .
+}
+
+data:RecHT-IncDrgMisuseBhvrDtlsShld_head {
+    data:RecHT-IncDrgMisuseBhvrDtlsShld_head
+            rdf:type               np:Nanopublication ;
+            np:hasAssertion        data:RecHT-IncDrgMisuseBhvrDtlsShld ;
+            np:hasProvenance       data:RecHT-IncDrgMisuseBhvrDtlsShld_provenance ;
+            np:hasPublicationInfo  data:RecHT-IncDrgMisuseBhvrDtlsShld_publicationinfo .
+}
+
+data:RecHT-DecCVDRskShould_provenance {
+    data:RecHT-DecCVDRskShould
+            prov:wasDerivedFrom  <http://bestpractice.bmj.com/best-practice/monograph/1071.html> .
+    
+    data:RecHT-DecCVDRskShould_provenance
+            rdf:type      oa:Annotation ;
+            oa:hasBody    data:RecHT-DecCVDRskShould ;
+            oa:hasTarget  [ oa:hasSource  <http://hdl.handle.net/10222/43703> ] .
+}
+
+data:RecHT-IncCVDAssmntchk1yrShould {
+    data:RecHT-IncCVDAssmntchk1yrShould
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "Recheck BP according to CVD risk:\nBP < 10% with risk factors or 10-20% recheck after 1 year."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerCVDAssmnt ;
+            tmr:basedOn           data:CBIncCVDAssmntchk1yr ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncCVDAssmntchk1yr
+            tmr:contribution  tmr:Positive .
+}
+
+data:RecHT-IncrsdBPFndnShld {
+    data:RecHT-IncrsdBPFndnShld
+            rdf:type              tmr:ClinicalRecommendation ;
+            rdfs:label            "review medication that may cause raise BP: NSAIDs (e.g. ibuprofen), combined oral contraceptive and antidepressants."@en ;
+            tmr:aboutExecutionOf  data:ActAdministerMdctnRvw ;
+            tmr:basedOn           data:CBIncrsdBPFndn ;
+            tmr:partOf            data:CIG-HT ;
+            tmr:strength          tmr:Should .
+    
+    data:CBIncrsdBPFndn
+            tmr:contribution  tmr:Positive .
+}
